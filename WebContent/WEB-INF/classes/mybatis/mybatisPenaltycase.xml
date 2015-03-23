@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.PenaltycaseDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Penaltycase" id="penaltycase">
+		<result property="penaltycaseId" column="_penaltycaseId" />
+		<result property="penaltycaseTitle" column="_penaltycaseTitle" />
+		<result property="penaltycaseSTime" column="_penaltycaseSTime" />
+		<result property="penaltycaseCategory" column="_penaltycaseCategory" />
+		<result property="penaltycaseContent" column="_penaltycaseContent" />
+		<result property="penaltycaseResult" column="_penaltycaseResult" />
+		<result property="penaltycaseApply" column="_penaltycaseApply" />
+		<result property="penaltycaseProvince" column="_penaltycaseProvince" />
+		<result property="penaltycaseParentUnit" column="_penaltycaseParentUnit" />
+		<result property="penaltycaseUTime" column="_penaltycaseUTime" />
+		<result property="penaltycasePublishUserId" column="_penaltycasePublishUserId" />
+		<result property="penaltycaseExecute" column="_penaltycaseExecute" />
+		<result property="numCount" column="numCount"/>
+	</resultMap>
+
+
+	<insert id="insertpenaltycase" parameterType="Penaltycase">  
+     <![CDATA[ 
+        insert into b_penaltycase(_penaltycaseId,
+        _penaltycaseTitle,
+        _penaltycaseSTime,
+        _penaltycaseCategory,
+        _penaltycaseContent,
+        _penaltycaseResult,
+        _penaltycaseApply,
+        _penaltycaseProvince,
+        _penaltycaseParentUnit,
+        _penaltycaseUTime,
+        _penaltycasePublishUserId,
+		_penaltycaseExecute) 
+        values(#{penaltycaseId},
+        #{penaltycaseTitle},
+        #{penaltycaseSTime},
+        #{penaltycaseCategory},
+        #{penaltycaseContent},
+        #{penaltycaseResult},
+        #{penaltycaseApply},
+        #{penaltycaseProvince},
+        #{penaltycaseParentUnit},
+        #{penaltycaseUTime},
+        #{penaltycasePublishUserId},
+		#{penaltycaseExecute}) 
+        ]]>
+	</insert>
+	
+	<update id="updatepenaltycase" parameterType="Penaltycase">
+		update b_penaltycase
+		set _penaltycaseTitle=#{penaltycaseTitle}
+		,_penaltycaseSTime=#{penaltycaseSTime}
+		,_penaltycaseCategory=#{penaltycaseCategory}
+		,_penaltycaseContent=#{penaltycaseContent}
+		,_penaltycaseResult=#{penaltycaseResult}
+		,_penaltycaseApply=#{penaltycaseApply}
+		,_penaltycaseProvince=#{penaltycaseProvince}
+		,_penaltycaseParentUnit=#{penaltycaseParentUnit}
+		,_penaltycaseUTime=#{penaltycaseUTime}
+		,_penaltycasePublishUserId=#{penaltycasePublishUserId}
+		,_penaltycaseExecute=#{penaltycaseExecute}
+		where _penaltycaseId=#{penaltycaseId}
+	</update>
+	
+	<delete id="deletepenaltycase" parameterType="int">
+		delete from	b_penaltycase where _penaltycaseId=#{penaltycaseId}
+	</delete>
+	
+	<select id="findpenaltycaseAll" resultMap="penaltycase">
+		select * from b_penaltycase
+	</select>
+
+	<select id="findpenaltycaseByid" parameterType="int" resultMap="penaltycase">
+		select * from b_penaltycase where _penaltycaseId=#{penaltycaseId}
+	</select>
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_penaltycase
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_penaltycase  where _penaltycaseProvince=#{inchargeMent} or _penaltycaseParentUnit = #{inchargeMent}
+	</select>
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_penaltycase where _penaltycasePublishUserId=#{penaltycasePublishUserId}
+	</select>
+	
+	
+	
+	<select id="findPenaltycaseByUser" parameterType="map" resultMap="penaltycase">
+		select * from b_penaltycase where _penaltycasePublishUserId = #{userId}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _penaltycaseTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_penaltycaseUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _penaltycaseProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _penaltycaseTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _penaltycaseCategory 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _penaltycaseResult 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _penaltycaseApply 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="penaltycase">
+		select * from b_penaltycase where _penaltycaseProvince = #{inchargeMent} or _penaltycaseParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _penaltycaseTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_penaltycaseSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _penaltycaseProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _penaltycaseTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _penaltycaseCategory 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _penaltycaseResult 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _penaltycaseApply 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findPenaltycaseByAll" parameterType="map" resultMap="penaltycase">
+		select
+		* from b_penaltycase 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _penaltycaseTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_penaltycaseSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery!=''">
+				And _penaltycaseParentUnit = #{provinceQuery}
+			</if>
+		</where>
+		<if test="fieldQuery == 0">
+			order by _penaltycaseUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _penaltycaseTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _penaltycaseCategory 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _penaltycaseResult 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _penaltycaseApply 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findProvinceCount" parameterType="String" resultType="int">
+		select count(*) from b_penaltycase  where _penaltycaseProvince=#{inchargeMent} or _penaltycaseParentUnit = #{inchargeMent}
+	</select>
+
+	<select id="findTopTen" resultMap="penaltycase">
+		select * from b_penaltycase order by _penaltycaseUTime desc limit 0,6
+	</select>
+	
+	<select id="findByCount" parameterType="map" resultMap="penaltycase">
+		select count(_penaltycaseId) as numCount ,_penaltycaseProvince  from b_penaltycase
+		<where>
+			<if test="yearsQuery !=null and yearsQuery !=''">
+				<![CDATA[AND  left(_penaltycaseUTime,4) = #{yearsQuery}]]>
+			</if>
+			<if test="province !=null and province !=''">
+				And _penaltycaseProvince = #{province}
+			</if>
+			<if test="penaltycaseCategory !=null and penaltycaseCategory !=''">
+				And _penaltycaseCategory = #{penaltycaseCategory}
+			</if>
+		</where>
+		group by _penaltycaseProvince
+	</select>
+
+</mapper>

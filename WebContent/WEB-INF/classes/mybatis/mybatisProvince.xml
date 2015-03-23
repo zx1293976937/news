@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.ProvinceDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Province" id="province">
+		<result property="provinceId" column="_provinceId" />
+		<result property="provinceName" column="_provinceName" />
+		<result property="parentUnit" column="_parentUnit" />
+		<result property="priority" column="_priority" />
+		<result property="privilege" column="_privilege" />
+	</resultMap>
+
+
+	<insert id="insertProvince" parameterType="Province">  
+     <![CDATA[ 
+        insert into b_province(
+        _provinceId, 
+		_provinceName,
+		_parentUnit,
+		_priority,
+		_privilege
+		) 
+        values (
+		#{provinceId} ,
+		#{provinceName} ,
+		#{parentUnit} ,
+		#{priority},
+		#{privilege}) 
+        ]]>
+	</insert>
+	
+	<update id="updateProvince" parameterType="Province">
+		update b_province
+		set 
+		_provinceName=#{provinceName}
+		,_parentUnit=#{parentUnit}
+		,_priority=#{priority}
+		,_privilege=#{privilege}
+		where _provinceId=#{provinceId}
+	</update>
+	
+	<delete id="deleteProvince" parameterType="int">
+		delete from	b_province where _provinceId=#{provinceId}
+	</delete>
+	
+	<select id="findProvinceByid" parameterType="int" resultMap="province">
+		select * from b_province where _provinceId=#{provinceId}
+	</select>
+	
+	<select id="findProvinceByNum" parameterType="map" resultMap="province">
+		select * from b_province 
+		<where>
+			<if test="privilege !=null and privilege !=''">
+				and _privilege=#{privilege} 
+			</if>
+			<if test="provinceName !=null and provinceName !=''">
+				and _provinceName=#{provinceName} 
+			</if>
+			<if test="inchargeMent !=null and inchargeMent !=''">
+				and _parentUnit = #{inchargeMent}
+			</if>
+		</where> 
+		order by _priority asc
+	</select>
+	
+	<select id="findParentUnit" parameterType="string" resultType="string">
+		select _parentUnit from b_province where _provinceName=#{provinceName}
+	</select>
+	
+	<select id="findAllCount" resultType="int">
+		select count(*) from b_province
+	</select>
+
+	<select id="findAll" parameterType="map" resultMap="province">
+		select
+		* from b_province order by _priority asc limit
+		#{intPageCount},#{pageSize}
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_province  where _parentUnit = #{inchargeMent}
+	</select>
+	
+	<select id="findProvince" resultType="String">
+		select _provinceName from b_province order by _priority asc
+	</select>
+	<select id="findProvinceAll" resultMap="province">
+		select * from b_province order by _priority asc
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="province">
+		select * from b_province where _parentUnit = #{inchargeMent} order by _priority ascc
+		limit #{intPageCount},#{pageSize}
+	</select>
+	
+	<select id="findByPro" parameterType="map" resultMap="province">
+		select * from b_province where _provinceName = #{inchargeMent} order by _priority asc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByProvince" parameterType="String" resultType="string">
+		select _priority from b_province where _provinceName = #{temp};
+	</select>
+
+</mapper>

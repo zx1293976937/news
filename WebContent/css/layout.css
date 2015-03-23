@@ -1,0 +1,240 @@
+@charset "utf-8";
+body {
+	margin: 0 auto;
+	width: 100%;
+	top:10px;
+	height:100%;
+	
+	background:#daf7ff !important;
+}
+#navbar {
+	height: 50px;
+	line-height: 50px;
+	background: #343336;
+	padding: 0 50px;
+}
+#navbar h1 {
+	float: left;
+	color: #fff;
+}
+.wrapbg {
+	background:url(../images/M_logo.png) no-repeat;
+	width: 960px;
+	margin:0 auto;
+	z-index: 0;
+	height:548px;
+}
+
+.building{
+	background:#daf7ff url(../images/building.png) repeat-x;	
+	height:237px;
+	margin:0 auto;
+
+}
+.header {
+	height:106px;
+	width:100%;
+	background:#066dc5;
+	line-height:106px;
+}
+.logo {
+	margin-left:40px;
+}
+.header .logo img {
+*position:relative;
+*top:25%;
+}
+/*animation动画*/
+.animate {
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+	visibility: hidden;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+}
+@-webkit-keyframes flipInY {
+ 0% {
+ -webkit-transform: perspective(400px) rotateY(90deg);
+ opacity: 0;
+}
+ 40% {
+ -webkit-transform: perspective(400px) rotateY(-10deg);
+}
+ 70% {
+ -webkit-transform: perspective(400px) rotateY(10deg);
+}
+ 100% {
+ -webkit-transform: perspective(400px) rotateY(0deg);
+ opacity: 1;
+}
+}
+@-moz-keyframes flipInY {
+ 0% {
+ -moz-transform: perspective(400px) rotateY(90deg);
+ opacity: 0;
+}
+ 40% {
+ -moz-transform: perspective(400px) rotateY(-10deg);
+}
+ 70% {
+ -moz-transform: perspective(400px) rotateY(10deg);
+}
+ 100% {
+ -moz-transform: perspective(400px) rotateY(0deg);
+ opacity: 1;
+}
+}
+@-o-keyframes flipInY {
+ 0% {
+ -o-transform: perspective(400px) rotateY(90deg);
+ opacity: 0;
+}
+ 40% {
+ -o-transform: perspective(400px) rotateY(-10deg);
+}
+ 70% {
+ -o-transform: perspective(400px) rotateY(10deg);
+}
+ 100% {
+ -o-transform: perspective(400px) rotateY(0deg);
+ opacity: 1;
+}
+}
+@keyframes flipInY {
+ 0% {
+ transform: perspective(400px) rotateY(90deg);
+ opacity: 0;
+}
+ 40% {
+ transform: perspective(400px) rotateY(-10deg);
+}
+ 70% {
+ transform: perspective(400px) rotateY(10deg);
+}
+ 100% {
+ transform: perspective(400px) rotateY(0deg);
+ opacity: 1;
+}
+}
+.animate.flipInY {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInY;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInY;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInY;
+	backface-visibility: visible !important;
+	animation-name: flipInY;
+	visibility: visible !important;
+}
+/*首页导航页*/
+.bootNav {
+	overflow: hidden;
+	
+	padding-top:240px;
+}
+.bootNav ul {
+	float: left;
+	position: relative;
+	left: 50%;
+ *display:block;
+ *left:40%
+}
+.bootNav div {
+	height: 150px;
+	width: 150px;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	overflow: hidden;
+	-webkit-transition: all ease-in 0.2s;
+	-moz-transition: all ease-in 0.2s;
+	-ms-transition: all ease-in 0.2s;
+	-o-transition: all ease-in 0.2s;
+	transition: all ease-in 0.2s;
+}
+.bootNav h2 {
+	text-align: center;
+	margin-top: 15px;
+	font-size: 16px;
+}
+.bootNav li {
+	float: left;
+	position: relative;
+	left: -50%;
+	margin: 0 30px;
+ *display:block;
+ *height: 150px;
+ *width: 150px;
+}
+.bootNav a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+ *width:auto !important;
+	color:#044f9b;
+}
+.bootNav a:hover {
+	color:#000;
+	text-decoration:none;
+}
+.bootNav img {
+	height: 100%;
+	width: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+.bootNav i {
+	display: block;
+	height: 150px;
+	width: 150px;
+	background: url("../images/look.png") no-repeat center center;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	position: absolute;
+	top: -100%;
+}
+.bootNav li:hover div {
+	border-color: #50b6d3;
+	-webkit-box-shadow: 0 0 8px #50b6d3;
+	-moz-box-shadow: 0 0 8px #50b6d3;
+	box-shadow: 0 0 8px #50b6d3;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.bootNav li:hover span {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#Policy {
+	background-color:#785cae;
+}
+#legal {
+	background-color:#5fb562;
+}
+#measurement {
+	background-color:#feb958;
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.PolicyDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Policy" id="policy">
+		<result property="policyId" column="_policyId" />
+		<result property="policyName" column="_policyName" />
+		<result property="policyCategory" column="_policyCategory" />
+		<result property="policyIncharger" column="_policyIncharger" />
+		<result property="policySDate" column="_policySDate" />
+		<result property="policyEDate" column="_policyEDate" />
+		<result property="policyUDate" column="_policyUDate" />
+		<result property="policyADate" column="_policyADate" />
+		<result property="policyThesis" column="_policyThesis" />
+		<result property="policyProvince" column="_policyProvince" />
+		<result property="policyPublishUserId" column="_policyPublishUserId" />
+	</resultMap>
+
+
+	<insert id="insertPolicy" parameterType="Policy">  
+     <![CDATA[ 
+        insert into b_policy(_policyId,
+        _policyName,
+        _policyCategory,
+        _policyIncharger,
+        _policySDate,
+        _policyEDate,
+        _policyUDate,
+        _policyADate,
+        _policyThesis,
+        _policyProvince,
+        _policyPublishUserId) 
+        values(#{policyId},
+        #{policyName},
+        #{policyCategory},
+        #{policyIncharger},
+        #{policySDate},
+        #{policyEDate},
+        #{policyUDate},
+        #{policyADate},
+        #{policyThesis},
+        #{policyProvince},
+        #{policyPublishUserId}) 
+        ]]>
+	</insert>
+
+	<update id="updatePolicy" parameterType="Policy">
+		update b_policy
+		set
+		_policyName=#{policyName}
+		,_policyCategory=#{policyCategory}
+		,_policyIncharger=#{policyIncharger}
+		,_policySDate=#{policySDate}
+		,_policyEDate=#{policyEDate}
+		,_policyUDate=#{policyUDate}
+		,_policyADate=#{policyADate}
+		,_policyThesis=#{policyThesis}
+		,_policyProvince=#{policyProvince}
+		,_policyPublishUserId=#{policyPublishUserId}
+		where _policyId=#{policyId}
+	</update>
+
+	<delete id="deletePolicy" parameterType="int">
+		delete from b_policy
+		where _policyId=#{policyId}
+	</delete>
+
+	<select id="findPolicyAll" resultMap="policy">
+		select * from b_policy
+	</select>
+
+	<select id="findPolicyByid" parameterType="int" resultMap="policy">
+		select * from b_policy where _policyId=#{policyId}
+	</select>
+	
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_policy
+	</select>
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_policy where _policyPublishUserId=#{policyPublishUserId}
+	</select>
+	<select id="findPolicyByUser" parameterType="map" resultMap="policy">
+		select * from b_policy where _policyPublishUserId = #{userId} order by
+		_policyUDate desc
+		limit #{intPageCount},#{pageSize}
+	</select>
+	<select id="findPolicyByAll" parameterType="map" resultMap="policy">
+		select
+		* from b_policy order by _policyUDate desc
+		limit
+		#{intPageCount},#{pageSize}
+	</select>
+
+	<select id="findTopTen" resultMap="policy">
+		select * from b_policy order by _policyUDate desc limit 0,6
+	</select>
+
+
+</mapper>

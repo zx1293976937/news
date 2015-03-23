@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="User" type="com.tjdzj.www.model.User" />
+		<typeAlias alias="Laws" type="com.tjdzj.www.model.Laws" />
+		<typeAlias alias="Regular" type="com.tjdzj.www.model.Regular" />
+		<typeAlias alias="Document" type="com.tjdzj.www.model.Document" />
+		<typeAlias alias="Lstandards" type="com.tjdzj.www.model.Lstandards" />
+		<typeAlias alias="Lawagency" type="com.tjdzj.www.model.Lawagency" />
+		<typeAlias alias="Employee" type="com.tjdzj.www.model.Employee" />
+		<typeAlias alias="Enforcement" type="com.tjdzj.www.model.Enforcement" /> 
+		<typeAlias alias="Propaganda" type="com.tjdzj.www.model.Propaganda" />
+		<typeAlias alias="Train" type="com.tjdzj.www.model.Train" />
+		<typeAlias alias="Policy" type="com.tjdzj.www.model.Policy" />
+		<typeAlias alias="News" type="com.tjdzj.www.model.News" /> 
+		<typeAlias alias="Province" type="com.tjdzj.www.model.Province" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="/mybatis/mybatisUser.xml" />
+		<mapper resource="/mybatis/mybatisLaws.xml" />
+		<mapper resource="/mybatis/mybatisRegular.xml" />
+		<mapper resource="/mybatis/mybatisDocument.xml" /> 
+		<mapper resource="/mybatis/mybatisLstandards.xml" />
+		<mapper resource="/mybatis/mybatisLawagency.xml" /> 
+		<mapper resource="/mybatis/mybatisEmployee.xml" /> 
+		<mapper resource="/mybatis/mybatisEnforcement.xml" /> 
+		<mapper resource="/mybatis/mybatisPropaganda.xml" /> 
+		<mapper resource="/mybatis/mybatisTrain.xml" /> 
+		<mapper resource="/mybatis/mybatisPolicy.xml" /> 
+		<mapper resource="/mybatis/mybatisNews.xml" />
+		<mapper resource="/mybatis/mybatisProvince.xml" />
+	</mappers>
+</configuration>

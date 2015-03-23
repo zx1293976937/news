@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.LawagencyDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Lawagency" id="lawagency">
+		<result property="lawagencyId" column="_lawagencyId" />
+		<result property="lawagencyNumber" column="_lawagencyNumber" />
+		<result property="lawagencyTitle" column="_lawagencyTitle" />
+		<result property="lawagencyAddress" column="_lawagencyAddress" />
+		<result property="lawagencyZip" column="_lawagencyZip" />
+		<result property="lawagencyInchargeNumber" column="_lawagencyInchargeNumber" />
+		<result property="lawagencyInchargeName" column="_lawagencyInchargeName" />
+		<result property="lawagencyInchargeEmail" column="_lawagencyInchargeEmail" />
+		<result property="lawagencyInchargeBirthday" column="_lawagencyInchargeBirthday" />
+		<result property="lawagencyInchargeSex" column="_lawagencyInchargeSex" />
+		<result property="lawagencyInchargeLN" column="_lawagencyInchargeLN" />
+		<result property="lawagencyInchargeEB" column="_lawagencyInchargeEB" />
+		<result property="lawagencyLeadershipName" column="_lawagencyLeadershipName" />
+		<result property="lawagencyLeadershipTitle" column="_lawagencyLeadershipTitle" />
+		<result property="lawagencyLeadershipPhone" column="_lawagencyLeadershipPhone" />
+		<result property="lawagencyUTime" column="_lawagencyUTime" />
+		<result property="lawagencyProvince" column="_lawagencyProvince" />
+		<result property="lawagencyParentUnit" column="_lawagencyParentUnit" />
+		<result property="lawagencyPublishUserId" column="_lawagencyPublishUserId" />
+		<result property="lawagencyPhone" column="_lawagencyPhone" />
+		<result property="lawagencyMobilePhone" column="_lawagencyMobilePhone" />
+		<result property="lawagencyAddressProvince" column="_lawagencyAddressProvince" />
+		<result property="lawagencyAddressCity" column="_lawagencyAddressCity" />
+	</resultMap>
+
+
+	<insert id="insertLawagency" parameterType="Lawagency">  
+     <![CDATA[ 
+        insert into b_lawagency(_lawagencyId,
+        _lawagencyNumber,
+		_lawagencyTitle,
+		_lawagencyAddress,
+		_lawagencyZip,
+		
+		_lawagencyInchargeNumber,
+		_lawagencyInchargeName,
+		_lawagencyInchargeEmail,
+		_lawagencyInchargeBirthday,
+		_lawagencyInchargeSex,
+		_lawagencyInchargeLN,
+		_lawagencyInchargeEB,
+		
+		_lawagencyLeadershipName,
+		_lawagencyLeadershipTitle,
+		_lawagencyLeadershipPhone,
+		
+		_lawagencyUTime,
+		_lawagencyProvince,
+		_lawagencyParentUnit,
+		_lawagencyPublishUserId,
+		_lawagencyPhone,
+		_lawagencyMobilePhone,
+		_lawagencyAddressProvince,
+		_lawagencyAddressCity
+		)
+        values(#{lawagencyId},
+        #{lawagencyNumber},
+        #{lawagencyTitle},
+        #{lawagencyAddress},
+        #{lawagencyZip},
+       
+        #{lawagencyInchargeNumber},
+        #{lawagencyInchargeName},
+        #{lawagencyInchargeEmail},
+        #{lawagencyInchargeBirthday},
+        #{lawagencyInchargeSex},
+        #{lawagencyInchargeLN},
+        #{lawagencyInchargeEB},
+        
+        #{lawagencyLeadershipName},
+        #{lawagencyLeadershipTitle},
+        #{lawagencyLeadershipPhone},
+        #{lawagencyUTime},
+        #{lawagencyProvince},
+        #{lawagencyParentUnit},
+        #{lawagencyPublishUserId},
+        #{lawagencyPhone},
+        #{lawagencyMobilePhone},
+        #{lawagencyAddressProvince},
+        #{lawagencyAddressCity}
+        ) 
+        ]]>
+	</insert>
+
+	<update id="updateLawagency" parameterType="Lawagency">
+		update b_lawagency
+		set 
+		_lawagencyNumber=#{lawagencyNumber}
+        ,_lawagencyTitle=#{lawagencyTitle}
+        ,_lawagencyAddress=#{lawagencyAddress}
+        ,_lawagencyZip=#{lawagencyZip}
+       
+        ,_lawagencyInchargeNumber=#{lawagencyInchargeNumber}
+        ,_lawagencyInchargeName=#{lawagencyInchargeName}
+        ,_lawagencyInchargeEmail=#{lawagencyInchargeEmail}
+        ,_lawagencyInchargeBirthday=#{lawagencyInchargeBirthday}
+        ,_lawagencyInchargeSex=#{lawagencyInchargeSex}
+        ,_lawagencyInchargeLN=#{lawagencyInchargeLN}
+        ,_lawagencyInchargeEB=#{lawagencyInchargeEB}
+        
+        ,_lawagencyLeadershipName=#{lawagencyLeadershipName}
+        ,_lawagencyLeadershipTitle=#{lawagencyLeadershipTitle}
+        ,_lawagencyLeadershipPhone=#{lawagencyLeadershipPhone}
+        
+        ,_lawagencyUTime=#{lawagencyUTime}
+        ,_lawagencyProvince=#{lawagencyProvince}
+        ,_lawagencyParentUnit=#{lawagencyParentUnit}
+        ,_lawagencyPublishUserId=#{lawagencyPublishUserId}
+        ,_lawagencyPhone=#{lawagencyPhone}
+		,_lawagencyMobilePhone=#{lawagencyMobilePhone}
+		,_lawagencyAddressProvince=#{lawagencyAddressProvince}
+		,_lawagencyAddressCity=#{lawagencyAddressCity}
+		where
+		_lawagencyId=#{lawagencyId}
+	</update>
+
+	<delete id="deleteLawagency" parameterType="int">
+		delete from
+		b_lawagency where _lawagencyId=#{lawagencyId}
+	</delete>
+
+	<select id="findLawagencyAll" resultMap="lawagency">
+		select * from
+		b_lawagency
+	</select>
+
+	<select id="findLawagencyByid" parameterType="int" resultMap="lawagency">
+		select * from b_lawagency where _lawagencyId=#{lawagencyId}
+	</select>
+
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_lawagency
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_lawagency  where _lawagencyProvince=#{inchargeMent} or _lawagencyParentUnit = #{inchargeMent}
+		
+	</select>
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_lawagency where _lawagencyPublishUserId=#{lawagencyPublishUserId}
+	</select>
+	
+	
+	
+	<select id="findLawagencyByUser" parameterType="map" resultMap="lawagency">
+		select * from b_lawagency where _lawagencyPublishUserId = #{userId}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _lawagencyTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_lawagencyUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _lawagencyUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _lawagencyTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _lawagencyInchargeNumber 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _lawagencyInchargeName 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _lawagencyInchargeSex 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _lawagencyLeadershipName 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="lawagency">
+		select * from b_lawagency where _lawagencyProvince = #{inchargeMent} or _lawagencyParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _lawagencyTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_lawagencyUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _lawagencyProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _lawagencyTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _lawagencyInchargeNumber 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _lawagencyInchargeName 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _lawagencyInchargeSex 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _lawagencyLeadershipName 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findLawagencyByAll" parameterType="map" resultMap="lawagency">
+		select
+		* from b_lawagency 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _lawagencyTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_lawagencyUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery!=''">
+				And _lawagencyParentUnit = #{provinceQuery}
+			</if>
+		</where>
+		<if test="fieldQuery == 0">
+			order by _lawagencyUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _lawagencyTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _lawagencyInchargeNumber 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _lawagencyInchargeName 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _lawagencyInchargeSex 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _lawagencyLeadershipName 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+
+	<select id="findTopTen" resultMap="lawagency">
+		select * from b_lawagency order by _lawagencyUTime desc
+	</select>
+
+
+
+</mapper>

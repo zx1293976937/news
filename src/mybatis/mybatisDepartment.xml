@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.DepartmentDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Department" id="department" >
+		<result property="departmentId" column="_departmentId" />
+		<result property="departmentName" column="_departmentName" />
+		<result property="departmentParent" column="_departmentParent" />
+		<result property="departmentEmployee" column="_departmentEmployee" />
+		
+	</resultMap>
+	
+	<insert id="insertDepartment" parameterType="Department">  
+     <![CDATA[ 
+        insert into b_department(
+        _departmentId,
+        _departmentName,
+        _departmentParent,
+        _departmentEmployee
+        ) 
+        values(
+        #{departmentId},
+        #{departmentName},
+        #{departmentParent},
+        #{departmentEmployee}) 
+        ]]>
+	</insert>
+
+	<update id="updateDepartment" parameterType="Department">
+		update b_department set
+		_departmentName=#{departmentName},
+		_departmentParent=#{departmentParent},
+		_departmentEmployee=#{departmentEmployee}
+		where _departmentId=#{departmentId}
+	</update>
+
+	<delete id="deleteDepartment" parameterType="int">
+		delete from b_department where
+		_departmentId=#{departmentId}
+	</delete>
+	
+	<select id="findDepartmentByid" parameterType="int" resultMap="department">
+		select * from b_department where _departmentId=#{departmentId}
+	</select>
+	
+	<select id="findByUser" parameterType="String" resultMap="department">
+		select * from b_department where _departmentId = #{userName}
+	</select>
+
+	<select id="findAll" parameterType="map" resultMap="department">
+		select * from b_department order by _departmentName desc
+		limit #{intPageCount},#{pageSize}
+	</select>
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from b_department
+	</select>
+	
+	
+	
+</mapper>

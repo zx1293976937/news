@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"   
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:/spring/mysql.properties" />
+	</bean>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close" dependency-check="none">
+		<!-- 
+		<property name="driverClass">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>jdbc:mysql://localhost/test</value>
+		</property>
+		<property name="user">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value>root</value>
+		</property>
+ -->
+ <!-- PJX修改 -->
+ 		<!-- 基本属性 url、user、password -->  
+ 		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost/beian?useUnicode=true&amp;characterEncoding=utf-8"/>
+		<property name="user" value="root"/>
+		<property name="password" value="bhsa"/>
+		
+		<!-- 初始链接数 -->
+		<property name="initialPoolSize" value="2"/>
+		
+		<!-- 最小链接数 -->
+		<property name="minPoolSize" value="1"/>
+		
+		<!-- 最大连接数  -->
+		<property name="maxPoolSize" value="20"/>
+		
+		<!-- 在当前连接数耗尽的时候，一次获取的新的连接数 -->
+		<property name="maxIdleTime" value="1800"/>
+		
+		<!-- 在当前连接数耗尽的时候，一次获取的新的连接数 -->
+		<property name="acquireIncrement" value="2"/>
+		
+		<!-- 在数据库中获取新连接失败后重复尝试次数 默认30 -->
+		<property name="acquireRetryAttempts"><value>30</value></property>
+		
+	</bean>
+
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<!-- *************************getter && setter bean************************* -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+
+	<!-- *************************userbean************************* -->
+	<bean id="userService" class="com.tjdzj.www.serviceImpl.UserServiceImpl">
+		<property name="userDao" ref="userDao" />
+	</bean>
+	<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.UserDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************provincebean************************* -->
+	<bean id="provinceService" class="com.tjdzj.www.serviceImpl.ProvinceServiceImpl">
+		<property name="provinceDao" ref="provinceDao" />
+	</bean>
+	<bean id="provinceDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.ProvinceDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************lawsbean************************* -->
+	<bean id="lawsService" class="com.tjdzj.www.serviceImpl.LawsServiceImpl">
+		<property name="lawsDao" ref="lawsDao" />
+	</bean>
+	<bean id="lawsDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.LawsDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************regularbean************************* -->
+	<bean id="regularService" class="com.tjdzj.www.serviceImpl.RegularServiceImpl">
+		<property name="regularDao" ref="regularDao" />
+	</bean>
+	<bean id="regularDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.RegularDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************documentbean************************* -->
+	<bean id="documentService" class="com.tjdzj.www.serviceImpl.DocumentServiceImpl">
+		<property name="documentDao" ref="documentDao" />
+	</bean>
+	<bean id="documentDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.DocumentDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************lstandardsbean************************* -->
+	<bean id="lstandardsService" class="com.tjdzj.www.serviceImpl.LstandardsServiceImpl">
+		<property name="lstandardsDao" ref="lstandardsDao" />
+	</bean>
+	<bean id="lstandardsDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.LstandardsDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+
+	
+	<!-- *************************lawagencybean************************* -->
+	<bean id="lawagencyService" class="com.tjdzj.www.serviceImpl.LawagencyServiceImpl">
+		<property name="lawagencyDao" ref="lawagencyDao" />
+	</bean>
+	<bean id="lawagencyDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.LawagencyDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************employeebean************************* -->
+	<bean id="employeeService" class="com.tjdzj.www.serviceImpl.EmployeeServiceImpl">
+		<property name="employeeDao" ref="employeeDao" />
+	</bean>
+	<bean id="employeeDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.EmployeeDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************enforcementbean************************* -->
+	<bean id="enforcementService" class="com.tjdzj.www.serviceImpl.EnforcementServiceImpl">
+		<property name="enforcementDao" ref="enforcementDao" />
+	</bean>
+	<bean id="enforcementDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.EnforcementDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************propagandabean************************* -->
+	<bean id="propagandaService" class="com.tjdzj.www.serviceImpl.PropagandaServiceImpl">
+		<property name="propagandaDao" ref="propagandaDao" />
+	</bean>
+	<bean id="propagandaDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.PropagandaDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************trainbean************************* -->
+	<bean id="trainService" class="com.tjdzj.www.serviceImpl.TrainServiceImpl">
+		<property name="trainDao" ref="trainDao" />
+	</bean>
+	<bean id="trainDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.TrainDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************policybean************************* -->
+	<bean id="policyService" class="com.tjdzj.www.serviceImpl.PolicyServiceImpl">
+		<property name="policyDao" ref="policyDao" />
+	</bean>
+	<bean id="policyDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.PolicyDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<!-- *************************newsbean************************* -->
+	<bean id="newsService" class="com.tjdzj.www.serviceImpl.NewsServiceImpl">
+		<property name="newsDao" ref="newsDao" />
+	</bean>
+	<bean id="newsDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.NewsDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+</beans> 

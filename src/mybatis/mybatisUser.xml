@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.UserDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="User" id="user" >
+		<result property="userId" column="_userId" />
+		<result property="userName" column="_userName" />
+		<result property="trueName" column="_trueName" />
+		<result property="passWord" column="_passWord" />
+		<result property="privilege" column="_privilege" /> 
+		<result property="phone" column="_phone" />
+		<result property="address" column="_address" />
+		<result property="zipcode" column="_zipcode" /> 
+		<result property="inchargeMent" column="_inchargeMent" />
+		<result property="departmentId" column="_departmentId" />
+		<result property="parentUnit" column="_parentUnit" />
+		<result property="userCode" column="_userCode" />
+		<result property="proName" column="_proName" />
+		<result property="userSex" column="_userSex" />
+		<result property="mobilePhone" column="_mobilePhone" />
+		<result property="mailBox" column="_mailBox" />
+	</resultMap>
+	
+	<insert id="insertUser" parameterType="user">  
+     <![CDATA[ 
+        insert into b_user(
+        _userId,
+        _userName,
+        _trueName,
+        _passWord,
+        _privilege,
+        _phone,
+        _address,
+        _zipcode,
+        _departmentId,
+        _inchargeMent,
+        _parentUnit,
+        _userCode,
+        _proName,
+        _userSex,
+        _mobilePhone,
+        _mailBox
+        ) 
+        values(
+        #{userId},
+        #{userName},
+        #{trueName},
+        #{passWord},
+        #{privilege},
+        #{phone},
+        #{address},
+        #{zipcode},
+        #{departmentId},
+        #{inchargeMent},
+        #{parentUnit},
+        #{userCode},
+        #{proName},
+        #{userSex},
+        #{mobilePhone},
+        #{mailBox}
+        ) 
+        ]]>
+	</insert>
+<!-- update b_user set _departmentId = '01100' where _inchargeMent = '安徽省地震局'; -->
+	<update id="updateUser" parameterType="user">
+		update b_user set
+		_userName=#{userName},
+		_trueName=#{trueName},
+		_passWord=#{passWord},
+		_privilege=#{privilege},
+		_phone=#{phone},
+		_address=#{address},
+		_zipcode=#{zipcode},
+		_departmentId=#{departmentId},
+		_inchargeMent=#{inchargeMent},
+		_parentUnit=#{parentUnit},
+		 _userCode=#{userCode},
+        _proName=#{proName},
+        _userSex=#{userSex},
+        _mobilePhone=#{mobilePhone},
+        _mailBox=#{mailBox}
+		where _userId=#{userId}
+	</update>
+
+	<delete id="deleteUser" parameterType="int">
+		delete from b_user where
+		_userId=#{userId}
+	</delete>
+	
+	
+	<select id="userLogin" parameterType="User" resultMap="user">
+		<![CDATA[select * from b_user where _proName=#{userName} and binary _passWord=#{passWord}]]>
+	</select>
+
+	<select id="findAll" resultMap="user">
+		select * from b_user order by _userCode asc
+	</select>
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_user
+	</select>
+	
+	<select id="findByParentUnitCount" resultType="int">
+		select count(*) from
+		b_user where _parentUnit=#{inchargeMent}
+	</select>
+	
+
+	<select id="findUserByid" parameterType="String" resultMap="user">
+		select *
+		from b_user where _userId=#{userId}
+	</select>
+
+	<select id="findByUserName" parameterType="String" resultMap="user">
+		select * from b_user where _userName=#{userName}
+	</select>
+	<select id="findByProName" parameterType="String" resultMap="user">
+		select * from b_user where _proName=#{proName}
+	</select>
+	
+	
+	<select id="findByInchargeMent" parameterType="map" resultMap="user">
+		select
+		* from b_user order by _userCode asc
+		limit
+		#{intPageCount},#{pageSize}
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="user">
+		select
+		* from b_user where _parentUnit=#{inchargeMent} order by _userCode asc
+		limit 
+		#{intPageCount},#{pageSize}
+	</select>
+	
+	<select id="findProvince" parameterType="String" resultType="string">
+		select distinct _inchargeMent from b_user where _privilege = '2';
+	</select>
+
+	
+</mapper>

@@ -1,0 +1,21 @@
+*{margin:0px; padding:0px;}
+body{  font-size:12px;}
+body img{ border:0px;}
+.clear{ clear:both;}
+ul{list-style-type: none;}
+a{ color:#687f96; text-decoration:none;cursor:pointer;}
+.zhong { width:1180px; margin:0 auto;}
+.clearfix:after{content:"&nbsp;";display:block;height:0;clear:both;visibility:hidden;}.clearfix{display:inline-block;}
+.menu{ background:#00508A; height:52px;padding-left:0px;}
+.menusel{ float:left;width:150px; position:relative; margin-top:20px;}
+.menusel h2{ font-size:1.125em; height:32px; font-weight:normal; text-align:center;}
+.menusel a{text-align:center; width:160px;height:25px;  position:relative; z-index:2; color:#fff;}
+.position{ position:absolute; z-index:1; margin-left:-10px;}
+.menusel ul{width:180px; background:#608ab3;margin-top: -1px; position:relative; z-index:1; display:none;}
+.menusel .block{ display:block;}
+.typeul li{border-bottom:1px solid #fff;width:150px; position:relative; float:left; height:35px; line-height:35px; padding-left:0px; text-align:center;}
+.typeul{  margin-left:0;  }
+.typeul ul{left:130px; top:0; position:absolute;}
+.fli{ margin-top:1px;}
+.menusel .lli{ border:none; }
+.zhongb { width:800px; margin:0 auto;}

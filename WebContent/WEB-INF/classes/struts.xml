@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+  <!DOCTYPE struts PUBLIC  
+      "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+      "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 所有的action都应该放在对应的package下 -->
+	
+	 <package name="user" namespace="/" extends="struts-default">  
+		<!-- <interceptors>
+			<interceptor name="sessionout" class="com.tjdzj.www.interceptor.SessionInterceptor"></interceptor>
+			<interceptor-stack name="dizhen">
+		         <interceptor-ref name="defaultStack"/>
+		         <interceptor-ref name="sessionout" />
+			</interceptor-stack>
+		</interceptors>
+		默认调用拦截器
+		<default-interceptor-ref name="dizhen" />
+		定义全局result
+		<global-results>
+			<result name="loginresult" type="redirect">/front.jsp</result>
+		</global-results> -->
+		
+		<!-- <action name="user_*" class="com.tjdzj.www.action.UserAction" method="{1}"> 
+		
+			定义逻辑视图和物理资源之间的映射
+			<result name="success" type="redirectAction">user_queryAllUser.action</result>  
+            <result name="input">/index.jsp</result>  
+            <result name="userList">/userList.jsp</result>  
+            <result name="addUser">/userAdd.jsp</result>  
+            <result name="updateUser">/userUpdate.jsp</result> 
+		</action> -->
+		
+		<!-- action name="user_add" class="com.tjdzj.www.action.UserAction" method="add">
+			
+			<result name="success">/index.jsp</result>
+		</action> -->
+		<action name="user_*" class="com.tjdzj.www.action.UserAction" method="{1}">
+			<result name="listUser" type="redirect">user_queryAllUser</result>
+			<result name="listuser">/user/listUser.jsp</result>
+			<result name="addUser">/user/addUser.jsp</result> 
+			<result name="relogin" type="redirect">info_toFront</result>
+			<result name="updateUser">/user/userUpdate.jsp</result> 
+			<result name="success">/manage.jsp</result> 
+			<!-- <result name="logout">/login.jsp</result> --> 
+			<result name="logout" type="redirect">info_toFront</result>
+			<result name="readdUser">/user/addUser.jsp</result>
+			<result name="toUpdateSuccess">modify_password.jsp </result>
+			 <result name="updatePassWordSuccess" type="redirect">user_toUpdate</result>
+			<result name="test">/error.jsp</result>
+		</action>
+		
+		<action name="province_*" class="com.tjdzj.www.action.ProvinceAction" method="{1}">
+			<result name="listProvinceUI" type="redirect">province_queryAllProvince</result>
+			<result name="listprovince">/province/listprovince.jsp</result>
+			<result name="addProvince">/province/addprovince.jsp</result> 
+			<result name="updateProvince">/province/updateprovince.jsp</result> 
+			<result name="success">/manage.jsp</result> 
+			<result name="readdProvince">/province/addprovince.jsp</result> 
+		</action>
+		
+		<action name="laws_*" class="com.tjdzj.www.action.LawsAction" method="{1}" >
+			<result name="listlawsUI" type="redirect">laws_queryAllLaws</result>
+			<result name="listlaws">/laws/listlaws.jsp</result>
+			<result name="addlaws">/laws/addlaws.jsp</result> 
+			<result name="updatelaws">/laws/updatelaws.jsp</result>
+			<result name="lawsfrontlist">/laws/lawsfrontlist.jsp</result>
+			<result name="front" type="freemarker">/template/laws.ftl</result>
+			<result name="error">/error.jsp</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+		<action name="regular_*" class="com.tjdzj.www.action.RegularAction" method="{1}" >
+			<result name="listregularUI" type="redirect">regular_queryAllRegular</result>
+			<result name="listregular">/regular/listregular.jsp</result>
+			<result name="addregular">/regular/addregular.jsp</result> 
+			<result name="updateregular">/regular/updateregular.jsp</result>
+			<result name="regularfrontlist">/regular/regularfrontlist.jsp</result>
+			<result name="front" type="freemarker">/template/regular.ftl</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+		<action name="document_*" class="com.tjdzj.www.action.DocumentAction" method="{1}" >
+			<result name="listdocumentUI" type="redirect">document_queryAllDocument</result>
+			<result name="listdocument">/document/listdocument.jsp</result>
+			<result name="adddocument">/document/adddocument.jsp</result> 
+			<result name="updatedocument">/document/updatedocument.jsp</result>
+			<result name="documentfrontlist">/document/documentfrontlist.jsp</result>
+			<result name="front" type="freemarker">/template/document.ftl</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+		<action name="lstandards_*" class="com.tjdzj.www.action.LstandardsAction" method="{1}" >
+			<result name="listlstandardsUI" type="redirect">lstandards_queryAllLstandards</result>
+			<result name="listlstandards">/lstandards/listlstandards.jsp</result>
+			<result name="addlstandards">/lstandards/addlstandards.jsp</result> 
+			<result name="updatelstandards">/lstandards/updatelstandards.jsp</result>
+			<result name="lstandardsfrontlist">/lstandards/lstandardsfrontlist.jsp</result>
+			<result name="success">error.jsp</result>
+			<result name="front" type="freemarker">/template/lstandards.ftl</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+
+		<action name="lawagency_*" class="com.tjdzj.www.action.LawagencyAction" method="{1}" >
+			<result name="listlawagencyUI" type="redirect">lawagency_queryAllLawagency</result>
+			<result name="listlawagency">/lawagency/listlawagency.jsp</result>
+			<result name="addlawagency">/lawagency/addlawagency.jsp</result> 
+			<result name="updatelawagency">/lawagency/updatelawagency.jsp</result>
+			<result name="lawagencyfrontlist">/lawagency/lawagencyfrontlist.jsp</result>
+			<result name="front" type="freemarker">/template/lawagency.ftl</result>
+		</action>
+		
+
+		<action name="employee_*" class="com.tjdzj.www.action.EmployeeAction" method="{1}" >
+			<result name="listemployeeUI" type="redirect">employee_queryAllEmployee</result>
+			<result name="listemployee">/employee/listemployee.jsp</result>
+			<result name="addemployee">/employee/addemployee.jsp</result> 
+			<result name="updateemployee">/employee/updateemployee.jsp</result>
+			<result name="front" type="freemarker">/template/employee.ftl</result>
+		</action>
+		<action name="enforcement_*" class="com.tjdzj.www.action.EnforcementAction" method="{1}" >
+			<result name="listenforcementUI" type="redirect">enforcement_queryAllEnforcement</result>
+			<result name="listenforcement">/enforcement/listenforcement.jsp</result>
+			<result name="addenforcement">/enforcement/addenforcement.jsp</result> 
+			<result name="updateenforcement">/enforcement/updateenforcement.jsp</result>
+			<result name="enforcementfrontlist">/enforcement/enforcementfrontlist.jsp</result>
+			<result name="success">error.jsp</result>
+			<result name="front" type="freemarker">/template/enforcement.ftl</result>
+		</action>
+		<action name="propaganda_*" class="com.tjdzj.www.action.PropagandaAction" method="{1}" >
+			<result name="listpropagandaUI" type="redirect">propaganda_queryAllPropaganda</result>
+			<result name="listpropaganda">/propaganda/listpropaganda.jsp</result>
+			<result name="addpropaganda">/propaganda/addpropaganda.jsp</result> 
+			<result name="updatepropaganda">/propaganda/updatepropaganda.jsp</result>
+			<result name="propagandafrontlist">/propaganda/propagandafrontlist.jsp</result>
+			<result name="front" type="freemarker">/template/propaganda.ftl</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+		<action name="train_*" class="com.tjdzj.www.action.TrainAction" method="{1}" >
+			<result name="listtrainUI" type="redirect">train_queryAllTrain</result>
+			<result name="listtrain">/train/listtrain.jsp</result>
+			<result name="addtrain">/train/addtrain.jsp</result> 
+			<result name="updatetrain">/train/updatetrain.jsp</result>
+			<result name="trainfrontlist">/train/trainfrontlist.jsp</result>
+			<result name="front" type="freemarker">/template/train.ftl</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+		<action name="policy_*" class="com.tjdzj.www.action.PolicyAction" method="{1}" >
+			<result name="listpolicyUI" type="redirect">policy_queryAllPolicy</result>
+			<result name="listpolicy">/policy/listpolicy.jsp</result>
+			<result name="addpolicy">/policy/addpolicy.jsp</result> 
+			<result name="updatepolicy">/policy/updatepolicy.jsp</result>
+			<result name="front" type="freemarker">/template/policy.ftl</result>
+		</action>
+		<action name="news_*" class="com.tjdzj.www.action.NewsAction" method="{1}" >
+			<result name="listnewsUI" type="redirect">news_queryAllNews</result>
+			<result name="listnews">/news/listnews.jsp</result>
+			<result name="addnews">/news/addnews.jsp</result> 
+			<result name="updatenews">/news/updatenews.jsp</result>
+			<result name="newsfrontlist">/news/newsfrontlist.jsp</result>
+			<result name="success">error.jsp</result>
+			<result name="front" type="freemarker">/template/news.ftl</result>
+			<result name="submitSuccess" type="redirect">news_queryAllNews</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+		<action name="anews_*" class="com.tjdzj.www.action.ApprovedNewsAction" method="{1}" >
+			<result name="toSuccess">/news/approveNews.jsp</result>
+			<result name="toHomeSuccess">/home.jsp</result>
+			<result name="toNewsFrontSuccess">/news/newsfrontlist.jsp</result>
+			<result name="saveSuccess" type="redirect">anews_approvedNews</result>
+			<result name="getCountSuccess">/lookCount.jsp</result>
+		</action>
+		<action name="info_*" class="com.tjdzj.www.action.FrontAction" method="{1}">
+			<result name="toFrontSuccess">front.jsp</result>
+			<result name="success">home.jsp</result>
+		</action>
+		<action name="statics_*" class="com.tjdzj.www.action.StaticsAction" method="{1}">
+			<result name="success">/statics/totalstatics.jsp</result>
+			<result name="empty">error.jsp</result>
+		</action>
+		<action name="download_*" class="com.tjdzj.www.action.DownloadAction" method="{1}">
+			<result name="empty">error.jsp</result>
+		</action>
+	</package>
+</struts> 

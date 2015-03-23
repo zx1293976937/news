@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.EnforcementDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Enforcement" id="enforcement">
+		<result property="enforcementId" column="_enforcementId" />
+		<result property="enforcementName" column="_enforcementName" />
+		<result property="enforcementProperty" column="_enforcementProperty" />
+		<result property="enforcementIncharge" column="_enforcementIncharge" />
+		<result property="enforcementInchargeSex" column="_enforcementInchargeSex" />
+		<result property="enforcementInchargePhone" column="_enforcementInchargePhone" />
+		<result property="enforcementInchargeEmail" column="_enforcementInchargeEmail" />
+		<result property="enforcementInchargeEB" column="_enforcementInchargeEB" />
+		<result property="enforcementInchargeBirthday" column="_enforcementInchargeBirthday" />
+		<result property="enforcementInchargeLN" column="_enforcementInchargeLN" />
+		<result property="enforcementUTime" column="_enforcementUTime" />
+		<result property="enforcementProvince" column="_enforcementProvince" />
+		<result property="enforcementParentUnit" column="_enforcementParentUnit" />
+		<result property="enforcementPublishUserId" column="_enforcementPublishUserId" />
+		<result property="enforcementFPTime" column="_enforcementFPtime"/>
+	</resultMap>
+
+
+	<insert id="insertEnforcement" parameterType="Enforcement">  
+     <![CDATA[ 
+        insert into b_enforcement(_enforcementId,
+		_enforcementName,
+		_enforcementProperty,
+		_enforcementIncharge,
+		_enforcementInchargeSex,
+		_enforcementInchargePhone,
+		_enforcementInchargeEmail,
+		_enforcementInchargeEB,
+		_enforcementInchargeBirthday,
+		_enforcementInchargeLN,
+		_enforcementUTime,
+		_enforcementProvince,
+		_enforcementParentUnit,
+		_enforcementPublishUserId,
+		_enforcementFPtime)
+        values(#{enforcementId},
+		#{enforcementName},
+		#{enforcementProperty},
+		#{enforcementIncharge},
+		#{enforcementInchargeSex},
+		#{enforcementInchargePhone},
+		#{enforcementInchargeEmail},
+		#{enforcementInchargeEB},
+		#{enforcementInchargeBirthday},
+		#{enforcementInchargeLN},
+		#{enforcementUTime},
+		#{enforcementProvince},
+		#{enforcementParentUnit},
+		#{enforcementPublishUserId},
+		#{enforcementFPTime}) 
+        ]]>
+	</insert>
+
+	<update id="updateEnforcement" parameterType="Enforcement">
+		update
+		b_enforcement
+		set
+		_enforcementName=#{enforcementName},
+		_enforcementProperty=#{enforcementProperty},
+		_enforcementIncharge=#{enforcementIncharge},
+		_enforcementInchargeSex=#{enforcementInchargeSex},
+		_enforcementInchargePhone=#{enforcementInchargePhone},
+		_enforcementInchargeEmail=#{enforcementInchargeEmail},
+		_enforcementInchargeEB=#{enforcementInchargeEB},
+		_enforcementInchargeBirthday=#{enforcementInchargeBirthday},
+		_enforcementInchargeLN=#{enforcementInchargeLN},
+		_enforcementUTime=#{enforcementUTime},
+		_enforcementProvince=#{enforcementProvince},
+		_enforcementParentUnit=#{enforcementParentUnit},
+		_enforcementPublishUserId=#{enforcementPublishUserId},
+		_enforcementFPtime=#{enforcementFPTime}
+		where _enforcementId=#{enforcementId}
+	</update>
+
+	<delete id="deleteEnforcement" parameterType="int">
+		delete from
+		b_enforcement
+		where _enforcementId=#{enforcementId}
+	</delete>
+
+	<select id="findEnforcementAll" resultMap="enforcement">
+		select * from
+		b_enforcement
+	</select>
+
+	<select id="findEnforcementByid" parameterType="int" resultMap="enforcement">
+		select * from b_enforcement where _enforcementId=#{enforcementId}
+	</select>
+
+
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_enforcement
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_enforcement  where _enforcementProvince=#{inchargeMent} or _enforcementParentUnit = #{inchargeMent}
+		
+	</select>
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_enforcement where
+		_enforcementPublishUserId=#{enforcementPublishUserId}
+	</select>
+	
+	
+	
+	<select id="findEnforcementByUser" parameterType="map"
+		resultMap="enforcement">
+		select * from b_enforcement where _enforcementPublishUserId
+		= #{userId}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _enforcementName like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fpifyQuery !=null and fpifyQuery!=''">
+				And _enforcementFPtime = '${fpifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_enforcementUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		order by
+		_enforcementName desc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+		<select id="findByParentUnit" parameterType="map" resultMap="enforcement">
+		select * from b_enforcement where _enforcementProvince = #{inchargeMent} or _enforcementParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _enforcementName like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fpifyQuery !=null and fpifyQuery!=''">
+				And _enforcementFPtime = '${fpifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_enforcementUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		order by
+		_enforcementProvince desc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findEnforcementByAll" parameterType="map" resultMap="enforcement">
+		select
+		* from b_enforcement 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _enforcementName like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fpifyQuery !=null and fpifyQuery!=''">
+				And _enforcementFPtime = '${fpifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_enforcementUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		</where>
+		order by _enforcementName desc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+
+	<select id="findTopTen" resultMap="enforcement">
+		select * from b_enforcement order by _enforcementName desc limit 0,6
+	</select>
+
+	<select id="findEnforcement" resultType="String">
+		select _enforcementName from b_enforcement order by _enforcementProvince asc
+	</select>
+</mapper>

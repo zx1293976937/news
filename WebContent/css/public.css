@@ -1,0 +1,165 @@
+html {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+body {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+div {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+span {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+h1 {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+h2 {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+h3 {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+h4 {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+h5 {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+h6 {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+p {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+a {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+img {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+strong {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+dl {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+dt {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+dd {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+ol {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+ul {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+li {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+fieldset {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+form {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+label {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+legend {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+table {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; text-align:left;
+}
+caption {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+tbody {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+tfoot {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+thead {
+	margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor;
+}
+body {
+	margin: 0px; padding: 0px; font-family: ËÎÌו,serif; font-size: 18px;
+}
+html {
+	margin: 0px; padding: 0px; font-family: ËÎÌו,serif; font-size: 12px;
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+
+th{
+font-weight:normal;color:rgb(0, 71, 157);overflow: hidden;font-size: 18px; padding-left:15px; text-align:left;   
+}
+
+td{
+font-weight:normal;overflow: hidden;font-size: 18px; padding-left:15px; text-align:left;   
+}
+
+input {
+	vertical-align: middle;
+}
+select {
+	vertical-align: middle;
+}
+a {
+	text-decoration: none;
+	color: rgb(0, 71, 157);
+}
+a:link {
+	color: rgb(0, 71, 157);
+}
+a:visited {
+	color: rgb(0, 71, 157);
+}
+a:hover {
+	color: rgb(255, 0, 0);
+}
+a:active {
+	color: rgb(0, 71, 157);
+}
+#dindex {
+	background: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+.showdindex_1_6 {
+	background: url("/pre_images/showdindex_1_6.gif") repeat-x; border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(31, 141, 218); border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid;
+}
+.showindex_2_5 {
+	padding-bottom: 5px;
+}
+.showindex_2_5 a {
+	width: 100%; height: 61px; line-height: 61px; font-size: 14px; font-weight: bold; display: block;
+}
+.showindex_2_5 #zhenjiFlag {
+	left: 50%; margin-left: -190px; filter: Dropshadow(offx=1,offy=0,color=#ffffff) Dropshadow(offx=0,offy=1,color=#ffffff) Dropshadow(offx=0,offy=-1,color=#ffffff) Dropshadow(offx=-1,offy=0,color=#ffffff); position: absolute; cursor: pointer;
+}
+.showindex_2_5 a:link {
+	color: rgb(178, 0, 3);
+}
+.showindex_2_5 a:visited {
+	color: rgb(178, 0, 3);
+}
+.showindex_2_5 a:hover {
+	color: rgb(178, 0, 3);
+}
+.showindex_2_5 a:active {
+	color: rgb(178, 0, 3);
+}
+.showindex_2_5 p {
+	background: url("/pre_images/tjdzj_dtPIC.jpg") no-repeat; width: 100%; height: 90px; margin-top: 3px;
+}
+.zhong { width:970px; margin:0 auto;}
+s{color:red;}

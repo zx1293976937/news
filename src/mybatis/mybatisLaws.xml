@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tjdzj.www.dao.LawsDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Laws" id="laws">
+		<id property="lawsId" column="_lawsId" />
+		<result property="lawsTitle" column="_lawsTitle" />
+		<result property="lawsContent" column="_lawsContent" />
+		<result property="lawsSTime" column="_lawsSTime" />
+		<result property="lawsITime" column="_lawsITime" />
+		<result property="lawsETime" column="_lawsETime" />
+		<result property="lawsPublisher" column="_lawsPublisher" />
+		<result property="lawsProvince" column="_lawsProvince" />
+		<result property="lawsUTime" column="_lawsUTime" />
+		<result property="lawsParentUint" column="_lawsParentUint" />
+		<result property="lawsPublishUserId" column="_lawsPublishUserId" />
+		<result property="lawsDepartmentId" column="_lawsDepartmentId" />
+		<result property="lawsField" column="_lawsField"/>
+		<result property="numCount" column="numCount"/>
+		<!-- <association property="User" column="_lawsPublishUserId" select="com.tjdzj.www.dao.UserDao.findUserByid"></association> -->
+	</resultMap>
+
+	<!-- suncc 多余字段：_lawsDepartmentId -->
+	<insert id="insertLaws" parameterType="laws">  
+     <![CDATA[ 
+        insert into b_laws(
+        _lawsId,
+        _lawsTitle,
+        _lawsContent,
+        _lawsSTime,
+        _lawsITime,
+        _lawsETime,
+        _lawsPublisher,
+        _lawsProvince,
+        _lawsUTime,
+        _lawsParentUint,
+        _lawsPublishUserId,
+		_lawsField) 
+        values(
+        #{lawsId},
+        #{lawsTitle},
+        #{lawsContent},
+        #{lawsSTime},
+        #{lawsITime},
+        #{lawsETime},
+        #{lawsPublisher},
+        #{lawsProvince},
+        #{lawsUTime},
+        #{lawsParentUint},
+        #{lawsPublishUserId},
+		#{lawsField}) 
+        ]]>
+	</insert>
+	<!-- suncc 多余字段：_lawsDepartmentId -->
+	<update id="updateLaws" parameterType="laws">
+		update b_laws
+		set
+		_lawsTitle=#{lawsTitle}
+		,_lawsContent=#{lawsContent}
+		,_lawsSTime=#{lawsSTime}
+		,_lawsITime=#{lawsITime}
+		,_lawsETime=#{lawsETime}
+		,_lawsPublisher=#{lawsPublisher}
+		,_lawsProvince=#{lawsProvince}
+		,_lawsUTime=#{lawsUTime}
+		,_lawsParentUint=#{lawsParentUint}
+		,_lawsPublishUserId=#{lawsPublishUserId}
+		,_lawsField=#{lawsField}
+		where
+		_lawsId=#{lawsId}
+	</update>
+
+	<delete id="deleteLaws" parameterType="int">
+		delete from b_laws where
+		_lawsId=#{lawsId}
+	</delete>
+
+	<select id="findAllLaws" resultMap="laws">
+		select * from b_laws
+	</select>
+
+	<select id="findLawsByid" parameterType="int" resultMap="laws">
+		select *
+		from b_laws where _lawsId=#{lawsId}
+	</select>
+
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_laws
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_laws  where _lawsProvince=#{inchargeMent} or _lawsParentUint = #{inchargeMent}
+	</select>
+	
+	
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_laws where _lawsPublishUserId=#{lawsPublishUserId}
+	</select>
+	
+	
+	
+	<select id="findLawsByUser" parameterType="map" resultMap="laws">
+		select * from b_laws where _lawsPublishUserId = #{userId}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _lawsTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fieldclassifyQuery !=null and fieldclassifyQuery!=''">
+				And _lawsField = '${fieldclassifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_lawsSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _lawsUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _lawsTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _lawsSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _lawsITime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _lawsETime 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _lawsPublisher 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="laws">
+		select * from b_laws where _lawsProvince = #{inchargeMent} or _lawsParentUint = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _lawsTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fieldclassifyQuery !=null and fieldclassifyQuery!=''">
+				And _lawsField = '${fieldclassifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_lawsSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _lawsProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _lawsTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _lawsSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _lawsITime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _lawsETime 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _lawsPublisher 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findLawsByAll" parameterType="map" resultMap="laws">
+		select
+		* from b_laws 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _lawsTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fieldclassifyQuery !=null and fieldclassifyQuery!=''">
+				And _lawsField = '${fieldclassifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_lawsSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery!=''">
+				And _lawsParentUint = #{provinceQuery}
+			</if>
+		</where>
+		<if test="fieldQuery == 0">
+			order by _lawsUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _lawsTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _lawsSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _lawsITime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _lawsETime 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _lawsPublisher 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+
+	<select id="findTopTen" resultMap="laws">
+		select * from b_laws order by _lawsUTime desc limit 0,6
+	</select>
+	
+	<!-- statistics -->
+	
+	<select id="queryByCity" parameterType="map" resultMap="laws">
+		select count(*) from b_laws where _lawsProvince = #(city)
+	</select>
+	
+	<select id="findProvinceCount" parameterType="String" resultType="int">
+		select count(*) from b_laws  where _lawsProvince=#{inchargeMent} or _lawsParentUint = #{inchargeMent}
+	</select>
+	
+	<select id="queryByTime" parameterType="map" resultMap="laws">
+		select count(*) from b_laws where _lawsUTime between #(starttime),#(endtime)
+	</select>
+	
+	<select id="findByCount" parameterType="map" resultMap="laws">
+		select count(_lawsId) as numCount ,_lawsProvince  from b_laws
+		<where>
+			<if test="yearsQuery !=null and yearsQuery !=''">
+				<![CDATA[AND  left(_lawsUTime,4) = #{yearsQuery}]]>
+			</if>
+			<if test="province !=null and province !=''">
+				And _lawsProvince = #{province}
+			</if>
+		</where>
+		group by _lawsProvince
+	</select>
+	
+	<!-- statistics -->
+</mapper>
+	

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.PropagandaDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Propaganda" id="propaganda">
+
+		<result property="propagandaId" column="_propagandaId" />
+		<result property="propagandaTitle" column="_propagandaTitle" />
+		<result property="propagandaContent" column="_propagandaContent" />
+		<result property="propagandaSTime" column="_propagandaSTime" />
+		<result property="propagandaETime" column="_propagandaETime" />
+		<result property="propagandaLocation" column="_propagandaLocation" />
+		<result property="propagandaRange" column="_propagandaRange" />
+		<result property="propagandaPeople" column="_propagandaPeople" />
+		<result property="propagandaOrgnizor" column="_propagandaOrgnizor" />
+		<result property="propagandaProvince" column="_propagandaProvince" />
+		<result property="propagandaParentUnit" column="_propagandaParentUnit" />
+		<result property="propagandaUTime" column="_propagandaUTime" />
+		<result property="propagandaPublishUserId" column="_propagandaPublishUserId" />
+		<result property="numCount" column="numCount"/>
+	</resultMap>
+
+
+	<insert id="insertPropaganda" parameterType="Propaganda">  
+     <![CDATA[ 
+        insert into b_propaganda(_propagandaId,
+        _propagandaTitle,
+        _propagandaContent,
+        _propagandaSTime,
+        _propagandaETime,
+        _propagandaLocation,
+        _propagandaRange,
+        _propagandaPeople,
+        _propagandaOrgnizor,
+        _propagandaUTime,
+        _propagandaProvince,
+        _propagandaParentUnit,
+        _propagandaPublishUserId) 
+        values(#{propagandaId},
+        #{propagandaTitle},
+        #{propagandaContent},
+        #{propagandaSTime},
+        #{propagandaETime},
+        #{propagandaLocation},
+        #{propagandaRange},
+        #{propagandaPeople},
+        #{propagandaOrgnizor},
+        #{propagandaUTime},
+        #{propagandaProvince},
+        #{propagandaParentUnit},
+        #{propagandaPublishUserId}) 
+        ]]>
+	</insert>
+
+	<update id="updatePropaganda" parameterType="Propaganda">
+		update b_propaganda
+		set
+		_propagandaTitle=#{propagandaTitle}
+		,_propagandaContent=#{propagandaContent}
+		,_propagandaSTime=#{propagandaSTime}
+		,_propagandaETime=#{propagandaETime}
+		,_propagandaLocation=#{propagandaLocation}
+		,_propagandaRange=#{propagandaRange}
+		,_propagandaPeople=#{propagandaPeople}
+		,_propagandaOrgnizor=#{propagandaOrgnizor}
+		,_propagandaUTime=#{propagandaUTime}
+		,_propagandaProvince=#{propagandaProvince}
+		,_propagandaParentUnit=#{propagandaParentUnit}
+		,_propagandaPublishUserId=#{propagandaPublishUserId}
+		where _propagandaId=#{propagandaId}
+	</update>
+
+	<delete id="deletePropaganda" parameterType="int">
+		delete from b_propaganda
+		where _propagandaId=#{propagandaId}
+	</delete>
+
+	<select id="findPropagandaAll" resultMap="propaganda">
+		select * from b_propaganda
+	</select>
+
+	<select id="findPropagandaByid" parameterType="int" resultMap="propaganda">
+		select * from b_propaganda where _propagandaId=#{propagandaId}
+	</select>
+	
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_propaganda
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_propaganda  where _propagandaProvince=#{inchargeMent} or _propagandaParentUnit = #{inchargeMent}
+		
+	</select>
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_propaganda where _propagandaPublishUserId=#{propagandaPublishUserId}
+	</select>
+	
+	<select id="findPropagandaByUser" parameterType="map" resultMap="propaganda">
+		select * from b_propaganda where _propagandaPublishUserId = #{userId} 
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _propagandaTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+		    <if test="peopleQuery !=null and peopleQuery!=''">
+				And _propagandaPeople ='${peopleQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_propagandaSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _propagandaUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _propagandaTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _propagandaSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _propagandaLocation 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _propagandaPeople 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _propagandaOrgnizor 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="propaganda">
+		select * from b_propaganda where _propagandaProvince = #{inchargeMent} or _propagandaParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _propagandaTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+		    <if test="peopleQuery !=null and peopleQuery!=''">
+				And _propagandaPeople ='${peopleQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_propagandaSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _propagandaProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _propagandaTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _propagandaSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _propagandaLocation 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _propagandaPeople 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _propagandaOrgnizor 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findPropagandaByAll" parameterType="map" resultMap="propaganda">
+		select
+		* from b_propaganda 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _propagandaTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+		    <if test="peopleQuery !=null and peopleQuery!=''">
+				And _propagandaPeople ='${peopleQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_propagandaSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery!=''">
+				And _propagandaParentUnit = #{provinceQuery}
+			</if>
+		</where>
+		<if test="fieldQuery == 0">
+			order by _propagandaUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _propagandaTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _propagandaSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _propagandaLocation 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _propagandaPeople 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _propagandaOrgnizor 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findProvinceCount" parameterType="String" resultType="int">
+		select count(*) from b_propaganda  where _propagandaProvince=#{inchargeMent} or _propagandaParentUnit = #{inchargeMent}
+	</select>
+
+	<select id="findTopTen" resultMap="propaganda">
+		select * from b_propaganda order by _propagandaUTime  desc limit 0,6
+	</select>
+	
+	<select id="findByCount" parameterType="map" resultMap="propaganda">
+		select count(_propagandaId) as numCount ,_propagandaProvince  from b_propaganda
+		<where>
+			<if test="yearsQuery !=null and yearsQuery !=''">
+				<![CDATA[AND  left(_propagandaUTime,4) = #{yearsQuery}]]>
+			</if>
+			<if test="province !=null and province !=''">
+				And _propagandaProvince = #{province}
+			</if>
+		</where>
+		group by _propagandaProvince
+	</select>
+
+</mapper>

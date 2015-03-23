@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.RegularDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Regular" id="regular">
+		<result property="regularId" column="_regularId" />
+		<result property="regularNumber" column="_regularNumber" />
+		<result property="regularTitle" column="_regularTitle" />
+		<result property="regularContent" column="_regularContent" />
+		<result property="regularSTime" column="_regularSTime" />
+		<result property="regularITime" column="_regularITime" />
+		<result property="regularETime" column="_regularETime" />
+		<result property="regularPublisher" column="_regularPublisher" />
+		<result property="regularProvince" column="_regularProvince" />
+		<result property="regularUTime" column="_regularUTime" />
+		<result property="regularParentUnit" column="_regularParentUnit" />
+		<result property="regularPublishUserId" column="_regularPublishUserId" />
+		<result property="regularField" column="_regularField" />
+		<result property="numCount" column="numCount"/>
+	</resultMap>
+
+
+	<insert id="insertRegular" parameterType="Regular">  
+     <![CDATA[ 
+        insert into b_regular(_regularId,
+        _regularNumber,
+        _regularTitle,
+        _regularContent,
+        _regularSTime,
+        _regularITime,
+        _regularETime,
+        _regularPublisher,
+        _regularProvince,
+        _regularUTime,
+        _regularParentUnit,
+        _regularPublishUserId,
+		_regularField) 
+        values(#{regularId},
+        #{regularNumber},
+        #{regularTitle},
+        #{regularContent},
+        #{regularSTime},
+        #{regularITime},
+        #{regularETime},
+        #{regularPublisher},
+        #{regularProvince},
+        #{regularUTime},
+        #{regularParentUnit},
+        #{regularPublishUserId},
+		#{regularField}) 
+        ]]>
+        
+	</insert>
+	
+	<update id="updateRegular" parameterType="Regular">
+		update b_regular
+		set _regularNumber=#{regularNumber}
+		,_regularTitle=#{regularTitle}
+		,_regularContent=#{regularContent}
+		,_regularSTime=#{regularSTime}
+		,_regularITime=#{regularITime}
+		,_regularETime=#{regularETime}
+		,_regularPublisher=#{regularPublisher}
+		,_regularProvince=#{regularProvince}
+		,_regularUTime=#{regularUTime}
+		,_regularParentUnit=#{regularParentUnit}
+		,_regularPublishUserId=#{regularPublishUserId}
+		,_regularField=#{regularField}
+		where _regularId=#{regularId}
+	</update>
+	
+	<delete id="deleteRegular" parameterType="int">
+		delete from	b_regular where _regularId=#{regularId}
+	</delete>
+	
+	<select id="findRegularAll" resultMap="regular">
+		select * from b_regular
+	</select>
+
+	<select id="findRegularByid" parameterType="int" resultMap="regular">
+		select * from b_regular where _regularId=#{regularId}
+	</select>
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_regular
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_regular  where _regularProvince=#{inchargeMent} or _regularParentUnit = #{inchargeMent}
+	</select>
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_regular where _regularPublishUserId=#{regularPublishUserId}
+	</select>
+	
+	
+	
+	<select id="findRegularByUser" parameterType="map" resultMap="regular">
+		select * from b_regular where _regularPublishUserId = #{userId}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _regularTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fieldclassifyQuery !=null and fieldclassifyQuery!=''">
+				And _regularField = '${fieldclassifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_regularSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _regularUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _regularTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _regularSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _regularITime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _regularETime 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _regularPublisher 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="regular">
+		select * from b_regular where _regularProvince = #{inchargeMent} or _regularParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _regularTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fieldclassifyQuery !=null and fieldclassifyQuery!=''">
+				And _regularField = '${fieldclassifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_regularSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _regularProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _regularTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _regularSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _regularITime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _regularETime 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _regularPublisher 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	<!-- staticies -->
+	<select id="findRegularByAll" parameterType="map" resultMap="regular">
+		select
+		* from b_regular 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _regularTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fieldclassifyQuery !=null and fieldclassifyQuery!=''">
+				And _regularField = '${fieldclassifyQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_regularSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery!=''">
+				And _regularParentUnit = #{provinceQuery}
+			</if>
+		</where>
+		<if test="fieldQuery == 0">
+			order by _regularUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _regularTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _regularSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _regularITime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _regularETime 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _regularPublisher 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+
+	<select id="findProvinceCount" parameterType="String" resultType="int">
+		select count(*) from b_regular  where _regularProvince=#{inchargeMent} or _regularParentUnit = #{inchargeMent}
+	</select>
+
+	<select id="findTopTen" resultMap="regular">
+		select * from b_regular order by _regularUTime  desc limit 0,6
+	</select>
+	
+	<select id="findByCount" parameterType="map" resultMap="regular">
+		select count(_regularId) as numCount ,_regularProvince  from b_regular
+		<where>
+			<if test="yearsQuery !=null and yearsQuery !=''">
+				<![CDATA[AND  left(_regularUTime,4) = #{yearsQuery}]]>
+			</if>
+			<if test="province !=null and province !=''">
+				And _regularProvince = #{province}
+			</if>
+		</where>
+		group by _regularProvince
+	</select>
+	
+
+</mapper>

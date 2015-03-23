@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.NewsDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="News" id="news">
+		<result property="newsId" column="_newsId" />
+		<result property="newsTitle" column="_newsTitle" />
+		<result property="newsContent" column="_newsContent" />
+		<result property="newsUTime" column="_newsUTime" />
+		<result property="newsProvince" column="_newsProvince" />
+		<result property="newsParentUnit" column="_newsParentUnit" />
+		<result property="newsPublishUserId" column="_newsPublishUserId" />
+		<result property="submitFlg" column="_submitFlg" />
+		<result property="type" column="_type" />
+		<result property="intPageCount" />
+		<result property="numCount" />
+		<result property="newsATime" column="_newsATime" />
+	</resultMap>
+
+	<!-- <parameterMap type="map" id="paramMap"> <parameter property="pubulisher" 
+		javaType="com.tjdzj.www.model.News" jdbcType="OTHER" /> <parameter property="pageSize" 
+		javaType="int" jdbcType="NUMERIC" /> </parameterMap> -->
+
+
+	<insert id="insertNews" parameterType="News">  
+     <![CDATA[ 
+        insert into b_news(_newsId,
+        _newsTitle,
+        _newsContent,
+        _newsUTime,
+        _newsProvince,
+        _newsParentUnit,
+        _newsPublishUserId,
+        _submitFlg,
+        _type,
+        _newsATime) 
+        values(#{newsId},
+        #{newsTitle},
+        #{newsContent},
+        #{newsUTime},
+        #{newsProvince},
+        #{newsParentUnit},
+        #{newsPublishUserId},
+        #{submitFlg},
+        #{type},
+        #{newsATime}) 
+        ]]>
+	</insert>
+
+	<update id="updateNews" parameterType="News">
+		update b_news
+		set
+		_newsTitle=#{newsTitle}
+		,_newsContent=#{newsContent}
+		,_newsUTime=#{newsUTime}
+		,_newsProvince=#{newsProvince}
+		,_newsParentUnit=#{newsParentUnit}
+		,_newsPublishUserId=#{newsPublishUserId}
+		,_submitFlg=#{submitFlg}
+		,_type=#{type}
+		,_newsATime=#{newsATime}
+		where
+		_newsId=#{newsId}
+	</update>
+
+	<delete id="deleteNews" parameterType="int">
+		delete from b_news where
+		_newsId=#{newsId}
+	</delete>
+
+	<select id="findAllNews" resultMap="news">
+		select * from b_news
+	</select>
+
+	<select id="findNewsByid" parameterType="int" resultMap="news">
+		select *
+		from b_news where _newsId=#{newsId}
+	</select>
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from b_news
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_news  where _newsProvince=#{inchargeMent} or _newsParentUnit = #{inchargeMent}
+	</select>
+
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_news where _newsPublishUserId=#{newsPublishUserId}
+	</select>
+
+	<select id="findNewsByNum" resultMap="news">
+		select * from b_news order
+		by _newsUTime desc limit #{intPageCount},3
+	</select>
+
+	<!-- parameterType === map -->
+	<select id="findNewsByUser" parameterType="map" resultMap="news">
+		select * from b_news where _newsPublishUserId = #{userId} 
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _newsTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_newsUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _newsUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _newsTitle 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="news">
+		select * from b_news where _newsProvince = #{inchargeMent} or _newsParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _newsTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_newsUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _newsProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _newsTitle 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+
+	<select id="findNewsByAll" parameterType="map" resultMap="news">
+		select * from b_news
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _newsTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_newsUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery !=''">
+				And _newsParentUnit = #{provinceQuery}
+			</if>
+			<if test="approveQuery == 1 or approveQuery == 2">
+				And _submitFlg = #{approveQuery}
+			</if>
+			<if test="type !=null and type !=''">
+				And (_type like CONCAT('%',#{type}) or _type like CONCAT(#{type},'%') or _type like CONCAT('%',#{type},'%') or _type = #{type})
+			</if>
+		</where> 
+		<if test="fieldQuery == 0">
+			order by _newsUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _newsTitle 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	
+	<select id="findNewsByApprove" parameterType="map" resultMap="news">
+		select * from b_news
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _newsTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_newsUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery !=''">
+				And _newsParentUnit = #{provinceQuery}
+			</if>
+			<if test="approveQuery == 1 or approveQuery == 2">
+				And _submitFlg = #{approveQuery}
+			</if>
+			<if test="type !=null and type !=''">
+				And (_type like CONCAT('%',#{type}) or _type like CONCAT(#{type},'%') or _type like CONCAT('%',#{type},'%') or _type = #{type})
+			</if>
+		</where> 
+		order by _newsATime desc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findNewsByCount" parameterType="map" resultMap="news">
+		select SUM((LENGTH(b_news._type) - LENGTH(REPLACE(b_news._type,",","")) + 1)) as numCount ,_newsProvince from b_news
+		<where>
+			_submitFlg = 2
+			<if test="yearsQuery !=null and yearsQuery!=''">
+				<![CDATA[AND  left(_newsUTime,4) = #{yearsQuery}]]>
+			</if>
+			<if test="type !=null and type !=''">
+				And (_type like CONCAT('%',#{type}) or _type like CONCAT(#{type},'%') or _type like CONCAT('%',#{type},'%') or _type = #{type})
+			</if>
+			<if test="province !=null and province !=''">
+				And _newsProvince = #{province}
+			</if>
+		</where>
+		group by _newsProvince
+	</select>
+	
+	<select id="findByCount" parameterType="map" resultMap="news">
+		select count(_newsId) as numCount ,_newsProvince from b_news
+		<where>
+			_submitFlg = 2
+			<if test="yearsQuery !=null and yearsQuery!=''">
+				<![CDATA[AND  left(_newsUTime,4) = #{yearsQuery}]]>
+			</if>
+			<if test="type !=null and type !=''">
+				And (_type like CONCAT('%',#{type}) or _type like CONCAT(#{type},'%') or _type like CONCAT('%',#{type},'%') or _type = #{type})
+			</if>
+			<if test="province !=null and province !=''">
+				And _newsProvince = #{province}
+			</if>
+		</where>
+		group by _newsProvince
+	</select>
+	
+	<select id="findTopTen" resultMap="news">
+		select * from b_news order by _newsUTime desc limit 0,6
+	</select>
+
+
+</mapper>

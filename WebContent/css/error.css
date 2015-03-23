@@ -1,0 +1,153 @@
+body {
+	/*background: #dfdfdf url(../images/bg_noise.jpg) repeat;*/
+	font-family: Helvetica, Arial, sans-serif;
+	overflow: hidden;
+}
+.main {
+	position: relative;
+	width: 600px;
+	margin: 0 auto;
+	padding-top:8%;
+}
+.main .error_title h1 {
+	position: relative;
+	display: block;
+	font: 72px Arial, sans-serif;
+	color: #0061a5;
+	text-shadow: 2px 2px #f7f7f7;
+}
+.main .error_title h1 span.sub {
+	position: relative;
+	font-size: 21px;
+	top: -20px;
+	padding: 0 10px;
+	font-style: italic;
+}
+.main .error_title h1 span.icon {
+	position: relative;
+	display: inline-block;
+	top: -6px;
+	margin: 0 10px 5px 0;
+	background: #0061a5;
+	width: 50px;
+	height: 50px;
+	-moz-box-shadow: 1px 2px white;
+	-webkit-box-shadow: 1px 2px white;
+	box-shadow: 1px 2px white;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	color: #dfdfdf;
+	font-size: 46px;
+	line-height: 48px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 0;
+}
+.contentHeader {
+	width: 637px;
+	height: 12px;
+	background: url(../images/content_header.png);
+	background-repeat: no-repeat;
+}
+.contentMiddle {
+	width: 637px;
+	height: auto;
+	background: url(../images/content_middle.png);
+	background-repeat: repeat-y;
+	padding: 0 12px;
+}
+.contentFooter {
+	width: 637px;
+	height: 12px;
+	background: url(../images/content_footer.png);
+	background-repeat: no-repeat;
+}
+.main .container h1 {
+	font-size: 52px;
+	color: #8c8c8c;
+	letter-spacing: -4px;
+	margin-bottom:10px;
+	line-height:55px
+}
+.main .container h3 {
+	font-size: 15px;
+	color: #5c5c5c;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	padding-bottom:10px
+}
+.main .container ul {
+	margin-left: 30px;
+}
+.main .container ul li {
+	padding: 4px 0;
+}
+.main .container .utilities {
+	padding: 20px
+}
+.main .container .utilities .button {
+	display: inline-block;
+	height: 34px;
+	margin: 10px;
+	padding: 0 18px;
+	background: #006db0;
+	background-image: linear-gradient(bottom, #0062a6 0%, #0079bb 100%);
+	background-image: -o-linear-gradient(bottom, #0062a6 0%, #0079bb 100%);
+	background-image: -moz-linear-gradient(bottom, #0062a6 0%, #0079bb 100%);
+	background-image: -webkit-linear-gradient(bottom, #0062a6 0%, #0079bb 100%);
+	background-image: -ms-linear-gradient(bottom, #0062a6 0%, #0079bb 100%);
+	-moz-box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00acd8 inset;
+	-webkit-box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00acd8 inset;
+	box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00acd8 inset;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 34px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 -1px #00385a;
+	text-decoration: none;
+}
+.main .container .utilities .button:hover {
+	background: #0081c6;
+	background-image: linear-gradient(bottom, #006fbb 0%, #008dce 100%);
+	background-image: -o-linear-gradient(bottom, #006fbb 0%, #008dce 100%);
+	background-image: -moz-linear-gradient(bottom, #006fbb 0%, #008dce 100%);
+	background-image: -webkit-linear-gradient(bottom, #006fbb 0%, #008dce 100%);
+	background-image: -ms-linear-gradient(bottom, #006fbb 0%, #008dce 100%);
+	-moz-box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00c1e4 inset;
+	-webkit-box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00c1e4 inset;
+	box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00c1e4 inset;
+}
+.main .container .utilities .button:active {
+	background: #0081c6;
+	background-image: linear-gradient(bottom, #008dce 0%, #006fbb 100%);
+	background-image: -o-linear-gradient(bottom, #008dce 0%, #006fbb 100%);
+	background-image: -moz-linear-gradient(bottom, #008dce 0%, #006fbb 100%);
+	background-image: -webkit-linear-gradient(bottom, #008dce 0%, #006fbb 100%);
+	background-image: -ms-linear-gradient(bottom, #008dce 0%, #006fbb 100%);
+	-moz-box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00c1e4 inset;
+	-webkit-box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00c1e4 inset;
+	box-shadow: 0 0 0 1px #003255, 0 1px 3px rgba(0, 50, 85, 0.5), 0 1px #00c1e4 inset;
+}
+.main .container .utilities .button-container .button:focus {
+	color: black
+}
+.main .container .leftContent {
+	float:left;
+	height:auto
+}
+.main .container .leftContent .smiley {
+	width: 178px;
+	height:166px;
+	background: url(../images/01.png) no-repeat;
+	margin: 95px auto 50px auto;
+}
+.main .container .rightContent {
+	width:430px;
+	height: auto;
+	float: right;
+	margin: 60px auto 50px auto;
+}

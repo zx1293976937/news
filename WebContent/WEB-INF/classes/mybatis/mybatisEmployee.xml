@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.EmployeeDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Employee" id="employee">
+		<result property="employeeId" column="_employeeId" />
+		<result property="employeeNumber" column="_employeeNumber" />
+		<result property="employeeName" column="_employeeName" />
+		<result property="employeeBirthday" column="_employeeBirthday" />
+		<result property="employeePhone" column="_employeePhone" />
+		<result property="employeeCell" column="_employeeCell" />
+		<result property="employeeEmail" column="_employeeEmail" />
+		<result property="employeeIssuedBy" column="_employeeIssuedBy"/>
+		<result property="employeeIssuedTime" column="_employeeIssuedTime" />
+		<result property="employeeEffectiveDate" column="_employeeEffectiveDate" />
+		<result property="employeeFPTime" column="_employeeFPTime" />
+		<result property="employeeUTime" column="_employeeUTime" />
+		<result property="employeeProvince" column="_employeeProvince" />
+		<result property="employeeParentUnit" column="_employeeParentUnit" />
+		<result property="employeePublishUserId" column="_employeePublishUserId" />
+		<result property="employeeJob" column="_employeeJob" />
+		
+	</resultMap>
+
+	<!-- 
+		<result property="employeeEnforcement" column="_employeeEnforcement" />
+		_employeeEnforcement,
+		#{employeeEnforcement},
+		,_employeeEnforcement=#{employeeEnforcement}
+	 -->
+
+	<insert id="insertEmployee" parameterType="Employee">  
+     <![CDATA[ 
+        insert into b_employee(_employeeId,
+        _employeeNumber,
+        _employeeName,
+        _employeeBirthday,
+        _employeePhone,
+        _employeeCell,
+        _employeeEmail,
+        _employeeIssuedBy,
+        _employeeIssuedTime,
+        _employeeEffectiveDate,
+        _employeeFPTime,
+        _employeeUTime,
+        _employeeProvince,
+        _employeeParentUnit,
+        _employeePublishUserId,
+		_employeeJob) 
+        values(#{employeeId},
+        #{employeeNumber},
+        #{employeeName},
+        #{employeeBirthday},
+        #{employeePhone},
+        #{employeeCell},
+        #{employeeEmail},
+        #{employeeIssuedBy},
+        #{employeeIssuedTime},
+        #{employeeEffectiveDate},
+        #{employeeFPTime},
+        #{employeeUTime},
+        #{employeeProvince},
+        #{employeeParentUnit},
+        #{employeePublishUserId},
+		#{employeeJob}) 
+        ]]>
+	</insert>
+	
+	<update id="updateEmployee" parameterType="Employee">
+		update b_employee
+		set _employeeNumber=#{employeeNumber}
+		,_employeeName=#{employeeName}
+		,_employeeBirthday=#{employeeBirthday}
+		,_employeePhone=#{employeePhone}
+		,_employeeCell=#{employeeCell}
+		,_employeeEmail=#{employeeEmail}
+		,_employeeIssuedBy=#{employeeIssuedBy}
+		,_employeeIssuedTime=#{employeeIssuedTime}
+		,_employeeEffectiveDate=#{employeeEffectiveDate}
+		,_employeeFPTime=#{employeeFPTime}
+		,_employeeUTime=#{employeeUTime}
+		,_employeeProvince=#{employeeProvince}
+		,_employeeParentUnit=#{employeeParentUnit}
+		,_employeePublishUserId=#{employeePublishUserId}
+		,_employeeJob=#{employeeJob}
+		where _employeeId=#{employeeId}
+	</update>
+	
+	<delete id="deleteEmployee" parameterType="int">
+		delete from	b_employee where _employeeId=#{employeeId}
+	</delete>
+	
+	<select id="findEmployeeAll" resultMap="employee">
+		select * from b_employee
+	</select>
+
+	<select id="findEmployeeByid" parameterType="int" resultMap="employee">
+		select * from b_employee where _employeeId=#{employeeId}
+	</select>
+
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_employee
+	</select>
+	
+	
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_employee where _employeePublishUserId=#{employeePublishUserId}
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_employee  where _employeeProvince=#{inchargeMent} or _employeeParentUnit = #{inchargeMent}
+		
+	</select>
+	
+	<select id="findEmployeeByUser" parameterType="map" resultMap="employee">
+		select * from b_employee where _employeePublishUserId = #{userId} 
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _employeeName like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fPTimeQuery !=null and fPTimeQuery!=''">
+				And _employeeFPTime ='${fPTimeQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_employeeUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		order by
+		_employeeProvince desc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="employee">
+		select * from b_employee where _employeeProvince = #{inchargeMent} or _employeeParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _employeeName like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fPTimeQuery !=null and fPTimeQuery!=''">
+				And _employeeFPTime ='${fPTimeQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_employeeUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		order by
+		_employeeProvince desc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findEmployeeByAll" parameterType="map" resultMap="employee">
+		select * from b_employee 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _employeeName like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+			<if test="fPTimeQuery !=null and fPTimeQuery!=''">
+				And _employeeFPTime ='${fPTimeQuery}' 
+			</if>
+
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_employeeUTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		</where>
+		order by _employeeProvince desc
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	
+
+	<select id="findTopTen" resultMap="employee">
+		select * from b_employee order by _employeeUTime desc limit 0,6
+	</select>
+
+	
+
+</mapper>

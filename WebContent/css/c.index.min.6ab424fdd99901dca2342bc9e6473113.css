@@ -1,0 +1,2931 @@
+.category-box {
+	margin: 5px 0px 15px; border: 1px solid rgb(221, 221, 221); z-index: 999;
+}
+.category-box .check-box {
+	margin-right: 4px;
+}
+.category-box .hotbuy-box {
+	padding: 12px 12px 6px; color: rgb(153, 153, 153); border-bottom-color: rgb(228, 228, 228); border-bottom-width: 1px; border-bottom-style: solid; box-shadow: inset 0px -2px 2px #eaf1f5; background-color: rgb(243, 251, 255); -webkit-box-shadow: #eaf1f5 0 -2px 2px inset; -moz-box-shadow: #eaf1f5 0 -2px 2px inset;
+}
+.category-box .hotbuy-box a {
+	margin: 0px 1em 6px 0px; padding: 0px 2px; float: left; white-space: nowrap;
+}
+.category-box .hotbuy-box a:hover {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(0, 136, 204);
+}
+.category-box .hotbuy-box a.hot:hover {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(0, 136, 204);
+}
+.category-box .hotbuy-box a.this {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(0, 136, 204);
+}
+.category-box .hotbuy-box .Left {
+	margin: 0px 15px 0px 0px;
+}
+.category-box .hot {
+	color: rgb(204, 0, 0);
+}
+.category-box .cat_1 {
+	color: rgb(204, 0, 0);
+}
+.category-box .category-nav {
+	display: block; zoom: 1; background-color: rgb(255, 255, 255);
+}
+.category-box .category-nav .term {
+	padding: 0px 10px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.category-box .category-nav .term h1 {
+	line-height: 18px; font-size: 12px; font-weight: normal;
+}
+.category-box .category-nav .term .i-hot {
+	top: 1px; right: 248px;
+}
+.category-box .category-nav .l-title {
+	background-position: -432px -420px; width: 38px; height: 48px; text-align: center; color: rgb(153, 153, 153); line-height: 48px; padding-right: 10px; float: left; position: relative; z-index: 99;
+}
+.category-box .category-nav .no-bg.l-title {
+	background-image: none;
+}
+.category-box .category-nav .cont {
+	padding: 15px 0px 7px 12px; width: 870px; margin-left: -1px; border-left-color: rgb(224, 224, 224); border-left-width: 1px; border-left-style: solid; float: left; position: relative; z-index: 98;
+}
+.category-box .category-nav .cont .classify {
+	padding: 0px 20px; position: relative; z-index: 10;
+}
+.category-box .category-nav .cont .cat-p {
+	padding: 0px 20px 0px 40px;
+}
+.category-box .category-nav .cont .no-cat {
+	padding: 0px 20px 0px 5px;
+}
+.category-box .category-nav .cont .one-line {
+	height: 26px; overflow: hidden;
+}
+.category-box .category-nav .cont .icon-r {
+	left: 0px; top: 4px; width: 13px; height: 13px; display: block; position: absolute; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.com.5cc9b73955cfb21cea74f0c165929ebf.png"); background-repeat: no-repeat;
+}
+.category-box .category-nav .cont .icon-b {
+	left: 0px; top: 4px; width: 13px; height: 13px; display: block; position: absolute; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.com.5cc9b73955cfb21cea74f0c165929ebf.png"); background-repeat: no-repeat;
+}
+.category-box .category-nav .cont .icon-n {
+	left: 0px; top: 4px; width: 13px; height: 13px; display: block; position: absolute; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.com.5cc9b73955cfb21cea74f0c165929ebf.png"); background-repeat: no-repeat;
+}
+.category-box .category-nav .cont .icon-s {
+	left: 0px; top: 4px; width: 13px; height: 13px; display: block; position: absolute; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.com.5cc9b73955cfb21cea74f0c165929ebf.png"); background-repeat: no-repeat;
+}
+.category-box .category-nav .cont .icon-r {
+	background-position: -20px -104px;
+}
+.category-box .category-nav .cont .icon-b {
+	background-position: -20px -136px;
+}
+.category-box .category-nav .cont .icon-n {
+	background-position: -20px -146px;
+}
+.category-box .category-nav .cont .icon-s {
+	background-position: -20px -120px;
+}
+.category-box .category-nav .cont .cat {
+	left: 2px; top: 0px; position: absolute;
+}
+.category-box .category-nav .cont .sel {
+	margin: 0px 10px 0px 0px; padding: 0px 2px; float: left; position: relative;
+}
+.category-box .category-nav .cont .sel .arr {
+	border-width: 4px 4px 0px; border-style: solid solid none; border-color: rgb(0, 136, 204) transparent currentColor; top: 8px; width: 0px; height: 0px; right: 2px; line-height: 0; font-size: 0px; position: absolute; _border-color: #08c #fff #fff;
+}
+.category-box .category-nav .cont .on.sel {
+	border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(219, 219, 219) rgb(219, 219, 219) currentColor; background-color: rgb(249, 249, 249);
+}
+.category-box .category-nav .cont .on.sel .arr {
+	border-width: 0px 4px 4px; border-style: none solid solid; border-color: currentColor transparent rgb(0, 136, 204); width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #f9f9f9 #f9f9f9 #08c;
+}
+.category-box .category-nav .cont .on.sel a {
+	
+}
+.category-box .category-nav .cont .on.sel a:hover {
+	background: 0px; color: rgb(0, 136, 204);
+}
+.category-box .category-nav .cont .bb {
+	padding-top: 15px; margin-top: 7px; border-top-color: rgb(224, 224, 224); border-top-width: 1px; border-top-style: dotted; _margin-top: 8px;
+}
+.category-box .category-nav .cont .bb .popu-open {
+	top: 16px;
+}
+.category-box .category-nav .cont .bb .popu-close {
+	top: 16px;
+}
+.category-box .category-nav .cont .bb .icon-r {
+	top: 17px;
+}
+.category-box .category-nav .cont .bb .icon-b {
+	top: 17px;
+}
+.category-box .category-nav .cont .bb .icon-n {
+	top: 17px;
+}
+.category-box .category-nav .cont .bb .icon-s {
+	top: 17px;
+}
+.category-box .category-nav .cont .bb .cat {
+	top: 17px;
+}
+.category-box .category-nav .cont .frequent {
+	margin: -3px 0px 6px 20px; padding: 0px 15px; width: 798px; height: 30px; color: rgb(153, 102, 0); line-height: 30px; position: relative; background-color: rgb(255, 248, 217);
+}
+.category-box .category-nav .cont .frequent .close {
+	background-position: 0px -260px; top: 11px; width: 9px; height: 9px; right: 0px; position: absolute;
+}
+.category-box .category-nav .cont .frequent .close:hover {
+	background-position: -20px -260px; background-color: rgb(255, 248, 217) !important;
+}
+.category-box .category-nav .cont .frequent .fre-tips {
+	float: left;
+}
+.category-box .category-nav .cont .frequent .fre-tips .fre-very {
+	float: none;
+}
+.category-box .category-nav .cont .frequent .tg-btn {
+	margin: 3px 0px 0px 5px;
+}
+.category-box .category-nav .cont a.frequented {
+	background-position: -276px -343px; color: rgb(204, 0, 0); padding-left: 18px;
+}
+.category-box .category-nav .cont a.frequented:hover {
+	background-position: -276px -363px; color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont a.frequented-this {
+	background-position: -276px -363px; color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont .add {
+	color: rgb(102, 102, 102);
+}
+.category-box .category-nav .cont .add a {
+	margin: 0px; padding: 0px; float: none;
+}
+.category-box .category-nav .cont .add a.tg-btn {
+	margin: -3px 0px 0px 5px; padding-left: 2px; float: left;
+}
+.category-box .category-nav .cont .add a.tg-btn:hover {
+	background-color: rgb(246, 246, 246);
+}
+.category-box .category-nav .cont .add a:hover {
+	color: rgb(0, 136, 204); text-decoration: underline; background-color: transparent;
+}
+.category-box .category-nav .cont .add-tips {
+	float: left;
+}
+.category-box .category-nav .cont .set-btn {
+	background-position: -160px -325px; padding: 0px 0px 0px 22px; width: 78px; height: 20px; color: rgb(102, 102, 102); line-height: 20px; cursor: pointer;
+}
+.category-box .category-nav .cont .set-btn:hover {
+	background-position: -160px -345px; color: rgb(102, 102, 102); text-decoration: none; background-color: transparent;
+}
+.category-box .category-nav .cont .desc a {
+	margin-top: 8px; margin-bottom: 8px;
+}
+.category-box .category-nav .cont .desc .Left {
+	margin: 8px 10px 6px 0px;
+}
+.category-box .category-nav .cont .desc .txt {
+	color: rgb(153, 153, 153); margin-top: 8px; margin-bottom: 8px; margin-left: 12px; float: left;
+}
+.category-box .category-nav .cont .desc-bg {
+	margin: 2px 0px 15px 20px; padding: 5px 10px; border: 1px solid rgb(224, 224, 224); background-color: rgb(246, 246, 246);
+}
+.category-box .category-nav .cont .desc-bg-t {
+	border-color: rgb(212, 233, 243); padding: 7px 15px 4px; background-color: rgb(240, 250, 255);
+}
+.category-box .category-nav .cont .desc-sel-bg {
+	margin: 0px 0px 0px 20px; border: 1px solid rgb(220, 220, 220); top: -1px; position: relative; z-index: 1; background-color: rgb(249, 249, 249);
+}
+.category-box .category-nav .cont .desc-sel {
+	padding: 5px 10px;
+}
+.category-box .category-nav .cont .desc-sel a {
+	margin-top: 8px; margin-bottom: 8px;
+}
+.category-box .category-nav .cont .ul {
+	border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .desc-py-bg {
+	clear: both;
+}
+.category-box .category-nav .cont .desc-py {
+	zoom: 1;
+}
+.category-box .category-nav .cont .desc-py::after {
+	height: 0px; clear: both; display: block; content: "\20";
+}
+.category-box .category-nav .cont .desc-py .py {
+	float: left;
+}
+.category-box .category-nav .cont .desc-py .pyl {
+	float: left;
+}
+.category-box .category-nav .cont .desc-py .py {
+	background-position: -57px -166px; margin: 0px 10px 0px 0px; padding: 1px 0px 0px; width: 62px; height: 20px; text-align: center; color: rgb(102, 102, 102); background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.com.5cc9b73955cfb21cea74f0c165929ebf.png"); background-repeat: no-repeat;
+}
+.category-box .category-nav .cont .desc-py .pyl {
+	width: 730px;
+}
+.category-box .category-nav .cont .popu-open {
+	padding: 0px 2px; top: 0px; width: 13px; height: 18px; right: 0px; display: block; position: absolute; cursor: pointer; background-color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont .popu-close {
+	padding: 0px 2px; top: 0px; width: 13px; height: 18px; right: 0px; display: block; position: absolute; cursor: pointer; background-color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont .popu-open:hover {
+	background-color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont .popu-close:hover {
+	background-color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont .popu-open {
+	background-position: -250px -180px;
+}
+.category-box .category-nav .cont .popu-close {
+	background-position: -267px -180px;
+}
+.category-box .category-nav .cont a {
+	padding: 0px 2px; margin-right: 10px; margin-bottom: 8px; float: left; white-space: nowrap;
+}
+.category-box .category-nav .cont a:hover {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(0, 136, 204);
+}
+.category-box .category-nav .cont a.hot:hover {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(0, 136, 204);
+}
+.category-box .category-nav .cont a.this {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(0, 136, 204);
+}
+.category-box .category-nav .cont .num {
+	color: rgb(153, 153, 153);
+}
+.category-box .category-nav .cont a:hover .num {
+	color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont a.this .num {
+	color: rgb(255, 255, 255);
+}
+.category-box .category-nav .cont .tagline {
+	margin: 2px 10px 0px 0px; border: 1px solid rgb(220, 220, 220); height: 13px; float: left;
+}
+.category-box .category-nav .cont .dt {
+	padding: 0px; margin-bottom: 3px;
+}
+.category-box .category-nav .cont .dt span {
+	border-bottom-color: rgb(255, 255, 255); border-bottom-width: 2px; border-bottom-style: solid; display: block;
+}
+.category-box .category-nav .cont .dt span b {
+	font-weight: normal; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+.category-box .category-nav .term-bt {
+	padding-top: 8px; margin-top: 8px; border-top-color: rgb(224, 224, 224); border-top-width: 1px; border-top-style: dotted;
+}
+.category-box .categ-extend {
+	height: 30px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid; background-color: white;
+}
+.category-box .categ-extend .extend-btn {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(219, 219, 219) rgb(219, 219, 219); margin: 0px auto; width: 70px; height: 25px; text-align: center; line-height: 25px; display: block; position: relative; cursor: pointer; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px;
+}
+.category-box .categ-extend .extend-btn b {
+	top: 10px; margin-left: 4px; position: absolute;
+}
+.category-box .categ-extend .close.extend-btn b {
+	border-width: 4px 4px 0px; border-style: solid solid none; border-color: rgb(0, 136, 204) transparent currentColor; width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #08c #fff #fff;
+}
+.category-box .categ-extend .open.extend-btn b {
+	border-width: 0px 4px 4px; border-style: none solid solid; border-color: currentColor transparent rgb(0, 136, 204); width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #fff #fff #08c;
+}
+.category-box .categ-sort {
+	padding: 0px 10px 0px 20px; height: 38px; line-height: 38px; overflow: visible; position: relative; z-index: 445; background-color: rgb(245, 245, 245);
+}
+.category-box .categ-sort .categ-sort-cont {
+	width: 930px; height: 32px; padding-top: 6px;
+}
+.category-box .categ-sort .categ-sort-cont .sort-lab {
+	height: 25px; line-height: 25px; float: left; _padding-top: 5px;
+}
+.category-box .categ-sort .categ-sort-cont .sort-lab a {
+	color: rgb(51, 51, 51); margin-right: 15px;
+}
+.category-box .categ-sort .categ-sort-cont .sort-lab .check-box {
+	margin-top: 0px; vertical-align: middle; display: inline-block; position: relative; zoom: 1;
+}
+.category-box .categ-sort .categ-sort-cont .sort-lab label {
+	margin-right: 20px; cursor: pointer;
+}
+.category-box .categ-sort .categ-sort-cont .filter {
+	float: left; position: relative;
+}
+.category-box .categ-sort .categ-sort-cont .filter a:hover {
+	text-decoration: none;
+}
+.category-box .categ-sort .categ-sort-cont .filter .new {
+	color: rgb(204, 0, 0);
+}
+.sortbtn-wrap {
+	padding-right: 1px; margin-right: 25px; float: left;
+}
+.sortbtn-wrap a {
+	padding: 0px 10px; border: 1px solid rgb(188, 188, 188); height: 24px; text-align: left; color: rgb(51, 51, 51); line-height: 23px; float: left; _line-height: 22px;
+}
+.sortbtn-wrap a:hover {
+	border-color: rgb(187, 187, 187); color: rgb(255, 102, 0);
+}
+.sortbtn-wrap .last {
+	margin-right: 0px;
+}
+.sortbtn-wrap .sortbtn {
+	margin-right: -1px; background-repeat: repeat-x;
+}
+.sortbtn-wrap .sortbtn span {
+	height: 23px; line-height: 23px; padding-right: 12px; float: left; position: relative; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.com.5cc9b73955cfb21cea74f0c165929ebf.png"); background-repeat: no-repeat; _line-height: 25px;
+}
+.sortbtn-wrap .sortbtn:hover {
+	color: rgb(255, 102, 0); background-image: none; background-color: rgb(255, 255, 255);
+}
+.sortbtn-wrap .sort-default-on {
+	color: rgb(255, 102, 0); background-image: none; background-color: rgb(255, 255, 255);
+}
+.sortbtn-wrap .sort-sale-on {
+	color: rgb(255, 102, 0); background-image: none; background-color: rgb(255, 255, 255);
+}
+.sortbtn-wrap .sort-price-on {
+	color: rgb(255, 102, 0); background-image: none; background-color: rgb(255, 255, 255);
+}
+.sortbtn-wrap .sort-new-on {
+	color: rgb(255, 102, 0); background-image: none; background-color: rgb(255, 255, 255);
+}
+.sortbtn-wrap .sort-sale span {
+	background-position: right -143px;
+}
+.sortbtn-wrap .sort-sale:hover span {
+	background-position: right -163px;
+}
+.sortbtn-wrap .sort-sale-on span {
+	background-position: right -163px;
+}
+.sortbtn-wrap .sort-price span {
+	background-position: right -183px;
+}
+.sortbtn-wrap .sort-price:hover span {
+	background-position: right -203px;
+}
+.sortbtn-wrap .sort-price-on span {
+	background-position: right -203px;
+}
+.sortbtn-wrap .sort-price-on:hover span {
+	background-position: right -223px;
+}
+.sortbtn-wrap .sort-new-on span {
+	background-position: right -223px;
+}
+.suspended-nav {
+	margin: 0px; top: 0px; width: 958px; border-bottom-color: rgb(177, 177, 177); border-bottom-width: 1px; border-bottom-style: solid; position: fixed; box-shadow: 0px 1px 1px 0px #d7d7d7; -webkit-box-shadow: 0 1px 1px 0 #d7d7d7; -moz-box-shadow: 0 1px 1px 0 #d7d7d7;
+}
+.suspended-nav .less {
+	border-radius: 0px 3px 3px 0px; top: -2px; width: 35px; height: 35px; text-align: center; right: -35px; color: rgb(232, 232, 232); line-height: 21px; padding-top: 2px; font-size: 10px; display: block; position: absolute; box-shadow: inset 2px 0px 1px 0px #737373; background-color: rgb(156, 156, 156); -webkit-box-shadow: 2px 0 1px 0 #737373 inset; -moz-box-shadow: 2px 0 1px 0 #737373 inset;
+}
+.suspended-nav .less:hover {
+	text-decoration: none;
+}
+.suspended-nav .less .triangle {
+	border-width: 0px 5px 5px; border-style: none solid solid; border-color: currentColor transparent rgb(232, 232, 232); width: 0px; height: 0px; line-height: 0; overflow: hidden; font-size: 0px; vertical-align: top; display: inline-block; _border-color: #9c9c9c #9c9c9c #e8e8e8;
+}
+.suspended-nav .less .down.triangle {
+	border-top-color: rgb(232, 232, 232); border-bottom-color: currentColor; border-top-width: 5px; border-bottom-width: 0px; border-top-style: solid; border-bottom-style: none;
+}
+.s-search-box {
+	border-radius: 2px; border: 1px solid rgb(204, 204, 204); width: 244px; height: 26px; overflow: hidden; float: right; background-color: rgb(255, 255, 255);
+}
+.s-search-box .input {
+	outline: 0px; border: 0px currentColor; width: 210px; height: 26px; color: rgb(204, 204, 204); line-height: 26px; padding-left: 5px; font-size: 12px; float: left;
+}
+.s-search-box .search-btn {
+	background-position: -99px -221px; width: 26px; height: 28px; line-height: 26px; text-indent: -9999px; float: left; display: block; cursor: pointer;
+}
+.s-search-box .search-btn:hover {
+	background-color: transparent;
+}
+.s-search-box .focus {
+	color: rgb(0, 0, 0);
+}
+.category-box .category-nav .cont .dt:hover .d-1325 {
+	border-bottom-color: rgb(238, 50, 41); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1325 {
+	border-bottom-color: rgb(238, 50, 41); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-1326 {
+	border-bottom-color: rgb(54, 184, 84); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1326 {
+	border-bottom-color: rgb(54, 184, 84); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-1327 {
+	border-bottom-color: rgb(255, 216, 35); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1327 {
+	border-bottom-color: rgb(255, 216, 35); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-1328 {
+	border-bottom-color: rgb(50, 1, 119); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1328 {
+	border-bottom-color: rgb(50, 1, 119); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-1329 {
+	border-bottom-color: rgb(130, 48, 148); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1329 {
+	border-bottom-color: rgb(130, 48, 148); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-1330 {
+	border-bottom-color: rgb(206, 4, 122); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1330 {
+	border-bottom-color: rgb(206, 4, 122); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-3110 {
+	border-bottom-color: rgb(243, 86, 15); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-3110 {
+	border-bottom-color: rgb(243, 86, 15); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-1331 {
+	border-bottom-color: rgb(0, 140, 193); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1331 {
+	border-bottom-color: rgb(0, 140, 193); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-1332 {
+	border-bottom-color: rgb(145, 197, 219); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-1332 {
+	border-bottom-color: rgb(145, 197, 219); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6338 {
+	border-bottom-color: rgb(199, 175, 211); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6338 {
+	border-bottom-color: rgb(199, 175, 211); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6339 {
+	border-bottom-color: rgb(142, 35, 35); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6339 {
+	border-bottom-color: rgb(142, 35, 35); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-8135 {
+	border-bottom-color: rgb(244, 184, 210); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-8135 {
+	border-bottom-color: rgb(244, 184, 210); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2179 {
+	border-bottom-color: rgb(175, 39, 43); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2179 {
+	border-bottom-color: rgb(175, 39, 43); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-8195 {
+	border-bottom-color: rgb(175, 39, 43); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-8195 {
+	border-bottom-color: rgb(175, 39, 43); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2180 {
+	border-bottom-color: rgb(39, 91, 148); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2180 {
+	border-bottom-color: rgb(39, 91, 148); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-3057 {
+	border-bottom-color: rgb(47, 132, 153); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-3057 {
+	border-bottom-color: rgb(47, 132, 153); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6964 {
+	border-bottom-color: rgb(47, 132, 153); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6964 {
+	border-bottom-color: rgb(47, 132, 153); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2181 {
+	border-bottom-color: rgb(143, 20, 111); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2181 {
+	border-bottom-color: rgb(143, 20, 111); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-8095 {
+	border-bottom-color: rgb(201, 150, 22); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-8095 {
+	border-bottom-color: rgb(201, 150, 22); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-7643 {
+	border-bottom-color: rgb(0, 149, 120); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-7643 {
+	border-bottom-color: rgb(0, 149, 120); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-7644 {
+	border-bottom-color: rgb(150, 198, 24); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-7644 {
+	border-bottom-color: rgb(150, 198, 24); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2507 {
+	border-bottom-color: rgb(59, 149, 201); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2507 {
+	border-bottom-color: rgb(59, 149, 201); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2182 {
+	border-bottom-color: rgb(242, 231, 64); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2182 {
+	border-bottom-color: rgb(242, 231, 64); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6962 {
+	border-bottom-color: rgb(94, 33, 111); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6962 {
+	border-bottom-color: rgb(94, 33, 111); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6963 {
+	border-bottom-color: rgb(226, 109, 40); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6963 {
+	border-bottom-color: rgb(226, 109, 40); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6961 {
+	border-bottom-color: rgb(219, 137, 175); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6961 {
+	border-bottom-color: rgb(219, 137, 175); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6965 {
+	border-bottom-color: rgb(208, 0, 103); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6965 {
+	border-bottom-color: rgb(208, 0, 103); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-8196 {
+	border-bottom-color: rgb(154, 145, 176); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-8196 {
+	border-bottom-color: rgb(154, 145, 176); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2339 {
+	border-bottom-color: rgb(255, 220, 1); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2339 {
+	border-bottom-color: rgb(255, 220, 1); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2340 {
+	border-bottom-color: rgb(34, 82, 221); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2340 {
+	border-bottom-color: rgb(34, 82, 221); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2341 {
+	border-bottom-color: rgb(255, 96, 0); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2341 {
+	border-bottom-color: rgb(255, 96, 0); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-2557 {
+	border-bottom-color: rgb(56, 181, 73); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-2557 {
+	border-bottom-color: rgb(56, 181, 73); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-5797 {
+	border-bottom-color: rgb(216, 1, 92); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-5797 {
+	border-bottom-color: rgb(216, 1, 92); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6419 {
+	border-bottom-color: rgb(1, 177, 159); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6419 {
+	border-bottom-color: rgb(1, 177, 159); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-6426 {
+	border-bottom-color: rgb(181, 240, 0); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-6426 {
+	border-bottom-color: rgb(181, 240, 0); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-8219 {
+	border-bottom-color: rgb(0, 140, 193); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-8219 {
+	border-bottom-color: rgb(0, 140, 193); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-3198 {
+	border-bottom-color: rgb(11, 169, 93); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-3198 {
+	border-bottom-color: rgb(11, 169, 93); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-3199 {
+	border-bottom-color: rgb(255, 74, 59); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-3199 {
+	border-bottom-color: rgb(255, 74, 59); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-7094 {
+	border-bottom-color: rgb(240, 149, 9); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-7094 {
+	border-bottom-color: rgb(240, 149, 9); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-7095 {
+	border-bottom-color: rgb(0, 197, 255); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-7095 {
+	border-bottom-color: rgb(0, 197, 255); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .dt:hover .d-7096 {
+	border-bottom-color: rgb(167, 154, 218); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.category-box .category-nav .cont .this .d-7096 {
+	border-bottom-color: rgb(167, 154, 218); border-bottom-width: 2px; border-bottom-style: solid;
+}
+body {
+	background-color: rgb(246, 246, 246);
+}
+.nav-side {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.nav-side .b {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.nav-side .icon-side {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.main .discount {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.rating-member-list .infor .comment-entry blockquote {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.main-text .discountB {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.feature-list .icon {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.icon-soldout {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.site-rbtn {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.site-btn {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.editor-box .infor {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.classify .frequented {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.set-btn {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.frequented-list .item {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.frequented-list .item .close {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.classify a.frequented {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.deal-infor .lavetime-only {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.rating-score-box .rating {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.normal-table .cautioned .icon {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.category-nav .cont .popu-open {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.category-nav .cont .popu-close {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.hotbuy-box .popu-open {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.hotbuy-box .popu-close {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.weixin {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.recommend-box {
+	background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.icon_end.05caa86bc26c881c680a297496ab2cc0.png"); background-repeat: no-repeat;
+}
+.deals-list .draw-in {
+	bottom: -50px; color: rgb(153, 153, 153); line-height: 21px; font-size: 14px; font-weight: bold; position: relative;
+}
+.deals-list .pic {
+	height: 151px;
+}
+.rating-box .rating-drop .unfold {
+	vertical-align: middle; display: inline-block; position: relative; zoom: 1;
+}
+.rating-box .rating-drop .away {
+	vertical-align: middle; display: inline-block; position: relative; zoom: 1;
+}
+.share-wrap .copy {
+	color: rgb(51, 51, 51); margin-bottom: 10px;
+}
+.my-question .pages-wrap {
+	color: rgb(51, 51, 51); margin-bottom: 10px;
+}
+.limit-time .time li {
+	color: rgb(51, 51, 51); margin-bottom: 10px;
+}
+.my-question {
+	font-size: 14px;
+}
+.tg-question-box .box-cont {
+	padding: 15px 0px 15px 25px; min-height: 90px; _height: 90px;
+}
+.tg-discuss-box .box-cont {
+	padding: 15px 25px 40px;
+}
+.my-question h2 {
+	margin-bottom: 20px;
+}
+.my-question .buy {
+	background: rgb(232, 232, 232); width: 215px; height: 90px; margin-left: 10px;
+}
+.my-question .buy strong {
+	width: 100px; text-align: center; color: rgb(204, 0, 0); line-height: 90px; padding-left: 10px; font-size: 32px; font-weight: normal; float: left;
+}
+.discusses {
+	padding-bottom: 1px; font-size: 12px; margin-bottom: 30px;
+}
+.discusses p {
+	padding: 0px 10px;
+}
+.discusses .lr {
+	margin: 0px 5px;
+}
+.discusses .time {
+	color: rgb(153, 153, 153); margin-right: 5px;
+}
+.discusses .caption {
+	height: 24px; color: rgb(102, 102, 102); line-height: 24px; padding-left: 10px; font-size: 12px; font-weight: bold; margin-bottom: 20px; position: relative; background-color: rgb(230, 230, 223);
+}
+.discusses .count {
+	top: 0px; right: 20px; color: rgb(102, 102, 102); font-weight: normal; position: absolute;
+}
+.discusses .cont {
+	overflow: hidden; font-size: 14px; word-wrap: break-word;
+}
+.discuss {
+	margin-bottom: 40px;
+}
+.discuss .editor-discuss {
+	margin: 20px 20px 0px;
+}
+.msstar {
+	padding: 6px; height: 18px; background-color: rgb(232, 232, 232);
+}
+.rating-box {
+	margin-bottom: 20px;
+}
+.tradingQA .J_tab_1 .rating-box {
+	padding: 10px 10px 0px;
+}
+.J_tab .Pages a {
+	padding: 3px 4px;
+}
+.rating-box .rating-drop .unfold {
+	background-position: right -358px; width: 12px; height: 14px; line-height: 28px; font-size: 14px; margin-left: 3px; _margin-top: 8px;
+}
+.rating-box .rating-drop .away {
+	background-position: right -358px; width: 12px; height: 14px; line-height: 28px; font-size: 14px; margin-left: 3px; _margin-top: 8px;
+}
+.rating-box .rating-drop .away {
+	background-position: right -379px;
+}
+.rating-box .tit {
+	height: 30px; line-height: 30px; padding-left: 12px; font-size: 14px; font-weight: bold; border-left-color: rgb(255, 132, 0); border-left-width: 10px; border-left-style: solid; background-color: rgb(232, 232, 232);
+}
+.rating-box .tit .caption {
+	height: 30px; line-height: 30px; float: left;
+}
+.rating-box .tit .rating-drop {
+	padding-right: 10px; font-size: 12px; font-weight: normal; float: right; _padding-top: 6px;
+}
+.rating-box .tit .rating-expand {
+	float: right;
+}
+.rating-box .tit .rating-away {
+	float: right;
+}
+.rating-drop {
+	margin-left: 5px;
+}
+.rating-member-list li::after {
+	height: 0px; clear: both; font-size: 12px; display: block; content: "\20";
+}
+.rating-member-list li {
+	zoom: 1;
+}
+.rating-member-list li {
+	padding-bottom: 25px; margin-bottom: 25px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted; position: relative;
+}
+.rating-member-list .avatar {
+	width: 48px; height: 48px; margin-right: 10px; float: left; display: block;
+}
+.rating-member-list .infor {
+	width: 390px; font-size: 12px; float: left;
+}
+.rating-member-list .long.infor {
+	width: 610px;
+}
+.rating-member-list .infor .name {
+	color: rgb(102, 102, 102); margin-bottom: 12px; position: relative;
+}
+.rating-member-list .infor .name .float-right {
+	right: 0px; position: absolute;
+}
+.rating-member-list .infor .name .shelter {
+	color: rgb(153, 153, 153);
+}
+.rating-member-list .infor .comment-entry {
+	margin-bottom: 5px;
+}
+.rating-member-list .infor .comment-entry blockquote {
+	background-position: -290px -325px; padding-left: 18px;
+}
+.rating-member-list .infor .rating-expand {
+	padding-left: 18px;
+}
+.rating-member-list .infor .recommend {
+	margin-top: 10px; margin-left: 18px;
+}
+.rating-member-list .infor .recommend .dishes {
+	color: rgb(169, 169, 169); margin-bottom: 10px;
+}
+.rating-member-list .infor .recommend .dishes .title {
+	color: rgb(169, 169, 169); float: left;
+}
+.rating-member-list .infor .recommend .dishes .mes {
+	width: 300px; float: left;
+}
+.rating-member-list .infor .recommend .dishes .mes span {
+	color: rgb(169, 169, 169);
+}
+.rating-member-list .infor .recommend .dishes .name {
+	margin-right: 3px;
+}
+.rating-member-list .infor .recommend .dishes-show {
+	position: relative;
+}
+.rating-member-list .infor .recommend .dishes-show span img {
+	height: 68px; display: inline-block;
+}
+.rating-member-list .infor .recommend .dishes-show .enLargement {
+	padding: 4px; border: 1px solid rgb(232, 232, 232); left: 0px; top: 0px; width: 400px; height: 300px; position: absolute; z-index: 9999; background-color: rgb(255, 255, 255);
+}
+.assess-user-box .title {
+	color: rgb(51, 51, 51); padding-top: 5px; padding-left: 25px;
+}
+.assess-user-box .title .num {
+	color: rgb(255, 102, 0);
+}
+.star-rating .msstar0 {
+	background-position: 0px -140px;
+}
+.star-rating .msstar10 {
+	background-position: 0px -120px;
+}
+.star-rating .msstar20 {
+	background-position: 0px -100px;
+}
+.star-rating .msstar30 {
+	background-position: 0px -80px;
+}
+.star-rating .msstar35 {
+	background-position: 0px -60px;
+}
+.star-rating .msstar40 {
+	background-position: 0px -40px;
+}
+.star-rating .msstar45 {
+	background-position: 0px -20px;
+}
+.star-rating .msstar50 {
+	
+}
+.J_auto-load {
+	display: none;
+}
+.weixin-box {
+	margin-top: 18px;
+}
+.weixin {
+	background-position: -315px -553px; margin: 0px auto 15px; width: 84px; padding-left: 15px;
+}
+.recommend-box {
+	background-position: 560px 15px; padding: 20px; border: 1px solid rgb(222, 222, 222); color: rgb(51, 51, 51); margin-top: 20px; position: relative; background-color: rgb(244, 244, 244);
+}
+.icon-soldout {
+	background-position: right -50px; top: 0px; width: 55px; height: 55px; right: 0px; display: block; position: absolute;
+}
+.recommend-box .img {
+	width: 250px; margin-right: 10px; float: left;
+}
+.recommend-box .img img {
+	width: 250px;
+}
+.recommend-box .img a:hover {
+	background-color: transparent;
+}
+.recommend-box .infor {
+	width: 400px; float: right;
+}
+.recommend-box .title {
+	color: rgb(51, 51, 51); line-height: 32px; font-size: 16px; font-weight: bold;
+}
+.recommend-box .title a {
+	color: rgb(51, 51, 51); line-height: 32px; font-size: 16px; font-weight: bold;
+}
+.recommend-box .title a:hover {
+	color: rgb(51, 51, 51); text-decoration: underline; background-color: transparent;
+}
+.recommend-box .title .this {
+	color: rgb(255, 102, 0);
+}
+.recommend-box .title a .this {
+	color: rgb(255, 102, 0);
+}
+.recommend-box .price {
+	margin-bottom: 15px;
+}
+.recommend-box .price .item {
+	vertical-align: middle; display: inline-block; position: relative; zoom: 1;
+}
+.recommend-box .price .item {
+	margin-right: 30px;
+}
+.recommend-box .price .price-new {
+	font-size: 18px; font-weight: bold;
+}
+.recommend-box .price .original {
+	color: rgb(153, 153, 153);
+}
+.recommend-box .price .price-old {
+	text-decoration: line-through;
+}
+.recommend-box .tx {
+	padding: 12px 10px; border: 1px solid rgb(228, 228, 228); line-height: 18px; margin-bottom: 15px; background-color: rgb(252, 252, 252);
+}
+.recommend-box .tx .num {
+	color: rgb(255, 102, 0); font-size: 20px; font-weight: normal; margin-right: 5px;
+}
+.recommend-box .tx .text {
+	margin-right: 10px; float: left;
+}
+.site-rbtn {
+	background-position: -160px -254px; width: 80px; height: 25px; color: rgb(102, 102, 102); line-height: 25px; padding-left: 18px; float: left;
+}
+.site-rbtn:hover {
+	text-decoration: none;
+}
+.site-rbtn:hover span {
+	text-decoration: none;
+}
+.site-btn {
+	background-position: -160px -280px; width: 88px; color: rgb(255, 255, 255); padding-left: 10px; font-weight: bold; display: block; cursor: pointer;
+}
+.site-btn:hover {
+	text-decoration: none; cursor: pointer;
+}
+.celebrate-icon {
+	top: 200px; right: 50%; margin-right: 480px; display: none; position: fixed; z-index: 100000;
+}
+.celebrate-icon a {
+	display: block;
+}
+.app-download-icon {
+	left: 50%; top: 150px; margin-left: 480px; display: none; position: fixed; z-index: 999;
+}
+.app-download-icon .close {
+	top: 105px; right: 10px; color: rgb(153, 153, 153); font-size: 14px; position: absolute;
+}
+.eventad {
+	display: none; position: relative; z-index: 2000000; background-color: rgb(255, 81, 118);
+}
+.small.eventad {
+	background-color: rgb(255, 81, 118);
+}
+.eventad .img {
+	margin: 0px auto; width: 960px; overflow: hidden; font-size: 0px; display: block;
+}
+.eventad .img img {
+	display: block;
+}
+.eventad .close {
+	top: 0px; width: 30px; height: 30px; text-align: center; right: 0px; color: rgb(255, 255, 255); line-height: 27px; text-indent: 0px; font-size: 20px; display: block; position: absolute; border-bottom-left-radius: 30px; background-color: rgb(153, 153, 153);
+}
+.eventad .close:hover {
+	text-decoration: none; background-color: rgb(51, 51, 51);
+}
+.deal-ad {
+	height: 50px;
+}
+.deal-ad .deal-ad-cont {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/dacu.594a91ccf1d14ff2ae6c98617cba65f3.png") no-repeat 20px 0px; top: -18px; height: 57px; color: rgb(255, 108, 0); line-height: 57px; padding-left: 145px; font-size: 14px; display: block; position: relative;
+}
+.citylist-box {
+	padding: 34px 20px 20px; border: 1px solid rgb(219, 219, 219); overflow: hidden; position: relative; zoom: 1; background-color: rgb(255, 255, 255);
+}
+.enter-city h6 {
+	padding-bottom: 15px; font-weight: normal;
+}
+.enter-city h6 a {
+	color: rgb(51, 51, 51); font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 22px;
+}
+.enter-city h6 a .arr {
+	padding-left: 3px; font-family: simsun; font-size: 9px;
+}
+.hot-city {
+	padding: 0px 0px 30px 80px; overflow: hidden; font-size: 14px; margin-bottom: 25px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid; zoom: 1;
+}
+.hot-city strong {
+	width: 80px; color:rgb(0, 71, 157); margin-left: -80px; float: left;
+}
+.hot-city a {
+	color: rgb(0, 71, 157); margin-right: 15px;
+}
+.letter-city h6 {
+	color: rgb(0, 71, 157); padding-bottom: 25px; font-size: 14px;
+}
+.cityes-list {
+	overflow: hidden; margin-top: -15px; zoom: 1;
+}
+.cityes-list li {
+	padding: 18px 10px 18px 55px; overflow: hidden; margin-top: -1px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: dotted; zoom: 1;
+}
+.cityes-list li .tit {
+	width: 30px; height: 28px; text-align: center; color: rgb(0, 71, 157); line-height: 28px; font-family: Tahoma,Geneva,sans-serif; font-size: 14px; margin-left: -45px; float: left; background-color: rgb(229, 229, 229);
+}
+.cityes-list li .cityes {
+	margin: -12px 0px 0px -20px; width: 873px; overflow: hidden; float: left; zoom: 1;
+}
+.cityes-list li .cityes li {
+	margin: 17px 0px 0px -1px; padding: 0px 20px; line-height: 16px; border-top-color: currentColor; border-left-color: rgb(204, 204, 204); border-top-width: 0px; border-left-width: 1px; border-top-style: none; border-left-style: solid; float: left;
+}
+.cityes-list li .cityes li a {
+	color: rgb(0, 71, 157); font-size: 14px; white-space: nowrap;
+}
+.cityes-list li.active {
+	background-color: rgb(239, 239, 239);
+}
+.cityes-list li.active .tit {
+	color: rgb(255, 255, 255); background-color: rgb(255, 102, 0);
+}
+.citylist-box .filter {
+	padding: 10px 0px 30px; overflow: hidden; zoom: 1;
+}
+.citylist-box .filter strong {
+	color: rgb(255, 102, 0); padding-top: 1px; font-size: 14px; vertical-align: middle; float: left;
+}
+.filter .filter-sel {
+	color: rgb(255, 102, 0); padding-top: 1px; font-size: 14px; vertical-align: middle; float: left;
+}
+.citylist-box .filter strong {
+	padding-top: 2px;
+}
+.citylist-box .filter .filter-sel select {
+	height: 23px; margin-right: 10px;
+}
+.citylist-box .filter .tg-btn {
+	_margin-right: 0;
+}
+.cityes-contact {
+	padding: 30px 0px 20px; margin-top: 10px; border-top-color: rgb(219, 219, 219); border-top-width: 1px; border-top-style: solid;
+}
+.frequented-content-box .frequented-hd {
+	margin-bottom: 15px;
+}
+.frequented-content-box .frequented-hd .title {
+	font-weight: bold;
+}
+.frequented-content-box .frequented-hot {
+	color: rgb(204, 0, 0); margin-bottom: 5px;
+}
+.frequented-content-box .frequented-hot .hot {
+	padding-left: 4px; font-family: Arial; font-size: 8px;
+}
+.frequented-content-box {
+	margin-bottom: 30px;
+}
+.frequented-content-box .tips {
+	color: rgb(153, 153, 153);
+}
+.frequented-list li {
+	margin: 0px 6px 10px 0px; float: left;
+}
+.frequented-list .item {
+	background-position: -271px -380px; padding: 4px 10px 4px 26px; border: 1px solid rgb(222, 222, 222); height: 18px; color: rgb(102, 102, 102); line-height: 18px; float: left; white-space: nowrap; position: relative; cursor: pointer;
+}
+.frequented-list .item:hover {
+	border: 1px solid rgb(204, 204, 204); text-decoration: none;
+}
+.frequented-list .item .close {
+	background-position: -290px -310px; top: -4px; width: 12px; height: 11px; right: -4px; display: none; position: absolute;
+}
+.frequented-list .item .swf {
+	left: 1px; top: 1px; position: absolute;
+}
+.frequented-list .item:hover .close {
+	display: block;
+}
+.frequented-list .item-close .close {
+	display: block;
+}
+.frequented-add-list .item {
+	background-position: -271px -400px; background-color: rgb(244, 244, 244);
+}
+.frequented-add-list .item:hover {
+	background-position: -271px -380px; border: 1px solid rgb(222, 222, 222); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+.frequented-add-list .item-off {
+	background-position: -271px -420px; color: rgb(204, 204, 204); cursor: auto;
+}
+.frequented-add-list .item-off:hover {
+	background-position: -271px -420px; color: rgb(204, 204, 204); background-color: rgb(244, 244, 244);
+}
+.guide-background {
+	left: 0px; top: 0px; width: 100%; visibility: visible; filter: alpha(opacity=80); position: fixed; z-index: 2150; zoom: 1; opacity: 0.8; background-color: rgb(0, 0, 0); _position: absolute;
+}
+.guide-img {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.frequent-guide.1669802c36f96127c0ab21b6bea85ab8.png") no-repeat center; left: 230px; top: 60px; width: 726px; height: 520px; display: block; position: absolute; z-index: 2300; _background: url(http://si1.s1.dpfile.com/t/cssnew/img/c.frequent-guide-6.4cb69bc8a934108c6a46268b5e825956.png) no-repeat scroll center center transparent;
+}
+.guide-img .guide-btn {
+	left: 260px; top: 335px; width: 200px; height: 60px; position: absolute; z-index: 4000; cursor: pointer;
+}
+.guide-img-close {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.frequent-close.db0b78c44936798a34f6b20d1025ea39.png") no-repeat center; top: 0px; width: 58px; height: 58px; right: 0px; display: block; position: absolute; z-index: 2300; cursor: pointer; _background: url(http://si1.s1.dpfile.com/t/cssnew/img/c.frequent-close-6.fd98e340c2f11d68a2262e8ecd60165f.png) no-repeat scroll center center transparent;
+}
+.frequented-box {
+	padding: 70px 0px;
+}
+.frequented-box .title {
+	padding-left: 110px; margin-bottom: 20px;
+}
+.frequented-box .title .text {
+	color: rgb(51, 51, 51); line-height: 34px; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 22px; margin-right: 20px; float: left;
+}
+.frequented-box .title .text .num {
+	color: rgb(255, 102, 0);
+}
+.frequented-box .img {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.frequent-bg.0353572c1276003bf18fb1873c7a7b65.png") no-repeat; margin: 0px auto; width: 300px; height: 260px;
+}
+.frequented-box .tips {
+	color: rgb(153, 153, 153);
+}
+.index-deal-list {
+	width: 730px;
+}
+.index-deal-list .deal-box {
+	margin: 0px 10px 10px 0px; padding: 19px 19px 11px; border: 1px solid rgb(219, 219, 219); width: 310px; float: left; position: relative; background-color: rgb(255, 255, 255);
+}
+.index-deal-list .deal-dt-img {
+	width: 310px; height: 194px; position: relative;
+}
+.index-deal-list .deal-dt-img img {
+	width: 310px; height: 194px;
+}
+.index-deal-list .deal-dt-img .promotion-box {
+	background: url("http://si1.s1.dpfile.com/t/res/1111/phone_discount.ae4511f7b58f8ec014485a5a79b56494.png") no-repeat; width: 69px; height: 69px; right: 0px; bottom: 0px; position: absolute; z-index: 17;
+}
+.index-deal-list .deal-dt-img .state-box {
+	padding: 5px 10px; left: 0px; width: 290px; text-align: left; bottom: 0px; line-height: 22px; text-indent: 1em; font-size: 12px; display: none; filter: alpha(opacity=0); position: absolute; z-index: 18; opacity: 0; background-color: rgb(0, 0, 0);
+}
+.index-deal-list .deal-dt-img .state-box .icon {
+	background-position: -280px -474px; width: 8px; height: 17px; line-height: 0; font-size: 0px; display: block; position: absolute; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat; background-color: rgb(0, 0, 0);
+}
+.index-deal-list .deal-dt-img .state-box a {
+	width: 100%; color: rgb(255, 255, 255); text-decoration: none; display: block;
+}
+.index-deal-list .deal-title {
+	padding: 10px 0px 6px; color: rgb(51, 51, 51); overflow: hidden; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 18px;
+}
+.index-deal-list .deal-title a {
+	width: 17em; height: 28px; color: rgb(51, 51, 51); line-height: 28px; overflow: hidden; float: left; white-space: nowrap; word-wrap: normal; text-overflow: ellipsis; o-text-overflow: ellipsis;
+}
+.index-deal-list .deal-title a:hover {
+	text-decoration: none;
+}
+.index-deal-list .deal-title .nar {
+	width: 15em;
+}
+.index-deal-list .deal-title .tag {
+	margin: 5px 10px 0px 0px; padding: 0px 3px; height: 18px; color: rgb(255, 255, 255); line-height: 18px; font-size: 12px; font-weight: normal; float: left;
+}
+.index-deal-list .deal-title .tag-q {
+	background-color: rgb(104, 185, 173);
+}
+.index-deal-list .deal-title .tag-o {
+	background-color: rgb(254, 139, 99);
+}
+.index-deal-list .buy {
+	height: 55px; padding-right: 0px; margin-bottom: 12px;
+}
+.index-deal-list .buy .price {
+	width: 158px; color: rgb(255, 102, 0); line-height: 55px; padding-top: 2px; font-family: Helvetica,arial,sans-serif !important; font-size: 30px; font-weight: bold; float: left;
+}
+.index-deal-list .m-btn {
+	margin-top: 12px; float: right;
+}
+.index-deal-list .m-rbtn {
+	margin-top: 12px; float: right;
+}
+.index-deal-list .m-nbtn {
+	margin-top: 12px; float: right;
+}
+.index-deal-list .deal-infor {
+	color: rgb(102, 102, 102); padding-top: 8px; border-top-color: rgb(219, 219, 219); border-top-width: 1px; border-top-style: solid;
+}
+.index-deal-list .deal-infor .price {
+	font-family: Helvetica,arial,sans-serif !important; float: left;
+}
+.index-deal-list .deal-infor .count {
+	float: right;
+}
+.index-deal-more {
+	
+}
+.index-deal-more span {
+	
+}
+.index-deal-more:hover {
+	
+}
+.index-deal-more:hover span {
+	
+}
+.index-deal-more span {
+	width: 670px; color: rgb(0, 136, 204); font-size: 12px; font-weight: normal;
+}
+.index-deal-title {
+	margin: 65px 0px 15px; height: 30px;
+}
+.index-deal-title h2 {
+	color: rgb(51, 51, 51); line-height: 30px; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 22px; font-weight: normal; float: left;
+}
+.index-deal-title .subtitle {
+	color: rgb(102, 102, 102); line-height: 30px; margin-left: 15px; float: left;
+}
+.index-deal-title .subtitle .recent_region {
+	background-position: -280px -406px; padding-left: 10px; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.index-deal-title .subtitle .edit {
+	color: rgb(153, 153, 153);
+}
+.index-deal-view {
+	border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(219, 219, 219) rgb(219, 219, 219) currentColor; margin: 30px 0px 15px; background-color: rgb(245, 245, 245);
+}
+.index-view-recom .recent-view-list {
+	padding-bottom: 15px !important;
+}
+.index-deal-view .recent-view-title {
+	height: 45px; line-height: 45px; padding-left: 20px; font-weight: normal;
+}
+.index-deal-view .recent-view-title span {
+	color: rgb(0, 136, 204);
+}
+.index-deal-view .recent-view-list {
+	padding: 12px 0px 30px; overflow: hidden; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 255);
+}
+.index-deal-view .recent-view-list li {
+	width: 200px; padding-left: 28px; float: left; position: relative;
+}
+.index-deal-view .recent-view-list li .price {
+	color: rgb(255, 102, 0); font-size: 14px;
+}
+.index-deal-view .recent-view-list li .o-price {
+	color: rgb(153, 153, 153);
+}
+.index-deal-view .recent-view-list li .recom-worth {
+	margin-top: 2px; word-wrap: normal;
+}
+.index-deal-view .recent-view-list li .recom-tag {
+	padding: 1px 7px; right: 0px; bottom: -4px; color: rgb(255, 255, 255); text-decoration: none; margin-right: 8px; position: absolute; background-color: rgb(0, 136, 204);
+}
+.index-deal-view .recent-view-list li a {
+	color: rgb(51, 51, 51); font-size: 12px; font-weight: normal; float: left;
+}
+.index-deal-view .recent-view-list li a {
+	width: 16em; overflow: hidden; white-space: nowrap; word-wrap: normal; text-overflow: ellipsis; o-text-overflow: ellipsis;
+}
+.search-category-result {
+	background: rgb(255, 255, 255); border: 1px solid rgb(219, 219, 219); margin-bottom: 0px;
+}
+.search-result {
+	padding: 0px 18px; font-size: 12px; margin-bottom: 10px; zoom: 1;
+}
+.search-result a {
+	color: rgb(0, 136, 204);
+}
+.search-result::after {
+	height: 0px; clear: both; display: block; content: "\20";
+}
+.search-result .tips {
+	color: rgb(153, 153, 153); font-size: 12px;
+}
+.search-result .result {
+	color: rgb(255, 102, 0); font-weight: bold;
+}
+.search-result .invite-list {
+	color: rgb(102, 102, 102); margin-top: 40px;
+}
+.search-result .info {
+	width: 100%; line-height: 40px; font-size: 12px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: dashed; float: left;
+}
+.search-result .info img {
+	margin-right: 5px; vertical-align: text-top;
+}
+.search-result .info a {
+	float: right;
+}
+.search-result .info_ {
+	width: 100%; line-height: 40px; font-size: 12px; float: left;
+}
+.search-result .info_ a {
+	margin-left: 15px;
+}
+.search-result .name {
+	color: rgb(255, 102, 0);
+}
+.search-result .num {
+	color: rgb(255, 102, 0);
+}
+.search-result .more {
+	font-size: 12px; float: right;
+}
+.soldout-box {
+	padding: 20px 25px; border: 1px solid rgb(222, 222, 222); color: rgb(51, 51, 51); margin-bottom: 10px; background-color: rgb(255, 255, 255);
+}
+.soldout-box .guide {
+	background: 0px; margin: 0px auto 12px; width: 864px; padding-bottom: 12px; padding-left: 0px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.soldout-box .guide .dy {
+	padding-top: 12px; float: left;
+}
+.soldout-box .guide .explain {
+	height: 34px; line-height: 34px; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 24px; margin-right: 12px; margin-bottom: 5px; float: left;
+}
+.soldout-box .guide .tips {
+	color: rgb(102, 102, 102); line-height: 25px; margin-right: 5px; float: left;
+}
+.soldout-box .guide .input {
+	padding: 3px; border: 1px solid rgb(204, 204, 204); width: 160px; height: 16px; color: rgb(204, 204, 204); line-height: 16px; font-size: 12px; margin-right: 5px; float: left;
+}
+.soldout-box .guide .focus {
+	color: rgb(0, 0, 0);
+}
+.soldout-box .guide-more {
+	padding-left: 20px; font-size: 14px; margin-top: 15px;
+}
+.soldout-box .guide .fucksearch {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/outtitle.2ff53d1a5504adb06cfeba2be04abe13.png") no-repeat 0px 0px; width: 275px; text-indent: -9999px;
+}
+.soldout-box .guide .fucksearch2 {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/overtitle.68eb653e820ef0e7a92ab344a20f3681.png") no-repeat 0px -2px; width: 275px; text-indent: -9999px;
+}
+.soldout-box .otherdeal .tit {
+	margin: 0px auto 6px; width: 864px; font-size: 14px;
+}
+.soldout-box .otherdeal-list {
+	margin: 0px auto; width: 904px;
+}
+.soldout-box .pop-tip-box .cont {
+	padding: 6px 15px;
+}
+.otherdeal-list li {
+	padding: 0px 20px; width: 186px; float: left;
+}
+.otherdeal-list .thumb {
+	width: 186px; height: 116px; overflow: hidden; display: block;
+}
+.otherdeal-list .thumb {
+	background-color: rgb(245, 245, 245);
+}
+.soldout-box .otherdeal-list .thumb:hover {
+	background-color: rgb(245, 245, 245);
+}
+.otherdeal-list .thumb img {
+	width: 186px; height: 116px; display: block; position: relative;
+}
+.soldout-box .otherdeal-list img {
+	width: 186px; height: 116px;
+}
+.otherdeal-list .title {
+	margin: 5px 0px; height: 18px; overflow: hidden; font-weight: normal; display: block;
+}
+.otherdeal-list .title a {
+	color: rgb(51, 51, 51);
+}
+.otherdeal-list .title a:hover {
+	color: rgb(51, 51, 51); text-decoration: underline; background-color: rgb(255, 255, 255);
+}
+.otherdeal-list .sprite {
+	position: relative; z-index: 10;
+}
+.otherdeal-list .price {
+	color: rgb(204, 0, 0); font-size: 16px; font-weight: bold; margin-right: 8px;
+}
+.otherdeal-list .o-price {
+	color: rgb(153, 153, 153); text-decoration: line-through;
+}
+.otherdeal-list .tg-btn {
+	background-color: transparent;
+}
+.gl {
+	color: rgb(153, 153, 153); margin-top: 5px;
+}
+.gl a {
+	color: rgb(153, 153, 153); text-decoration: none;
+}
+.gl a:hover {
+	color: rgb(153, 153, 153); text-decoration: underline; background-color: rgb(246, 246, 246);
+}
+.main-Box {
+	border: 4px solid rgb(233, 233, 233); padding-bottom: 0px; margin-bottom: 10px; position: relative; z-index: 21;
+}
+.main-Box .box-wrap {
+	position: relative; z-index: 22;
+}
+.main-Box .box-cont {
+	border: 0px currentColor; padding-bottom: 20px;
+}
+.main-Box .deal-title {
+	padding: 10px 20px 22px; line-height: 1.2; font-family: "Microsoft YaHei",黑体,arial,sans-serif; position: relative; z-index: 20;
+}
+.main-Box .deal-title h1 {
+	color: rgb(17, 17, 17); line-height: 1.2; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 30px; font-weight: bold;
+}
+.main-Box .deal-title .deal-des {
+	color: rgb(119, 119, 119); line-height: 30px; padding-top: 10px; font-size: 24px; font-weight: normal;
+}
+.main-Box .main-text .buy {
+	margin: 0px 15px; padding: 29px 0px 15px; height: auto; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.main-Box .main-text .Price-font {
+	overflow: inherit;
+}
+.main-Box .main-text .Price-font-s {
+	height: 40px; text-align: center; color: rgb(255, 102, 0); line-height: 40px; font-size: 36px; font-weight: bold;
+}
+.main-Box .main-text .price-rel {
+	position: relative;
+}
+.main-Box .main-text .discountB {
+	background-position: right -140px; top: -15px; width: 43px; height: 18px; text-align: center; right: -30px; color: rgb(255, 255, 255); line-height: 18px; padding-bottom: 4px; font-size: 12px; position: absolute; _right: 10px;
+}
+.main-Box .main-text .originalPrice {
+	height: 24px; text-align: center; color: rgb(153, 153, 153); line-height: 18px; font-size: 12px; margin-bottom: 5px;
+}
+.main-Box .main-text .originalPrice .num {
+	color: rgb(153, 153, 153); line-height: 18px; font-size: 12px; font-weight: bold; text-decoration: line-through;
+}
+.main-Box .main-text .btn-out {
+	width: 162px; height: 46px; text-indent: -9999px; margin-bottom: 18px; margin-left: 20px;
+}
+.main-Box .main-text .btn-over {
+	width: 162px; height: 46px; text-indent: -9999px; margin-bottom: 18px; margin-left: 20px;
+}
+.main-Box .main-text .btn-out {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/f.soldout.3960ec0218b14b084c9b89da5d67dfbc.png") no-repeat 0px 0px;
+}
+.main-Box .main-text .btn-over {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/f.over.f8c81238c1c72afa284ead3ace42d722.png") no-repeat 0px 0px;
+}
+.main-Box .main-text .b-rbtn {
+	margin-bottom: 18px; margin-left: 20px;
+}
+.main-Box .main-text .b-btn {
+	margin-bottom: 18px; margin-left: 20px;
+}
+.main-Box .main-text .b-nbtn {
+	margin-bottom: 18px; margin-left: 20px;
+}
+.main-Box .main-text .b-rbtn span {
+	width: 100px; line-height: 40px; font-size: 20px;
+}
+.main-Box .main-text .b-btn span {
+	width: 100px; line-height: 40px; font-size: 20px;
+}
+.main-Box .main-text .b-nbtn span {
+	width: 100px; line-height: 40px; font-size: 20px;
+}
+.main-Box .main-text .small.b-rbtn {
+	margin-left: 0px;
+}
+.main-Box .main-text .small.b-rbtn span {
+	padding: 0px; width: 115px; font-size: 18px;
+}
+.main-Box .main-text div.b-rbtn {
+	_margin-left: 10px;
+}
+.main-Box .main-text div.b-btn {
+	_margin-left: 10px;
+}
+.main-Box .main-text div.b-nbtn {
+	_margin-left: 10px;
+}
+.main-Box .main-text .cart-btn {
+	margin-left: 8px;
+}
+.main-Box .main-text .cart-btn span {
+	padding: 0px 14px 0px 10px; width: auto;
+}
+.main-Box .main-text .feature-list {
+	text-align: center; color: rgb(102, 102, 102);
+}
+.main-Box .main-text .feature-list .feature-day {
+	width: 96px; float: left;
+}
+.main-Box .main-text .feature-list .feature-exp {
+	width: 96px; float: right;
+}
+.main-Box .main-text .feature-list .icon {
+	background-position: right -180px; width: 25px; height: 24px; margin-left: 34px;
+}
+.main-Box .main-text .feature-list .icon-day {
+	background-position: right -180px;
+}
+.main-Box .main-text .feature-list .icon-exp {
+	background-position: right -240px;
+}
+.main-Box .main-text .feature-list a {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.main-Box .main-text .feature-list a:hover {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.main-Box .main-text .feature-list .feature-day-n {
+	color: rgb(153, 153, 153);
+}
+.main-Box .main-text .feature-list .feature-exp-n {
+	color: rgb(153, 153, 153);
+}
+.main-Box .main-text .feature-list .feature-day-n a {
+	color: rgb(153, 153, 153);
+}
+.main-Box .main-text .feature-list .feature-exp-n a {
+	color: rgb(153, 153, 153);
+}
+.main-Box .main-text .feature-list .feature-day-n a:hover {
+	color: rgb(153, 153, 153);
+}
+.main-Box .main-text .feature-list .feature-exp-n a:hover {
+	color: rgb(153, 153, 153);
+}
+.main-Box .main-text .feature-list .feature-day-n .icon-day {
+	background-position: right -210px;
+}
+.main-Box .main-text .feature-list .feature-exp-n .icon-exp {
+	background-position: right -270px;
+}
+.main-Box .main-text .tg-status {
+	margin: 0px 15px; padding: 15px 0px 8px; width: auto; height: 43px; overflow: hidden; border-top-color: rgb(246, 246, 246); border-top-width: 1px; border-top-style: solid;
+}
+.main-Box .main-text .tg-status .count {
+	text-align: center; color: rgb(51, 51, 51); font-size: 14px;
+}
+.main-Box .main-text .tg-status .note {
+	text-align: center; color: rgb(153, 153, 153);
+}
+.main-Box .main-text .tg-status .closed {
+	text-align: center;
+}
+.main-Box .main-text .tg-status .closed img {
+	margin-bottom: 5px;
+}
+.main-Box .main-text .tg-status .num {
+	margin: 0px 5px; color: rgb(204, 0, 0); font-weight: bold;
+}
+.main-Box .main-text .tg-status .deal-count {
+	color: rgb(204, 0, 0);
+}
+.main-Box .main-text .limit-time {
+	height: 28px; text-align: center; color: rgb(51, 51, 51); line-height: 28px; font-size: 12px; background-color: rgb(231, 231, 231);
+}
+.main-Box .main-text .fucksearchoverat.limit-time {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/f.overat.4b0922d8acaad93e252a3ec5d66cbcd2.png") no-repeat 0px 4px rgb(231, 231, 231); text-align: left; padding-left: 60px;
+}
+.main-Box .main-text .limit-time .time {
+	color: rgb(153, 153, 153);
+}
+.main-Box .main {
+	width: 222px; clear: left; font-family: Helvetica,arial,sans-serif; margin-right: 10px; float: left; position: relative; background-color: rgb(244, 244, 244);
+}
+.main-Box .main .time-out h3 {
+	padding-top: 8px; font-size: 14px; font-weight: normal;
+}
+.main-Box .main .time-dealfail h3 {
+	padding-top: 8px; font-size: 14px; font-weight: normal;
+}
+.main-Box .side {
+	width: 450px; padding-bottom: 1px; float: left; position: relative;
+}
+.main-Box .side .slide {
+	width: 450px; height: 280px; overflow: hidden; position: relative;
+}
+.main-Box .side .img-wrap {
+	overflow: hidden; position: relative;
+}
+.main-Box .side .fade img {
+	left: 0px; top: 0px; display: block; position: absolute;
+}
+.main-Box .side .fade img.current {
+	z-index: 10;
+}
+.main-Box .side .imgctrl {
+	left: 0px; width: 100%; text-align: center; bottom: 10px; position: absolute;
+}
+.main-Box .side .imgctrl span {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.dot.3e3efda050839f36832be7492e311922.png") no-repeat -8px 0px; margin: 0px 5px; border-radius: 4px; border: currentColor; width: 8px; height: 8px; line-height: 0; font-size: 0px; vertical-align: middle; display: inline-block; position: relative; cursor: pointer; zoom: 1;
+}
+.main-Box .side .imgctrl span.on {
+	border-color: rgb(255, 255, 255);
+}
+.main-Box .side .sideTrigger li {
+	background: rgb(0, 0, 0); top: 122px; width: 35px; height: 36px; text-indent: -9999px; filter: alpha(opacity=50); position: absolute; cursor: pointer; opacity: 0.5;
+}
+.main-Box .side .sideTrigger li span {
+	margin: -10px 0px 0px -5px; left: 50%; top: 50%; display: block; position: absolute;
+}
+.main-Box .side .sideTrigger li span b {
+	font-weight: normal; position: absolute; zoom: 1;
+}
+.main-Box .side .sideTrigger li.before {
+	left: 10px;
+}
+.main-Box .side .sideTrigger li.before span {
+	border-width: 10px 10px 10px medium; border-style: solid solid solid none; border-color: transparent rgb(255, 255, 255) transparent currentColor; width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #000 #fff #000 #000;
+}
+.main-Box .side .sideTrigger li.before span b {
+	border-width: 5px 5px 5px medium; border-style: solid solid solid none; border-color: transparent rgb(0, 0, 0) transparent currentColor; top: -5px; width: 0px; height: 0px; right: -10px; line-height: 0; font-size: 0px; _border-color: #000 #000 #000 #000; _border: 0;
+}
+.main-Box .side .sideTrigger li.after {
+	right: 10px;
+}
+.main-Box .side .sideTrigger li.after span {
+	border-width: 10px 0px 10px 10px; border-style: solid none solid solid; border-color: transparent currentColor transparent rgb(255, 255, 255); width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #000 #000 #000 #fff;
+}
+.main-Box .side .sideTrigger li.after span b {
+	border-width: 5px 0px 5px 5px; border-style: solid none solid solid; border-color: transparent currentColor transparent rgb(0, 0, 0); left: -10px; top: -5px; width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #000 #000 #000 #000; _border: 0;
+}
+.main-Box .side .favorites-box {
+	float: left; position: relative; z-index: 100;
+}
+.main-Box .side .favorites-box .favorites-btn {
+	margin-top: 9px;
+}
+.main-Box .side .favorites-box .fix-m.favorites-btn {
+	margin-left: 10px;
+}
+.main-Box .side .favorites-box .favorites-btn i {
+	background-position: -250px -262px; width: 14px; height: 100%; float: left; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.comm.2e477297390f0e325acd49978c5e1c65.png"); background-repeat: no-repeat;
+}
+.main-Box .side .favorites-box .favorites-btn span {
+	color: rgb(102, 102, 102); font-weight: normal;
+}
+.main-Box .side .favorites-box .favorites-btn-off {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png") no-repeat -160px -230px; width: 60px; height: 24px; color: rgb(102, 102, 102); line-height: 23px; padding-left: 23px; float: left; cursor: pointer;
+}
+.main-Box .side .favorites-box .img-loading {
+	margin: 13px 0px 0px 5px; float: left;
+}
+.main-Box .side .book-btn {
+	margin: 9px 0px 0px 5px;
+}
+.main-Box .side .book-btn i {
+	background-position: -189px -285px; width: 14px; height: 100%; float: left; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.comm.2e477297390f0e325acd49978c5e1c65.png"); background-repeat: no-repeat;
+}
+.main-Box .side .book-btn span {
+	color: rgb(102, 102, 102); font-weight: normal;
+}
+.main-Box .side .group-btn {
+	margin: 9px 0px 0px 5px;
+}
+.main-Box .side .group-btn i {
+	background-position: -269px -266px; width: 15px; height: 100%; float: left; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/g.comm.2e477297390f0e325acd49978c5e1c65.png"); background-repeat: no-repeat;
+}
+.main-Box .side .group-btn span {
+	color: rgb(102, 102, 102); font-weight: normal;
+}
+.main-Box .side .share-wrap .favorites-box a.favorites-btn:hover {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.main-Box .Share-min-list {
+	float: left;
+}
+.main-Box .Share-num-box {
+	width: 22px; height: 22px; margin-top: 10px; float: left; position: relative;
+}
+.main-Box .Share-num-box b {
+	border-width: 4px 4px 0px; border-style: solid solid none; border-color: rgb(102, 102, 102) transparent currentColor; left: 6px; top: 9px; width: 0px; height: 0px; line-height: 0; font-size: 0px; position: absolute; _border-color: #666 #fff #fff;
+}
+.main-Box .Share-num-box .operate {
+	border: 1px solid rgb(255, 255, 255); width: 20px; height: 20px; position: absolute; z-index: 1221; background-color: rgb(255, 255, 255);
+}
+.main-Box .Share-num-box .Share-num-list {
+	padding: 5px 5px 15px 15px; border: 1px solid rgb(224, 224, 224); top: 20px; width: 140px; height: auto; right: 0px; position: absolute; z-index: 1220;
+}
+.main-Box .Share-num-box .Share-num-list li {
+	width: 68px;
+}
+.main-Box .Share-num-box .Share-num-list li a {
+	color: rgb(102, 102, 102);
+}
+.main-Box .Share-num-box .Share-num-list li a:hover {
+	color: rgb(102, 102, 102); text-decoration: underline;
+}
+.main-Box .Share-num-on b {
+	border-width: 0px 4px 4px; border-style: none solid solid; border-color: currentColor transparent rgb(102, 102, 102); top: 9px; width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #fff #fff #666;
+}
+.main-Box .Share-num-on .operate {
+	border-width: 1px; border-style: solid; border-color: rgb(224, 224, 224) rgb(224, 224, 224) rgb(255, 255, 255);
+}
+.main-Box .share-wrap .box-wrap {
+	border: 1px solid rgb(224, 224, 224); width: 440px; padding-left: 6px; clear: both;
+}
+.main-Box .share-wrap .box-cont {
+	border-width: 0px; border-color: rgb(223, 223, 223); padding: 0px 0px 0px 10px; height: 36px; line-height: 36px;
+}
+.main-Box .share-wrap label {
+	float: left; cursor: default;
+}
+.main-Box .share-wrap .copy {
+	width: 280px; padding-top: 4px; float: left;
+}
+.main-Box .share-wrap input {
+	padding: 3px; border: 1px solid rgb(204, 204, 204); width: 260px; font-size: 12px; margin-top: 2px; margin-right: 5px; float: left;
+}
+.main-Box .share-wrap .tg-btn {
+	font-weight: bold;
+}
+.region {
+	left: -2px; top: -2px; width: 60px; height: 60px; position: absolute; z-index: 10;
+}
+.slidedeal-box {
+	clear: left; background-color: rgb(255, 255, 255);
+}
+.moredeal-box {
+	margin: 0px 0px 10px; padding: 20px 20px 0px; width: auto; position: relative;
+}
+.moredeal-box .otherdeal {
+	padding: 0px 20px; width: 625px;
+}
+.moredeal-box .otherdeal .tit {
+	margin: 0px 0px 12px -20px; width: auto;
+}
+.moredeal-box .recom-ul li {
+	width: 195px; margin-right: 20px; margin-bottom: 20px;
+}
+.moredeal-box .recom-ul img {
+	width: 195px; height: 121px;
+}
+.combo-box {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.combo.b4d2acb001a4cf9989ac00b868e281af.png") no-repeat right top rgb(255, 255, 255); padding: 20px; border: 1px solid rgb(222, 222, 222); width: 668px; clear: both; margin-bottom: 15px;
+}
+.coupon.combo-box {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.combo2.4f897175be20693e6b342f75bc21b15b.png") no-repeat right top rgb(255, 255, 255);
+}
+.combo-box .mask {
+	width: 100%; height: 176px; filter: alpha(opacity=50); position: absolute; z-index: 10; opacity: 0.5; background-color: rgb(255, 255, 255);
+}
+.combo-box .current {
+	padding: 0px 15px; left: -8px; top: 8px; height: 25px; color: rgb(255, 255, 255); line-height: 25px; font-weight: bold; display: block; position: absolute; z-index: 11; background-color: rgb(255, 125, 39);
+}
+.combo-box .combo-deal {
+	width: 200px; padding-bottom: 5px; float: left; position: relative; background-color: rgb(244, 244, 244);
+}
+.combo-box .combo-deal h6 {
+	margin: 6px 5px 0px; height: 18px; line-height: 18px; overflow: hidden; font-size: 12px; font-weight: normal;
+}
+.combo-box .combo-deal h6 a {
+	color: rgb(51, 51, 51);
+}
+.combo-box .combo-deal .recom-worth {
+	margin: 2px 5px 0px; text-align: right; color: rgb(153, 153, 153); text-decoration: none; display: block; zoom: 1;
+}
+.combo-box .combo-deal .recom-worth .price {
+	color: rgb(255, 102, 0); font-size: 14px; font-weight: bold; margin-right: 4px; float: left;
+}
+.combo-box .combo-deal .recom-worth .o-price {
+	float: left;
+}
+.combo-box .combo-deal .recom-worth .buy-num {
+	color: rgb(255, 102, 0);
+}
+.combo-box .icon-add {
+	margin: 78px 18px 0px; width: 25px; height: 25px; float: left; position: relative;
+}
+.combo-box .icon-equal {
+	margin: 78px 18px 0px; width: 25px; height: 25px; float: left; position: relative;
+}
+.combo-box .icon-add span {
+	width: 25px; height: 5px; line-height: 0; font-size: 0px; display: block; position: absolute; background-color: rgb(204, 204, 204);
+}
+.combo-box .icon-equal span {
+	width: 25px; height: 5px; line-height: 0; font-size: 0px; display: block; position: absolute; background-color: rgb(204, 204, 204);
+}
+.combo-box .icon-add .ver {
+	left: 10px; width: 5px; height: 25px;
+}
+.combo-box .icon-add .hor {
+	top: 10px;
+}
+.combo-box .icon-equal .one {
+	top: 5px;
+}
+.combo-box .icon-equal .two {
+	top: 15px;
+}
+.combo-buy {
+	padding-top: 30px;
+}
+.combo-table {
+	color: rgb(102, 102, 102); font-size: 12px;
+}
+.combo-table tr {
+	height: 30px;
+}
+.combo-table tr.fl {
+	height: 22px;
+}
+.combo-table td {
+	vertical-align: bottom;
+}
+.combo-table .o-price del {
+	margin-left: 5px;
+}
+.combo-table .cp {
+	color: rgb(204, 0, 0);
+}
+.combo-table .price {
+	color: rgb(255, 102, 0); font-size: 20px;
+}
+.combo-table .combo_btn {
+	padding-top: 12px;
+}
+.evaluate-box {
+	padding: 10px 10px 10px 20px; border: 1px solid rgb(224, 224, 224); margin-bottom: 10px; background-color: rgb(255, 255, 255);
+}
+.evaluate-box .tit {
+	height: 30px; line-height: 30px; font-size: 14px; font-weight: bold; margin-bottom: 10px;
+}
+.evaluate-box .tit .caption {
+	height: 30px; line-height: 30px; float: left;
+}
+.evaluate-box .tit .rating-drop {
+	padding-right: 10px; font-size: 12px; font-weight: normal; float: right; _padding-top: 6px;
+}
+.evaluate-box .rating-score-box {
+	background-color: rgb(255, 255, 255);
+}
+.evaluate-box .rating-score-box p.list {
+	margin-right: 2px; display: inline;
+}
+.evaluate-box .rating-score-box .star-rating {
+	top: -3px; position: relative;
+}
+.evaluate-box .rating-score-box .fraction {
+	color: rgb(255, 102, 0); font-size: 14px;
+}
+.evaluate-box .rating-score-box .fraction .num {
+	font-family: Tahoma; font-size: 20px; font-weight: normal;
+}
+.evaluate-box .rating-score-box .rating {
+	height: 30px; line-height: 30px; overflow: hidden; padding-left: 10px; background-image: none;
+}
+.evaluate-box .rating-score-box .rating .num {
+	color: rgb(138, 137, 137); margin-bottom: 8px;
+}
+.evaluate-box .rating-score-box .rating .sat {
+	height: 40px; color: rgb(51, 51, 51); line-height: 30px;
+}
+.evaluate-box .rating-score-box .rating .percentage {
+	font-family: Tahoma; font-size: 17px;
+}
+.evaluate-box .rating-score-box .rating p.list {
+	display: inline;
+}
+.other-deal-box {
+	padding: 20px; border: 1px solid rgb(222, 222, 222); margin-bottom: 10px; background-color: rgb(255, 255, 255);
+}
+.other-deal-list {
+	width: 100%; overflow: hidden; margin-top: 5px;
+}
+.other-deal-list a {
+	height: 32px; color: rgb(51, 51, 51); line-height: 32px; margin-top: -1px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: dotted; display: block; cursor: pointer;
+}
+.other-deal-list a:hover {
+	color: rgb(0, 136, 204); background-color: rgb(249, 249, 249);
+}
+.rating-score-list a:hover span {
+	color: rgb(0, 136, 204); background-color: rgb(249, 249, 249);
+}
+.other-deal-list a.dif {
+	background-color: rgb(249, 249, 249);
+}
+.other-deal-list .price {
+	padding: 0px 10px; color: rgb(204, 0, 0); font-size: 14px; font-weight: bold; float: left; display: block;
+}
+.other-deal-list .sellprice {
+	padding-right: 5px; float: left; display: block;
+}
+.other-deal-list .infor {
+	width: 32em; height: 32px; overflow: hidden; float: left; display: block; white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis;
+}
+.other-deal-list .num {
+	padding-right: 20px; float: right; display: block;
+}
+.other-deal-box .other-deal-more {
+	border-radius: 4px; height: 28px; text-align: center; color: rgb(102, 102, 102); line-height: 28px; margin-bottom: 10px; display: block; background-color: rgb(242, 242, 242);
+}
+.other-deal-box .other-deal-hover {
+	background-color: rgb(232, 232, 232);
+}
+.other-deal-box .other-deal-more .local {
+	color: rgb(102, 102, 102); font-size: 12px;
+}
+.other-deal-box .other-deal-more .local:hover {
+	text-decoration: none;
+}
+.other-deal-box .other-deal-more .unfold {
+	vertical-align: middle; display: inline-block; position: relative; zoom: 1;
+}
+.other-deal-box .other-deal-more .unfold {
+	background-position: right -358px; width: 12px; height: 14px; line-height: 28px; font-size: 14px; margin-left: 8px; _margin-top: 5px;
+}
+.dptg-intro {
+	color: rgb(51, 51, 51); font-size: 14px;
+}
+.dptg-intro .notice {
+	border: 0px currentColor; width: 668px; color: rgb(255, 0, 0); line-height: 21px; font-size: 12px; font-weight: bold; margin-bottom: 10px;
+}
+.dptg-intro .detail {
+	margin: 0px;
+}
+.dptg-intro .detail-box {
+	margin-bottom: 25px;
+}
+.dptg-intro .detail-box .may {
+	margin-bottom: 10px;
+}
+.dptg-intro .detail-box .listitem {
+	background-position: -496px -400px; padding: 0px 0px 0px 10px; line-height: 22px;
+}
+.dptg-intro .tit {
+	height: 30px; line-height: 30px; padding-left: 12px; font-size: 14px; font-weight: bold; margin-bottom: 8px; border-left-color: rgb(255, 132, 0); border-left-width: 10px; border-left-style: solid; position: relative; background-color: rgb(232, 232, 232);
+}
+.dptg-intro .tit-c {
+	background-color: rgb(254, 241, 223);
+}
+.dptg-intro .text-pitch {
+	margin-bottom: 25px;
+}
+.dptg-intro .img {
+	margin-bottom: 15px;
+}
+.dptg-intro .img img {
+	max-width: 450px;
+}
+.dptg-intro .explain {
+	background: 0px; color: rgb(102, 102, 102); line-height: 18px; font-size: 12px; margin-bottom: 6px;
+}
+.dptg-intro .staff {
+	padding: 10px 0px 0px;
+}
+.dptg-intro .detail-tit {
+	line-height: 18px; font-size: 12px; font-weight: bold; margin-bottom: 5px;
+}
+.dptg-intro .detail-table {
+	border: 1px solid rgb(226, 226, 226); color: rgb(51, 51, 51); margin-bottom: 18px; border-collapse: collapse; border-spacing: 0;
+}
+.dptg-intro .detail-table thead th {
+	height: 26px; text-align: center; color: rgb(51, 51, 51); line-height: 26px; font-size: 12px; border-bottom-color: rgb(226, 226, 226); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(242, 242, 242);
+}
+.dptg-intro .detail-table td {
+	padding: 0px 10px; border: 1px solid rgb(226, 226, 226); line-height: 26px; font-size: 14px; word-break: break-all;
+}
+.dptg-intro .detail-table td.tc {
+	text-align: center;
+}
+.dptg-intro .detail-table .total td {
+	border: 0px currentColor; line-height: 26px; background-color: rgb(242, 242, 242);
+}
+.dptg-intro .detail-list {
+	margin-bottom: 20px;
+}
+.dptg-intro .detail-list strong {
+	font-weight: bolder; margin-left: 5px;
+}
+.dptg-intro .purchase-notes {
+	background: rgb(255, 253, 229); padding: 4px 14px 10px;
+}
+.dptg-intro .purchase-notes dl {
+	line-height: 24px; padding-left: 85px; margin-top: 6px;
+}
+.dptg-intro .purchase-notes dl dt {
+	width: 85px; font-weight: 700; margin-left: -85px; float: left; _display: inline;
+}
+.dptg-intro .purchase-notes dl .time {
+	padding-left: 10px; font-weight: 700;
+}
+.dptg-intro .purchase-notes dl .time a {
+	margin-left: 8px;
+}
+.dptg-intro .purchase-notes dl .listitem {
+	background-position: -490px -620px;
+}
+.dptg-info {
+	padding: 0px 5px 0px 15px; width: 185px;
+}
+.dptg-info .contact {
+	color: rgb(51, 51, 51); padding-bottom: 25px; margin-bottom: 25px; border-bottom-color: rgb(224, 224, 224); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.dptg-info .shop-name-box {
+	color: rgb(102, 102, 102);
+}
+.dptg-info .shop-name-box h4 {
+	color: rgb(51, 51, 51); padding-top: 6px; font-size: 14px; font-weight: bold; margin-bottom: 10px;
+}
+.dptg-info .shop-infor-box {
+	color: rgb(102, 102, 102);
+}
+.dptg-info .shop-infor-box .city {
+	font-size: 14px;
+}
+.dptg-info .shop-infor-box .shop {
+	margin-top: 20px;
+}
+.dptg-info .shop-infor-box .dz {
+	color: rgb(51, 51, 51); margin-bottom: 5px;
+}
+.editor-box {
+	padding: 25px 20px; border: 1px solid rgb(224, 224, 224); color: rgb(51, 51, 51); margin-bottom: 10px;
+}
+.editor-box .editor-text {
+	width: 290px; float: left;
+}
+.editor-box .editor-says {
+	line-height: 28px; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 20px; margin-bottom: 22px;
+}
+.editor-box .tit {
+	font-size: 14px; margin-bottom: 20px;
+}
+.editor-box .tit .name {
+	color: rgb(153, 153, 153); padding-left: 5px; font-size: 12px;
+}
+.editor-box .infor {
+	background-position: -310px -310px; line-height: 24px; text-indent: 2em; padding-top: 2px; font-size: 12px;
+}
+.editor-box .editor-img {
+	width: 350px; float: right;
+}
+.editor-box .editor-img img {
+	width: 350px;
+}
+.wysiwyg-color-orange {
+	color: orange;
+}
+.wysiwyg-color-red {
+	color: red;
+}
+.wysiwyg-color-black {
+	color: black;
+}
+.dptg-intro {
+	padding: 0px 15px 0px 10px; width: 455px; line-height: 1.5; font-size: 14px; border-right-color: rgb(227, 219, 205); border-right-width: 1px; border-right-style: solid; float: left;
+}
+.dptg-intro .buy {
+	padding: 15px 0px 0px 120px;
+}
+.dptg-intro h2 {
+	left: 20px; top: 10px; width: 670px; padding-bottom: 10px; font-size: 14px; border-bottom-color: rgb(214, 201, 189); border-bottom-width: 1px; border-bottom-style: dashed; position: absolute;
+}
+.dptg-intro .warning {
+	color: rgb(204, 0, 0); font-size: 14px;
+}
+.dptg-intro .member-dp {
+	margin: 10px 0px;
+}
+.dptg-intro .member-dp div {
+	padding: 5px 0px;
+}
+.dptg-intro .editor-say {
+	margin: 10px 0px;
+}
+.dptg-intro .editor-say h3 {
+	color: rgb(51, 153, 153); font-size: 12px; font-weight: bold;
+}
+.dptg-intro .editor-say .editor_wrap {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.editor_tp.f3d9568a17af2001b652e81272389164.png") no-repeat 0px 0px; padding: 10px 0px 0px 71px; overflow: hidden; margin-top: 10px; position: relative; _zoom: 1;
+}
+.dptg-intro .editor-say .editor_wrap .editor_content {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.editor_bt.38fa022b0d4877f333cad37f2a525483.png") no-repeat 0px 100%; padding: 0px 15px 24px; min-height: 90px; _height: 90px;
+}
+.dptg-intro .editor-say .editor_wrap .icon-hack {
+	background: rgb(247, 246, 242); left: 71px; top: 33px; width: 2px; height: 9px; overflow: hidden; position: absolute;
+}
+.dptg-intro .list {
+	padding-left: 15px;
+}
+.dptg-intro .list li {
+	margin-bottom: 18px; list-style-type: disc;
+}
+.dptg-intro .red {
+	color: rgb(232, 19, 111);
+}
+.dptg-intro .staff {
+	color: rgb(204, 204, 204); padding-top: 40px; font-size: 12px;
+}
+.bill-info .box-cont {
+	padding-top: 55px; position: relative; zoom: 1;
+}
+.box-wrap .pv {
+	left: 10px; bottom: 20px; color: rgb(102, 102, 102); font-size: 12px; position: absolute;
+}
+.dptg-info {
+	width: 180px; overflow: hidden; padding-left: 15px; margin-left: -1px; border-left-color: rgb(227, 219, 205); border-left-width: 1px; border-left-style: solid; float: left;
+}
+.dptg-info h3 {
+	line-height: 18px; padding-left: 15px; font-size: 14px; font-weight: bold;
+}
+.dptg-info .infoTitle {
+	color: rgb(0, 0, 0); font-size: 14px; font-weight: normal; margin-bottom: 5px; display: block;
+}
+.dptg-info .infoTitleSub {
+	margin-bottom: 25px;
+}
+.dptg-info .infoTitleLink {
+	font-weight: bold;
+}
+.dptg-info .infoMisc {
+	margin-bottom: 20px; display: block;
+}
+.dptg-info .infoList li {
+	margin-bottom: 15px;
+}
+.dptg-info .infoList li p {
+	margin-bottom: 3px;
+}
+.dptg-info .infoListSep {
+	margin-bottom: 20px; border-bottom-color: rgb(241, 235, 229); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.dptg-info .itemTitle {
+	margin-bottom: 2px; display: block;
+}
+.dptg-info .itemIcon {
+	top: 2px; margin-left: 5px; position: relative;
+}
+.dptg-info .itemIcon:hover {
+	background: 0px;
+}
+.dptg-info .itemRating {
+	margin-bottom: 10px; display: block;
+}
+.dptg-info .contact .name {
+	line-height: 21px; font-size: 14px;
+}
+.dptg-info .contact .branch {
+	margin-bottom: 20px;
+}
+.dptg-info .user-say {
+	font-size: 14px; margin-bottom: 20px;
+}
+.dptg-info .member-dp .user {
+	color: rgb(102, 102, 102); margin-bottom: 20px;
+}
+.detailEntryBox {
+	margin-bottom: 20px;
+}
+.detailEntryBox p {
+	margin-bottom: 10px;
+}
+.detailSubTitle {
+	color: rgb(51, 153, 153); font-size: 14px; margin-bottom: 5px; display: block;
+}
+.detailSubTitle span {
+	font-weight: normal;
+}
+.tradingQA .title-qa {
+	padding: 3px 10px; font-size: 14px; margin-bottom: 10px; position: relative; background-color: rgb(230, 230, 223); -moz-border-radius: 4px 4px 4px 4px;
+}
+.tradingQA .title-qa .rt {
+	top: 2px; right: 10px; position: absolute;
+}
+.tradingQA .title-qa .edit-qa {
+	padding: 0px 10px; color: rgb(255, 0, 102); text-decoration: underline;
+}
+.deal-guide {
+	margin-bottom: 20px;
+}
+.deal-guide .txt {
+	margin-bottom: 5px;
+}
+.box-buy-bottom {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(222, 222, 222) rgb(222, 222, 222); padding: 30px; background-color: rgb(248, 248, 248);
+}
+.box-buy-bottom .buy-bottom-price {
+	height: 50px; color: rgb(255, 102, 0); line-height: 50px; padding-right: 40px; font-size: 28px; font-weight: bold; border-right-color: rgb(222, 222, 222); border-right-width: 1px; border-right-style: solid; float: left;
+}
+.box-buy-bottom .buy-bottom-tab {
+	padding-left: 30px; border-left-color: rgb(255, 255, 255); border-left-width: 1px; border-left-style: solid; float: left;
+}
+.box-buy-bottom .buy-bottom-tab th {
+	height: 28px; text-align: center; color: rgb(153, 153, 153); line-height: 28px; font-size: 14px;
+}
+.box-buy-bottom .buy-tab td {
+	height: 28px; text-align: center; color: rgb(153, 153, 153); line-height: 28px; font-size: 14px;
+}
+.box-buy-bottom .buy-bottom-tab td {
+	color: rgb(51, 51, 51); font-size: 14px;
+}
+.box-buy-bottom .buy-bottom-btn {
+	padding-top: 5px; margin-right: 30px; float: left;
+}
+.box-buy-bottom .buy-bottom-btn .b-rbtn span {
+	font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 20px;
+}
+.box-buy-bottom .cart-btn {
+	margin-left: 8px;
+}
+.box-buy-bottom .buy-bottom-btn .btn-out {
+	width: 100px; height: 42px; text-indent: -9999px;
+}
+.box-buy-bottom .buy-bottom-btn .btn-over {
+	width: 100px; height: 42px; text-indent: -9999px;
+}
+.box-buy-bottom .buy-bottom-btn .btn-out {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/f.soldout2.1275961e2ea7794d513e4df63db4be87.png") no-repeat 0px -3px;
+}
+.box-buy-bottom .buy-bottom-btn .btn-over {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/f.over2.5e5012022520176148befd47de02df87.png") no-repeat 0px -3px;
+}
+.top_banner {
+	position: relative;
+}
+.top_banner .container {
+	height: 90px; overflow: hidden; position: relative;
+}
+.top_banner .close {
+	border-radius: 18px; top: 8px; width: 18px; height: 18px; text-align: center; right: 8px; color: rgb(255, 255, 255); line-height: 16px; font-size: 14px; display: block; position: absolute; background-color: rgb(153, 153, 153);
+}
+.top_banner .close:hover {
+	text-decoration: none; background-color: rgb(51, 51, 51);
+}
+.top_banner .track {
+	position: absolute;
+}
+.top_banner .track a {
+	font-size: 0px; position: absolute;
+}
+.top_banner .track img {
+	width: 960px; height: 90px; vertical-align: bottom;
+}
+.top_banner .ctrl {
+	right: 0px; bottom: 4px; position: absolute; z-index: 20; zoom: 1;
+}
+.top_banner .ctrl li {
+	background: black; font: 11px/normal Verdana, arial; padding: 2px 4px; text-align: center; color: white; margin-right: 5px; float: left; filter: alpha(opacity=50); cursor: pointer; font-size-adjust: none; font-stretch: normal; opacity: 0.5;
+}
+.top_banner .ctrl li.on {
+	filter: alpha(opacity=80); opacity: 0.8; background-color: rgb(255, 102, 0);
+}
+.head_banner {
+	position: relative;
+}
+.head_banner .ad {
+	display: block;
+}
+.head_banner .ad img {
+	margin: 0px auto; display: block;
+}
+.head_banner .close {
+	top: 0px; width: 30px; height: 30px; text-align: center; right: 0px; color: rgb(255, 255, 255); line-height: 27px; text-indent: 0px; font-size: 20px; display: block; position: absolute; border-bottom-left-radius: 30px; background-color: rgb(153, 153, 153);
+}
+.head_banner .close:hover {
+	text-decoration: none; background-color: rgb(51, 51, 51);
+}
+.list-tags {
+	left: 10px; top: 0px; position: absolute; z-index: 10;
+}
+.list-tags .newdeal {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.new.84e4d2da3d05712f4428dc84c2f8f53f.png") no-repeat 0px 0px; margin-right: 1px;
+}
+.list-tags .no-book {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.new.84e4d2da3d05712f4428dc84c2f8f53f.png") no-repeat 0px 0px; margin-right: 1px;
+}
+.list-tags .recommend-s {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.new.84e4d2da3d05712f4428dc84c2f8f53f.png") no-repeat 0px 0px; margin-right: 1px;
+}
+.list-tags .mobile {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.new.84e4d2da3d05712f4428dc84c2f8f53f.png") no-repeat 0px 0px; margin-right: 1px;
+}
+.list-tags .newdeal {
+	width: 38px; height: 35px; float: left;
+}
+.list-tags .no-book {
+	width: 38px; height: 35px; float: left;
+}
+.list-tags .recommend-s {
+	width: 38px; height: 35px; float: left;
+}
+.list-tags .mobile {
+	background-position: -170px 0px; width: 50px; height: 38px; float: left; _background-image: none;
+}
+.list-tags .newdeal {
+	_background-image: none;
+}
+.list-tags .no-book {
+	background-position: -39px 0px; _background-image: none;
+}
+.list-tags .recommend-s {
+	background-position: -126px 0px; _background-image: none;
+}
+.deal-tags {
+	top: 0px; right: 10px; position: absolute; z-index: 22;
+}
+.deal-tags .no-book-b {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.new.84e4d2da3d05712f4428dc84c2f8f53f.png") no-repeat 0px 0px; float: left;
+}
+.deal-tags .no-book-b {
+	background-position: -78px 0px; width: 48px; height: 40px; _background-image: none;
+}
+.sysrec {
+	width: 100%; height: 90px; right: 0px; bottom: 0px; position: fixed; z-index: 3; background-color: rgba(94, 94, 94, 0.9); _bottom: auto; _position: absolute;
+}
+.sysrec .close-btn {
+	border-radius: 15px; top: 10px; width: 25px; height: 25px; text-align: center; right: 10px; color: rgb(153, 153, 153); line-height: 24px; font-size: 24px; text-decoration: none; position: absolute; z-index: 5; background-color: rgba(0, 0, 0, 0.6);
+}
+.sysrec .close-btn:hover {
+	color: rgb(255, 255, 255);
+}
+.sysrec .cont {
+	width: 1018px; height: 90px; margin-right: auto; margin-left: auto; position: relative;
+}
+.sysrec .cont .rec-logo {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/rec.logo.6e41e5acc3c8a293cd8a2d2e36337722.png") no-repeat 0px 0px; top: -24px; width: 80px; height: 100px; position: absolute; _background-image: none;
+}
+.sysrec .cont .rec-des {
+	width: 256px; line-height: 32px; padding-top: 17px; padding-left: 90px; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 20px; font-weight: bold; float: left;
+}
+.sysrec .cont .rec-des .find {
+	color: rgb(255, 255, 255);
+}
+.sysrec .cont .rec-des .find b {
+	color: rgb(188, 188, 188); font-weight: normal;
+}
+.sysrec .cont .rec-des .find a {
+	color: rgb(255, 255, 255);
+}
+.sysrec .cont .rec-des .hot {
+	color: rgb(255, 153, 34);
+}
+.sysrec .cont .rec-des .hot b {
+	font-size: 20px;
+}
+.sysrec .cont .rec-des .hot a {
+	color: rgb(255, 153, 34);
+}
+.sysrec .cont .rec-cont {
+	width: 652px; padding-top: 18px; padding-left: 20px; float: left;
+}
+.sysrec .cont .rec-cont li {
+	width: 80px; display: inline-block; zoom: 1;
+}
+.sysrec .cont .rec-cont li p {
+	width: 9em; overflow: hidden; font-size: 12px; white-space: nowrap; word-wrap: normal; text-overflow: ellipsis; o-text-overflow: ellipsis;
+}
+.sysrec .cont .rec-cont li .rec-title {
+	color: rgb(255, 255, 255);
+}
+.sysrec .cont .rec-cont li .rec-price {
+	color: rgb(255, 153, 34); font-family: Helvetica,arial,sans-serif !important;
+}
+.sysrec .cont .rec-cont li .rec-num {
+	color: rgb(188, 188, 188);
+}
+.sysrec .cont .rec-cont li a img {
+	width: 80px; height: 50px;
+}
+.sysrec .cont .rec-cont .rec-detail {
+	left: 10px; width: 126px; line-height: 20px; position: relative; zoom: 1;
+}
+.sysrec .cont .rec-cont .rec-detail a {
+	color: rgb(255, 255, 255);
+}
+.sysrec .cont .rec-cont .rec-detail a:hover {
+	color: rgb(255, 255, 255);
+}
+.buy-Box {
+	border: 1px solid rgb(219, 219, 219); padding-bottom: 0px; margin-bottom: 10px; position: relative; z-index: 21; zoom: 1; background-color: rgb(255, 255, 255);
+}
+.buy-Box::after {
+	height: 0px; clear: both; display: block; content: "\20";
+}
+.buy-Box .box-wrap {
+	position: relative; z-index: 22;
+}
+.buy-Box .deal-cont {
+	border: 0px currentColor; background-color: rgb(255, 255, 255);
+}
+.buy-Box .deal-title {
+	padding: 10px 20px 22px; line-height: 1.2; font-family: "Microsoft YaHei",黑体,arial,sans-serif; position: relative; z-index: 20;
+}
+.buy-Box .deal-title h1 {
+	color: rgb(17, 17, 17); line-height: 1.2; font-family: "Microsoft YaHei",黑体,arial,sans-serif; font-size: 30px; font-weight: bold;
+}
+.buy-Box .deal-title .deal-des {
+	color: rgb(119, 119, 119); line-height: 30px; padding-top: 10px; font-size: 24px; font-weight: normal;
+}
+.buy-Box .buy-info {
+	width: 258px; clear: left; font-family: Helvetica,arial,sans-serif,"瀹嬩綋"; border-top-color: rgb(224, 224, 224); border-bottom-color: rgb(224, 224, 224); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; float: left; position: relative; background-color: rgb(255, 255, 255);
+}
+.buy-Box .buy-info .price {
+	background-position: 0px -514px; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.buy-Box .buy-info .countPrice {
+	height: 34px; text-align: center; color: rgb(255, 102, 0); line-height: 34px; overflow: inherit; padding-top: 20px; font-size: 42px;
+}
+.buy-Box .buy-info .originalPrice {
+	height: 24px; text-align: center; color: rgb(153, 153, 153); line-height: 18px; font-size: 12px; margin-bottom: 8px;
+}
+.buy-Box .buy-info .originalPrice .num {
+	color: rgb(153, 153, 153); line-height: 22px; font-family: Tahoma; font-size: 12px; font-weight: bold;
+}
+.buy-Box .buy-info .combo {
+	margin-bottom: 10px; position: relative;
+}
+.buy-Box .buy-info .buy-num {
+	margin-bottom: 10px; position: relative;
+}
+.buy-Box .buy-info .combo input {
+	padding: 0px 21px 0px 5px; border: 1px solid rgb(204, 204, 204); left: 27px; height: 25px; color: rgb(102, 102, 102); line-height: 25px; font-family: "瀹嬩綋",Tahoma,arial,sans-serif; font-size: 12px; position: relative;
+}
+.buy-Box .buy-info .buy-num input {
+	padding: 0px 21px 0px 5px; border: 1px solid rgb(204, 204, 204); left: 27px; height: 25px; color: rgb(102, 102, 102); line-height: 25px; font-family: "瀹嬩綋",Tahoma,arial,sans-serif; font-size: 12px; position: relative;
+}
+.buy-Box .buy-info .combo input:focus {
+	outline: 0px; border: 1px solid rgb(204, 204, 204); outline-offset: 0;
+}
+.buy-Box .buy-info .buy-num input:focus {
+	outline: 0px; border: 1px solid rgb(204, 204, 204); outline-offset: 0;
+}
+.buy-Box .buy-info .combo .down-arrow {
+	border: 1px solid rgb(204, 204, 204); left: 204px; width: 25px; height: 25px; position: absolute; cursor: pointer; background-repeat: repeat-x; background-color: rgb(237, 237, 237);
+}
+.buy-Box .buy-info .buy-num .minus {
+	border: 1px solid rgb(204, 204, 204); left: 204px; width: 25px; height: 25px; position: absolute; cursor: pointer; background-repeat: repeat-x; background-color: rgb(237, 237, 237);
+}
+.buy-Box .buy-info .buy-num .plus {
+	border: 1px solid rgb(204, 204, 204); left: 204px; width: 25px; height: 25px; position: absolute; cursor: pointer; background-repeat: repeat-x; background-color: rgb(237, 237, 237);
+}
+.buy-Box .buy-info .combo .down-arrow:hover {
+	background-image: none;
+}
+.buy-Box .buy-info .buy-num .minus:hover {
+	background-image: none;
+}
+.buy-Box .buy-info .buy-num .plus:hover {
+	background-image: none;
+}
+.buy-Box .buy-info .combo input {
+	width: 149px; cursor: pointer;
+}
+.buy-Box .buy-info .combo .down-arrow {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none; cursor: pointer;
+}
+.buy-Box .buy-info .combo .down-arrow b {
+	border-width: 4px 4px 0px; border-style: solid solid none; border-color: rgb(102, 102, 102) transparent currentColor; top: 11px; width: 0px; height: 0px; right: 8px; line-height: 0; font-size: 0px; position: absolute; _border-color: #666 #fcfcfc #fcfcfc;
+}
+.buy-Box .buy-info .combo .holder {
+	border: 1px solid rgb(204, 204, 204); left: 27px; top: 25px; text-align: left; position: absolute; z-index: 99; min-width: 201px; box-shadow: 1px 1px 4px #ccc; background-color: rgb(255, 255, 255); _width: 210px; -webkit-box-shadow: 1px 1px 4px #ccc; -moz-box-shadow: 1px 1px 4px #ccc;
+}
+.buy-Box .buy-info .combo .holder li {
+	height: 25px; color: rgb(102, 102, 102); line-height: 25px; padding-left: 5px; white-space: nowrap; cursor: pointer;
+}
+.buy-Box .buy-info .combo .holder li:hover {
+	color: rgb(255, 255, 255); background-color: rgb(0, 136, 204);
+}
+.buy-Box .buy-info .combo .holder li .hover {
+	color: rgb(255, 255, 255); background-color: rgb(0, 136, 204);
+}
+.buy-Box .buy-info .combo .holder .disabled {
+	color: rgb(153, 153, 153); cursor: default;
+}
+.buy-Box .buy-info .combo .holder .disabled:hover {
+	color: rgb(153, 153, 153); background-color: rgb(255, 255, 255);
+}
+.buy-Box .buy-info .buy-num input {
+	left: 53px; width: 123px; text-align: center;
+}
+.buy-Box .buy-info .buy-num .tip {
+	left: 55px; top: 1px; width: 148px; height: 25px; text-align: center; color: rgb(204, 0, 0); line-height: 25px; position: absolute; background-color: rgb(255, 253, 229);
+}
+.buy-Box .buy-info .buy-num .minus b {
+	width: 25px; height: 25px; display: block;
+}
+.buy-Box .buy-info .buy-num .plus b {
+	width: 25px; height: 25px; display: block;
+}
+.buy-Box .buy-info .buy-num .minus {
+	left: 27px; margin-left: 0px; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+.buy-Box .buy-info .buy-num .minus b {
+	background-position: 9px -445px; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.buy-Box .buy-info .buy-num .plus {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+.buy-Box .buy-info .buy-num .plus b {
+	background-position: 8px -466px; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.buy-Box .buy-info .buy-cart {
+	text-align: center;
+}
+.buy-Box .buy-info .buy-cart .b-rbtn {
+	margin-right: 12px; margin-left: 27px;
+}
+.buy-Box .buy-info .buy-cart .b-rbtn span {
+	padding: 0px 19px; font-family: "Microsoft YaHei",黑体; font-size: 20px;
+}
+.buy-Box .buy-info .buy-cart .cart-btn em {
+	background-position: 8px -379px; width: 41px; height: 100%; display: block; background-image: url("http://si1.s1.dpfile.com/t/cssnew/img/c.index.5a23960f1ba06b03254426f3c977fa3e.png"); background-repeat: no-repeat;
+}
+.buy-Box .buy-info .buy-cart .b-nbtn {
+	margin-left: 72px;
+}
+.buy-Box .buy-info .sales {
+	text-align: center; color: rgb(102, 102, 102); font-family: "瀹嬩綋",Tahoma,arial,sans-serif; font-size: 14px; margin-top: 10px; margin-bottom: 10px;
+}
+.buy-Box .buy-info .sales .num {
+	color: rgb(255, 102, 0);
+}
+.buy-Box .buy-info .feature-list {
+	text-align: center; color: rgb(102, 102, 102);
+}
+.buy-Box .buy-info .feature-list p {
+	line-height: 36px; float: left;
+}
+.buy-Box .buy-info .feature-list .feature-day {
+	width: 128px; height: 36px; border-top-color: rgb(230, 230, 230); border-right-color: rgb(230, 230, 230); border-top-width: 1px; border-right-width: 1px; border-top-style: dotted; border-right-style: dotted; float: left;
+}
+.buy-Box .buy-info .feature-list .feature-exp {
+	width: 128px; height: 36px; border-top-color: rgb(230, 230, 230); border-top-width: 1px; border-top-style: dotted; float: right;
+}
+.buy-Box .buy-info .feature-list .icon {
+	width: 25px; height: 24px; margin-top: 7px; margin-left: 22px; float: left; _margin-left: 11px;
+}
+.buy-Box .buy-info .feature-list .icon-day {
+	background-position: 0px -77px;
+}
+.buy-Box .buy-info .feature-list .icon-exp {
+	background-position: 0px -133px;
+}
+.buy-Box .buy-info .feature-list a {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.buy-Box .buy-info .feature-list a:hover {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.buy-Box .buy-info .feature-list .feature-day-n {
+	color: rgb(153, 153, 153);
+}
+.buy-Box .buy-info .feature-list .feature-exp-n {
+	color: rgb(153, 153, 153);
+}
+.buy-Box .buy-info .feature-list .feature-day-n a {
+	color: rgb(153, 153, 153);
+}
+.buy-Box .buy-info .feature-list .feature-exp-n a {
+	color: rgb(153, 153, 153);
+}
+.buy-Box .buy-info .feature-list .feature-day-n a:hover {
+	color: rgb(153, 153, 153);
+}
+.buy-Box .buy-info .feature-list .feature-exp-n a:hover {
+	color: rgb(153, 153, 153);
+}
+.buy-Box .buy-info .feature-list .feature-day-n .icon-day {
+	background-position: 0px -103px;
+}
+.buy-Box .buy-info .feature-list .feature-exp-n .icon-exp {
+	background-position: 0px -163px;
+}
+.buy-Box .side {
+	width: 450px; border-top-color: rgb(224, 224, 224); border-bottom-color: rgb(224, 224, 224); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; float: left; position: relative;
+}
+.buy-Box .side .slide {
+	width: 450px; height: 280px; overflow: hidden; position: relative;
+}
+.buy-Box .side .slide .img-wrap {
+	overflow: hidden; position: relative;
+}
+.buy-Box .side .countdown {
+	width: 170px; height: 32px; text-align: center; bottom: 0px; color: rgb(255, 255, 255); line-height: 32px; position: absolute; z-index: 99; background-color: rgba(94, 94, 94, 0.9);
+}
+.buy-Box .side .countdown span {
+	padding: 0px 5px; color: rgb(255, 102, 0); font-weight: bold;
+}
+.buy-Box .side .imgctrl {
+	left: 0px; width: 100%; text-align: center; bottom: 10px; position: absolute;
+}
+.buy-Box .side .imgctrl span {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/c.dot.3e3efda050839f36832be7492e311922.png") no-repeat -8px 0px; margin: 0px 5px; border-radius: 4px; border: currentColor; width: 8px; height: 8px; line-height: 0; font-size: 0px; vertical-align: middle; display: inline-block; position: relative; cursor: pointer; zoom: 1;
+}
+.buy-Box .side .imgctrl span.on {
+	border-color: rgb(255, 255, 255);
+}
+.buy-Box .side .sideTrigger li {
+	background: rgb(0, 0, 0); top: 122px; width: 35px; height: 36px; text-indent: -9999px; filter: alpha(opacity=50); position: absolute; cursor: pointer; opacity: 0.5;
+}
+.buy-Box .side .sideTrigger li span {
+	margin: -10px 0px 0px -5px; left: 50%; top: 50%; display: block; position: absolute;
+}
+.buy-Box .side .sideTrigger li span b {
+	font-weight: normal; position: absolute; zoom: 1;
+}
+.buy-Box .side .sideTrigger li.before {
+	left: 10px;
+}
+.buy-Box .side .sideTrigger li.before span {
+	border-width: 10px 10px 10px medium; border-style: solid solid solid none; border-color: transparent rgb(255, 255, 255) transparent currentColor; width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #000 #fff #000 #000;
+}
+.buy-Box .side .sideTrigger li.before span b {
+	border-width: 5px 5px 5px medium; border-style: solid solid solid none; border-color: transparent rgb(0, 0, 0) transparent currentColor; top: -5px; width: 0px; height: 0px; right: -10px; line-height: 0; font-size: 0px; _border-color: #000 #000 #000 #000; _border: 0;
+}
+.buy-Box .side .sideTrigger li.after {
+	right: 10px;
+}
+.buy-Box .side .sideTrigger li.after span {
+	border-width: 10px 0px 10px 10px; border-style: solid none solid solid; border-color: transparent currentColor transparent rgb(255, 255, 255); width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #000 #000 #000 #fff;
+}
+.buy-Box .side .sideTrigger li.after span b {
+	border-width: 5px 0px 5px 5px; border-style: solid none solid solid; border-color: transparent currentColor transparent rgb(0, 0, 0); left: -10px; top: -5px; width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #000 #000 #000 #000; _border: 0;
+}
+.buy-Box .advanced {
+	width: 100%; height: 44px; float: left; background-color: rgb(247, 247, 247);
+}
+.buy-Box .advanced .favorite {
+	height: 44px; line-height: 44px; padding-left: 20px; float: left;
+}
+.buy-Box .advanced .favorite a {
+	padding: 0px 10px;
+}
+.buy-Box .advanced .favorite .favorites-btn {
+	padding: 0px 10px; display: inline-block; zoom: 1;
+}
+.buy-Box .advanced .box-wrap {
+	width: 405px; height: 20px; line-height: 20px; margin-top: 5px; float: left;
+}
+.buy-Box .advanced .box-wrap .box-cont {
+	padding: 2px 5px;
+}
+.buy-Box .advanced .box-wrap .copy {
+	display: inline-block; zoom: 1;
+}
+.buy-Box .advanced .box-wrap .copy input {
+	padding: 3px; border: 1px solid rgb(204, 204, 204); width: 235px; font-size: 12px;
+}
+.buy-Box .advanced .Share .shareto {
+	height: 44px; text-align: right; color: rgb(103, 103, 103); line-height: 44px;
+}
+.buy-Box .advanced .Share .operate {
+	border: 1px solid rgb(247, 247, 247); top: 9px; width: 20px; height: 20px; display: inline-block; position: relative; zoom: 1;
+}
+.buy-Box .advanced .Share .operate b {
+	border-width: 4px 4px 0px; border-style: solid solid none; border-color: rgb(153, 153, 153) transparent currentColor; left: 0px; top: 7px; width: 0px; height: 0px; line-height: 0; font-size: 0px; margin-left: 5px; position: absolute; _border-color: #999 #f7f7f7 #f7f7f7;
+}
+.buy-Box .advanced .Share:hover {
+	cursor: pointer;
+}
+.buy-Box .advanced .Share .hover {
+	cursor: pointer;
+}
+.buy-Box .advanced .Share:hover .operate {
+	border-width: 1px; border-style: solid; border-color: rgb(224, 224, 224) rgb(255, 255, 255) rgb(255, 255, 255) rgb(224, 224, 224); z-index: 101; background-color: rgb(255, 255, 255);
+}
+.buy-Box .advanced .Share .hover .operate {
+	border-width: 1px; border-style: solid; border-color: rgb(224, 224, 224) rgb(255, 255, 255) rgb(255, 255, 255) rgb(224, 224, 224); z-index: 101; background-color: rgb(255, 255, 255);
+}
+.buy-Box .advanced .Share:hover b {
+	border-width: 0px 4px 4px; border-style: none solid solid; border-color: currentColor transparent rgb(153, 153, 153); width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #f7f7f7 #f7f7f7 #999;
+}
+.buy-Box .advanced .Share .hover b {
+	border-width: 0px 4px 4px; border-style: none solid solid; border-color: currentColor transparent rgb(153, 153, 153); width: 0px; height: 0px; line-height: 0; font-size: 0px; _border-color: #f7f7f7 #f7f7f7 #999;
+}
+.buy-Box .advanced .Share ul {
+	padding: 5px; border: 1px solid rgb(224, 224, 224); top: 34px; width: 165px; text-align: left; right: -1px; line-height: 16px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.buy-Box .advanced .Share ul li {
+	padding: 5px 5px 0px; width: 70px; display: inline-block; zoom: 1;
+}
+.buy-Box .share-wrap ul {
+	height: auto;
+}
+.buy-Box .share-wrap ul li {
+	margin-top: 5px;
+}
+.buy-Box .share-wrap .copy {
+	margin-bottom: 0px;
+}
+.oneCombo .buy-num {
+	margin: 24px 0px 32px !important;
+}
+.d-mar {
+	margin-top: 30px;
+}
+.d-mar2 {
+	margin-top: 20px;
+}
+.tb-new {
+	border: 1px solid rgb(237, 237, 237); text-align: center; font-size: 14px; border-collapse: collapse;
+}
+.tb-new th {
+	background: rgb(246, 246, 246); border: 1px solid rgb(237, 237, 237); height: 44px; font-weight: bold;
+}
+.tb-new td {
+	border: 1px dashed rgb(237, 237, 237); height: 44px;
+}
+.fbold {
+	font-weight: bold;
+}
+.forge {
+	color: rgb(255, 102, 0);
+}
+.d-cont {
+	width: 180px; font-weight: bold;
+}
+.only.d-cont {
+	width: 370px;
+}
+.d-cont-wide {
+	width: 335px;
+}
+.only.d-cont-wide {
+	width: 555px;
+}
+.d-price {
+	width: 90px;
+}
+.d-price-wide {
+	width: 110px;
+}
+.d-num {
+	width: 80px;
+}
+.d-num-wide {
+	width: 110px;
+}
+.d-total {
+	width: 85px; text-align: right; padding-right: 15px;
+}
+.d-total-wide {
+	width: 95px;
+}
+.d-sum td {
+	background: rgb(246, 246, 246); height: 76px; text-align: right; line-height: 35px; padding-right: 15px;
+}
+.d-sum td span {
+	width: 60px; display: inline-block;
+}
+.d-store {
+	margin: 30px 0px 15px;
+}
+.d-time {
+	width: 176px;
+}
+.d-time-wide {
+	width: 200px;
+}
+.time {
+	text-align: left; padding-left: 15px;
+}
+.d-std {
+	width: 160px;
+}
+.d-std-wide {
+	width: 250px;
+}
+.d-amount {
+	width: 100px;
+}
+.d-amount-wide {
+	width: 200px;
+}
+.d-tcont {
+	line-height: 25px; padding-top: 15px; vertical-align: top;
+}
+.dptg-intro .d-notes {
+	background: white;
+}
+.dptg-intro .d-notes dl dt {
+	width: 63px;
+}
+.dptg-intro-wide {
+	width: 668px;
+}
+.dptg-intro .new-tit {
+	font-size: 16px;
+}
+.dptg-intro .new-tit .name {
+	padding-bottom: 0px; float: left; display: inline-block;
+}
+.eventbox {
+	margin: -153px 0px 0px -174px; left: 50%; top: 50%; width: 569px; height: 307px; position: fixed; z-index: 1000000;
+}
+.eventbox .close {
+	top: 10px; width: 20px; height: 20px; right: 15px; position: absolute;
+}
+.eventbox1 {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/eventbox1.88c8a1aeb71a06cd89ca66a3023cb568.jpg") no-repeat;
+}
+.eventbox1 .link {
+	left: 220px; width: 120px; height: 40px; bottom: 20px; position: absolute;
+}
+.eventbox2 {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/eventbox2.02f014461280eddd2f0d8513c0d067ab.jpg") no-repeat;
+}
+.eventbox2 .link {
+	left: 220px; top: 110px; width: 120px; height: 48px; position: absolute;
+}
+.eventTuanBaidu {
+	background: rgb(255, 255, 255); margin: -153px 0px 0px -174px; border: 1px solid rgb(170, 170, 170); width: 389px; height: 257px;
+}
+.eventTuanBaidu .b-rbtn {
+	bottom: 40px; position: absolute;
+}
+.eventTuanBaidu .not-redeem {
+	left: 120px;
+}
+.eventTuanBaidu .redeem {
+	left: 130px;
+}
+.eventTuanBaidu .tit {
+	margin: 40px 40px 0px; text-align: left; color: rgb(51, 51, 51); line-height: 24px; font-family: "Microsoft Yahei"; font-size: 24px; font-weight: bold;
+}
+.eventTuanBaidu .tit em {
+	color: rgb(255, 102, 0);
+}
+.eventTuanBaidu .cont {
+	margin: 23px 40px; text-align: left; color: rgb(51, 51, 51); line-height: 25px; font-size: 16px; display: block;
+}
+.eventTuanBaidu .mbox-btn-close {
+	top: 10px; right: 10px;
+}
+.eventTuanBaiduSuccess {
+	margin: -153px 0px 0px -284px; width: 500px;
+}
+.eventTuanBaiduSuccess .tit {
+	margin: 40px 40px 0px; border: 0px currentColor; text-align: left; color: rgb(51, 51, 51); line-height: 24px; font-size: 24px;
+}
+.eventTuanBaiduSuccess .tit em {
+	color: rgb(255, 102, 0);
+}
+.eventTuanBaiduSuccess .cont {
+	margin: 15px 40px 0px;
+}
+.eventTuanBaiduSuccess .app-1 {
+	left: 135px; bottom: 40px;
+}
+.eventTuanBaiduSuccess .app-2 {
+	left: 305px; bottom: 40px;
+}
+.eventTuanBaiduSuccess .bin-code {
+	background: url("http://si1.s1.dpfile.com/t/cssnew/img/tuanbaidu.4834b1bc3d3c6cf52be7f7ca6b7cff3d.png") no-repeat 0px -46px; left: 35px; width: 75px; height: 75px; bottom: 25px; position: absolute;
+}
+.eventTuanBaiduSuccess .start-tuan {
+	left: 35px; bottom: 40px;
+}
+.eventTuanBaiduSuccess .bind-mobile {
+	left: 35px; bottom: 40px;
+}

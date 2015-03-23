@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.TrainDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+
+	<resultMap type="Train" id="train">
+		<result property="trainId" column="_trainId" />
+		<result property="trainTitle" column="_trainTitle" />
+		<result property="trainSTime" column="_trainSTime" />
+		<result property="trainETime" column="_trainETime" />
+		<result property="trainLocation" column="_trainLocation" />
+		<result property="trainContent" column="_trainContent" />
+		<result property="trainPeople" column="_trainPeople" />
+		<result property="trainStatics" column="_trainStatics" />
+		<result property="trainHost" column="_trainHost" />
+		<result property="trainUTime" column="_trainUTime" />
+		<result property="trainProvince" column="_trainProvince" />
+		<result property="trainParentUnit" column="_trainParentUnit" />
+		<result property="trainPublishUserId" column="_trainPublishUserId" />
+		<result property="numCount" column="numCount"/>
+	</resultMap>
+
+
+	<insert id="insertTrain" parameterType="Train">  
+     <![CDATA[ 
+        insert into b_train(_trainId,
+        _trainTitle,
+        _trainSTime,
+        _trainETime,
+        _trainLocation,
+        _trainContent,
+        _trainPeople,
+        _trainStatics,
+        _trainHost,
+        _trainUTime,
+        _trainProvince,
+        _trainParentUnit,
+        _trainPublishUserId) 
+        values(#{trainId},
+        #{trainTitle},
+        #{trainSTime},
+        #{trainETime},
+        #{trainLocation},
+        #{trainContent},
+        #{trainPeople},
+        #{trainStatics},
+        #{trainHost},
+        #{trainUTime},
+        #{trainProvince},
+        #{trainParentUnit},
+        #{trainPublishUserId}) 
+        ]]>
+	</insert>
+
+	<update id="updateTrain" parameterType="Train">
+		update b_train
+		set
+		_trainTitle=#{trainTitle}
+		,_trainSTime=#{trainSTime}
+		,_trainETime=#{trainETime}
+		,_trainLocation=#{trainLocation}
+		,_trainContent=#{trainContent}
+		,_trainPeople=#{trainPeople}
+		,_trainStatics=#{trainStatics}
+		,_trainHost=#{trainHost}
+		,_trainUTime=#{trainUTime}
+		,_trainProvince=#{trainProvince}
+		,_trainParentUnit=#{trainParentUnit}
+		,_trainPublishUserId=#{trainPublishUserId}
+		where _trainId=#{trainId}
+	</update>
+
+	<delete id="deleteTrain" parameterType="int">
+		delete from b_train
+		where _trainId=#{trainId}
+	</delete>
+
+	<select id="findTrainAll" resultMap="train">
+		select * from b_train
+	</select>
+
+	<select id="findTrainByid" parameterType="int" resultMap="train">
+		select * from b_train where _trainId=#{trainId}
+	</select>
+	
+	<select id="findAllCount" resultType="int">
+		select count(*) from
+		b_train
+	</select>
+	
+	<select id="findByParentUnitCount" parameterType="map" resultType="int">
+		select count(*) from b_train  where _trainProvince=#{inchargeMent} or _trainParentUnit = #{inchargeMent}
+		
+	</select>
+	
+	<select id="findUserCount" resultType="int">
+		select count(*) from
+		b_train where _trainPublishUserId=#{trainPublishUserId}
+	</select>
+	
+	
+	<select id="findTrainByUser" parameterType="map" resultMap="train">
+		select * from b_train where _trainPublishUserId = #{userId} 
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _trainTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+		    <if test="peopleQuery !=null and peopleQuery!=''">
+				And _trainPeople ='${peopleQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_trainSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _trainUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _trainTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _trainSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _trainETime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _trainPeople 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _trainStatics 
+			</if>
+			<if test="fieldQuery == 6">
+				order by _trainHost 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findByParentUnit" parameterType="map" resultMap="train">
+		select * from b_train where _trainProvince = #{inchargeMent} or _trainParentUnit = #{inchargeMent}
+		<if test="titleQuery !=null and titleQuery!=''">
+				And _trainTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+		    <if test="peopleQuery !=null and peopleQuery!=''">
+				And _trainPeople ='${peopleQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_trainSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+		<if test="fieldQuery == 0">
+			order by _trainProvince desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _trainTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _trainSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _trainETime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _trainPeople 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _trainStatics 
+			</if>
+			<if test="fieldQuery == 6">
+				order by _trainHost 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+	<select id="findTrainByAll" parameterType="map" resultMap="train">
+		select
+		* from b_train 
+		<where>
+			<if test="titleQuery !=null and titleQuery!=''">
+				And _trainTitle like CONCAT('%','${titleQuery}','%' ) 
+			</if>
+		    <if test="peopleQuery !=null and peopleQuery!=''">
+				And _trainPeople ='${peopleQuery}' 
+			</if>
+			<if test="startTimeQuery !=null and startTimeQuery !='' and endTimeQuery!=null and endTimeQuery!=''">
+				And (UNIX_TIMESTAMP(_trainSTime) BETWEEN UNIX_TIMESTAMP(#{startTimeQuery}) AND UNIX_TIMESTAMP(#{endTimeQuery}))
+			</if>
+			<if test="provinceQuery !=null and provinceQuery!=''">
+				And _trainParentUnit = #{provinceQuery}
+			</if>
+		</where>
+		<if test="fieldQuery == 0">
+			order by _trainUTime desc
+		</if>
+		<if test="fieldQuery!=0">
+			<if test="fieldQuery == 1">
+				order by _trainTitle 
+			</if>
+			<if test="fieldQuery == 2">
+				order by _trainSTime 
+			</if>
+			<if test="fieldQuery == 3">
+				order by _trainETime 
+			</if>
+			<if test="fieldQuery == 4">
+				order by _trainPeople 
+			</if>
+			<if test="fieldQuery == 5">
+				order by _trainStatics 
+			</if>
+			<if test="fieldQuery == 6">
+				order by _trainHost 
+			</if>
+			<if test="orderQuery == 1">
+				desc
+			</if>
+			<if test="orderQuery == 2">
+				asc
+			</if>
+		</if>
+		<if test="intPageCount !=null and pageSize !=null">
+		limit #{intPageCount},#{pageSize}
+		</if>
+	</select>
+	
+
+	<select id="findTopTen" resultMap="train">
+		select * from b_train order by _trainUTime  desc limit 0,6
+	</select>
+	
+	<select id="findByCount" parameterType="map" resultMap="train">
+		select count(_trainId) as numCount ,_trainProvince  from b_train
+		<where>
+			<if test="yearsQuery !=null and yearsQuery !=''">
+				<![CDATA[AND  left(_trainUTime,4) = #{yearsQuery}]]>
+			</if>
+			<if test="province !=null and province !=''">
+				And _trainProvince = #{province}
+			</if>
+		</where>
+		group by _trainProvince
+	</select>
+
+</mapper>
