@@ -17,6 +17,7 @@
 		<typeAlias alias="Policy" type="com.tjdzj.www.model.Policy" />
 		<typeAlias alias="News" type="com.tjdzj.www.model.News" /> 
 		<typeAlias alias="Province" type="com.tjdzj.www.model.Province" />
+		<typeAlias alias="LogEntity" type="com.tjdzj.www.model.LogEntity" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="/mybatis/mybatisUser.xml" />
@@ -32,5 +33,6 @@
 		<mapper resource="/mybatis/mybatisPolicy.xml" /> 
 		<mapper resource="/mybatis/mybatisNews.xml" />
 		<mapper resource="/mybatis/mybatisProvince.xml" />
+		<mapper resource="/mybatis/mybatisLog.xml" />
 	</mappers>
 </configuration>

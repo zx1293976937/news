@@ -174,5 +174,13 @@
 		<property name="mapperInterface" value="com.tjdzj.www.dao.NewsDao" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
+	<!-- *************************newsbean************************* -->
+	<bean id="logServiceImpl" class="com.tjdzj.www.serviceImpl.LogServiceImpl">
+		<property name="logDao" ref="logDao" />
+	</bean>
+	<bean id="logDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.tjdzj.www.dao.LogDao" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
 	
 </beans> 

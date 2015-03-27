@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjdzj.www.dao.LogDao">
+	<!-- resultMap属性：type为java实体类；id为此resultMap的标识。 -->
+
+	<resultMap type="LogEntity" id="log">
+		<result property="id" column="id" />
+		<result property="userName" column="userName" />
+		<result property="operation" column="operation" />
+		<result property="ip" column="ip" />
+		<result property="Time" column="time" />
+	</resultMap>
+
+
+	<insert id="add" parameterType="LogEntity">  
+     <![CDATA[ 
+        insert into b_log(id,
+        userName,
+        operation,
+        ip,
+        time}) 
+        ]]>
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		delete from b_log
+		where id=#{id}
+	</delete>
+
+	<select id="findAll" resultMap="log">
+		select * from b_log
+	</select>
+	
+	<select id="findPation" parameterType="map" resultMap="log">
+		select
+		* from b_log order by time desc
+		limit
+		#{pageNumber},#{pageSize}
+	</select>
+
+
+
+</mapper>
